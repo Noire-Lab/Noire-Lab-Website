@@ -78,9 +78,10 @@ export default function Home() {
             ))}
         </div>
 
-        <div className="h-[440px] md:h-[660px] w-[140%] mt-[30px] mb-[30px] md:mb-[60px] md:mt-[50px] translate-x-[-100px] rotate-[-3.41deg] relative overflow-hidden">
+        <div className="h-[440px] md:h-[660px] w-[140%] mt-[30px] mb-[30px] md:mb-[60px] md:mt-[50px] landscape:translate-x-[-100px] translate-x-[-110px] rotate-[-3.41deg] relative overflow-hidden">
+        {/* sm:landscape:translate-x-[-57%] */}
           <svg
-            className="hidden md:block absolute top-[19%] left-[50%] transform translate-x-[-56%] translate-y-[-50%] rotate-[5deg]"
+            className="hidden md:block absolute top-[19%] left-[50%] transform [@media(max-width:1024px)]:translate-x-[-56.5%] translate-x-[-68%] translate-y-[-50%] rotate-[5deg]"
             width="771"
             height="315"
             viewBox="0 0 771 315"
@@ -98,7 +99,7 @@ export default function Home() {
           </svg>
 
           <svg
-            className="md:hidden absolute top-[17.5%] left-[50%] transform landscape:translate-x-[-62%] translate-x-[-50%] -translate-y-1/2 rotate-[3.41deg]"
+            className="md:hidden absolute top-[17.5%] left-[50%] transform landscape:translate-x-[-62%]  translate-x-[-40%] -translate-y-1/2 rotate-[3.41deg]"
             width="299"
             height="176"
             viewBox="0 0 299 176"
@@ -117,9 +118,17 @@ export default function Home() {
 
           <div className="rotate-[3.41deg] w-full h-[356px] absolute bottom-0 ">
             <img
+              loading="lazy"
               src="/girl3.png"
-              className="absolute z-[1000] left-[50%] transform translate-x-[-40%] landscape:translate-x-[-50%] md:translate-x-[-50%] bottom-0 w-[450px] md:w-[788px]"
-              alt=""
+              className="block lg:hidden absolute z-[1000] left-[50%] transform translate-x-[-40%] landscape:translate-x-[-50%] bottom-0 w-[450px] md:w-[788px]"
+              alt="girl"
+            />
+
+            <img
+              loading="lazy"
+              src="/girl3.png"
+              className="hidden lg:block absolute z-[1000] left-[50%] transform translate-x-[-60%] bottom-0 w-[450px] md:w-[788px]"
+              alt="girl"
             />
           </div>
 
