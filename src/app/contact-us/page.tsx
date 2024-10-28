@@ -139,7 +139,7 @@ export default function Page() {
             />
           </div>
 
-          <p className="text-[16px] text-center font-[500]">Your budget</p>
+          <p className="text-[16px] text-center font-[500] md:hidden block">Your budget</p>
 
           <div className="flex flex-wrap justify-center gap-[12px] text-[20px] text-nowrap font-bold">
             <Button

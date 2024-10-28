@@ -1,6 +1,16 @@
 import { Button } from "@/components/Button";
-import { behance, behanceSmall, dribble, dribbleSmall, instagram, instagramSmall, linkedin, linkedinSmall } from "@/svg";
+import {
+  behance,
+  behanceSmall,
+  dribble,
+  dribbleSmall,
+  instagram,
+  instagramSmall,
+  linkedin,
+  linkedinSmall,
+} from "@/svg";
 import Link from "next/link";
+import { FC } from "react";
 
 export const Footer = () => {
   return (
@@ -32,10 +42,10 @@ export const Footer = () => {
           {dribble}
         </div>
         <div className="md:hidden grid grid-cols-2 place-items-center mx-auto gap-[16px]">
-         {instagramSmall}
-         {behanceSmall}
-         {linkedinSmall}
-         {dribbleSmall}
+          {instagramSmall}
+          {behanceSmall}
+          {linkedinSmall}
+          {dribbleSmall}
         </div>
         <div className="flex flex-wrap gap-[24px] md:justify-between justify-center items-center text-[16px] leading-[16px] font-light">
           <div className="flex gap-[46px] whitespace-nowrap">
@@ -47,6 +57,68 @@ export const Footer = () => {
           </div>
         </div>
       </footer>
+    </div>
+  );
+};
+
+export const Slot: FC<{
+  header?: React.ReactNode;
+  descriptionList: React.ReactNode[];
+  color: string;
+}> = (props) => {
+  return (
+    <div
+      style={{ backgroundColor: props.color }}
+      className={`p-[32px] md:px-[40px] md:py-[60px] rounded-[30px] flex flex-col gap-[20px] md:gap-[40px]`}
+    >
+      {props?.header && props.header}
+      <ul className="text-[16px] md:text-[24px] leading-[25px] flex flex-col gap-[12px] md:gap-[38px]">
+        {props.descriptionList.map((title, index) => {
+          return (
+            <li key={index} className="flex items-center gap-[15px]">
+              <div className="w-[13px] h-[13px]">
+                <svg
+                  width="12"
+                  height="13"
+                  viewBox="0 0 12 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="6" cy="6.5" r="6" fill="white" />
+                </svg>
+              </div>
+
+              <p>{title}</p>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
+
+export const SlotTools: FC<{
+  header?: React.ReactNode;
+  title: React.ReactNode;
+  description: React.ReactNode;
+  color: string;
+}> = (props) => {
+  return (
+    <div
+      style={{ backgroundColor: props.color }}
+      className={`p-[32px] md:px-[40px] md:py-[60px] rounded-[30px] flex flex-col gap-[20px] md:gap-[40px]`}
+    >
+      <div className="max-h-[102px] w-full flex items-center md:items-baseline justify-self-start md:text-center md:justify-center">
+        {props?.header && <p className="mr-[12px]">{props.header}</p>}
+        <p className="flex justify-start ml-[-26px] md:m-0">
+          <h3 className="text-[36px] sm:text-[50px] scale-x-[0.8] md:scale-100 leading-9 sm:leading-[50px] uppercase font-bold">
+            {props.title}
+          </h3>
+        </p>
+      </div>
+      <p className="text-[16px] md:text-[24px] leading-[19.2px] md:leading-[25px] font-normal md:max-w-[272px] md:mx-auto">
+        {props.description}
+      </p>
     </div>
   );
 };
