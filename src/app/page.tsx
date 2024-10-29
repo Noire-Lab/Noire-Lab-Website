@@ -253,7 +253,7 @@ export default function Home() {
       </section>
 
       <section className="py-[35px] lg:py-[140px] px-[16px]">
-        <div className="relative flex flex-col lg:flex-row justify-between max-w-[1114px] mx-auto h-[860px]">
+        <div className="relative flex flex-col lg:flex-row justify-between max-w-[1114px] mx-auto [@media(max-width:1024px)]:h-[860px]">
           <div className="flex flex-col gap-[30px] lg:gap-[38px] lg:mt-[40px]">
             <div className="flex justify-center ">
               <svg
@@ -345,7 +345,7 @@ export default function Home() {
                 Full-service studio
               </span>{" "}
               <br />
-              in development <br /> and promotion
+              in development and promotion
             </div>
 
             <div className="block md:hidden text-center leading-[28.8px] text-[24px]">

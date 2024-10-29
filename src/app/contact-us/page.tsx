@@ -73,7 +73,6 @@ export default function Page() {
 
   return (
     <div className="bg-[#0E0C12]">
-      {/* hidden md:block */}
       <header className="max-w-[1440px] h-[108px] relative md:h-[308px] overflow-hidden mx-auto">
         <Link
           href="/"
