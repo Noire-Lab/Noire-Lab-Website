@@ -73,10 +73,11 @@ export default function Page() {
 
   return (
     <div className="bg-[#0E0C12]">
-      <header className="hidden md:block max-w-[1440px] min-h-[244px] relative h-[308px] overflow-hidden mx-auto">
+      {/* hidden md:block */}
+      <header className="max-w-[1440px] h-[108px] relative md:h-[308px] overflow-hidden mx-auto">
         <Link
           href="/"
-          className="absolute z-10 mx-auto left-[calc(50%-90px)] top-[40px]"
+          className="absolute z-10 mx-auto left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0  md:left-[calc(50%-90px)] md:top-[40px]"
         >
           {logo}
         </Link>
@@ -84,7 +85,13 @@ export default function Page() {
         <img
           src="/bg2.webp"
           loading="eager"
-          className="absolute top-[-290px] object-center w-full "
+          className="hidden md:block absolute md:top-[-290px] object-center w-full"
+          alt="background"
+        />
+         <img
+          src="/contact.png"
+          loading="eager"
+          className="block md:hidden absolute object-cover w-full"
           alt="background"
         />
       </header>

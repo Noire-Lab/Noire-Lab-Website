@@ -79,7 +79,6 @@ export default function Home() {
         </div>
 
         <div className="h-[440px] md:h-[660px] w-[140%] mt-[30px] mb-[30px] md:mb-[60px] md:mt-[50px] landscape:translate-x-[-100px] translate-x-[-110px] rotate-[-3.41deg] relative overflow-hidden">
-        {/* sm:landscape:translate-x-[-57%] */}
           <svg
             className="hidden md:block absolute top-[19%] left-[50%] transform [@media(max-width:1024px)]:translate-x-[-56.5%] translate-x-[-68%] translate-y-[-50%] rotate-[5deg]"
             width="771"
@@ -225,7 +224,7 @@ export default function Home() {
           />
           <img
             src="/tv2.png"
-            className="block md:hidden object-contain w-full max-h-[345px] mx-auto mb-[30px]"
+            className="block md:hidden object-contain w-full max-h-[325px] mx-auto mb-[30px]"
             alt="tv"
           />
 
@@ -253,15 +252,95 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-[35px] md:py-[140px] px-[16px]">
-        <div className="relative flex flex-col md:flex-row justify-between max-w-[1114px] mx-auto">
-          <div className="flex flex-col gap-[40px] md:mt-[40px]">
-            <div className="text-center font-bold text-[100px] md:text-[148px] leading-[90px] mb:leading-[130px] ">
-              <p className="rotate-[-3.41deg]">Noire</p>
-              <p className="rotate-[-1.6deg]">Lab</p>
+      <section className="py-[35px] lg:py-[140px] px-[16px]">
+        <div className="relative flex flex-col lg:flex-row justify-between max-w-[1114px] mx-auto h-[860px]">
+          <div className="flex flex-col gap-[30px] lg:gap-[38px] lg:mt-[40px]">
+            <div className="flex justify-center ">
+              <svg
+                className="hidden lg:block"
+                width="400"
+                height="252"
+                viewBox="0 0 400 252"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M362.059 108.172C338.27 109.551 319.72 93.8744 318.315 69.6431L318.298 69.3476C316.988 46.7416 332.013 27.1911 355.062 25.8549C381.51 24.3215 394.816 44.1566 396.118 66.6149C396.221 68.388 396.185 70.3173 396.166 72.5421L341.054 75.7373C343.861 85.8036 351.262 90.7115 361.309 90.1291C368.844 89.6922 374.026 87.0198 380.046 80.8891L393.56 91.5208C386.564 101.266 376.39 107.341 362.059 108.172ZM339.945 61.718L373.78 59.7563C371.868 49.7863 365.564 43.3324 356.108 43.8806C346.651 44.4288 341.127 51.4203 339.945 61.718Z"
+                  fill="white"
+                />
+                <path
+                  d="M264.835 112.03L260.244 32.8341L282.702 31.532L283.627 47.4893C287.582 36.4378 294.402 28.7782 307.882 28.5898L309.244 52.0823L308.062 52.1508C293.139 53.016 284.492 62.4122 285.597 81.4722L287.294 110.727L264.835 112.03Z"
+                  fill="white"
+                />
+                <path
+                  d="M215.596 26.6764L214.439 6.72993L238.08 5.35938L239.236 25.3059L215.596 26.6764ZM221.284 114.554L216.692 35.3595L239.151 34.0575L243.742 113.252L221.284 114.554Z"
+                  fill="white"
+                />
+                <path
+                  d="M161.094 119.824C136.715 121.237 117.349 104.273 116.021 81.3715L116.004 81.076C114.685 58.3222 131.935 38.7911 156.61 37.3606C180.989 35.9472 200.355 52.9107 201.683 75.8123L201.7 76.1078C203.019 98.8616 185.769 118.393 161.094 119.824ZM160.268 100.451C173.122 99.7054 180.24 89.5083 179.555 77.6882L179.537 77.3927C178.861 65.7203 169.848 56.0136 157.437 56.7332C144.582 57.4784 137.465 67.6755 138.15 79.4956L138.167 79.7911C138.844 91.4635 147.857 101.17 160.268 100.451Z"
+                  fill="white"
+                />
+                <path
+                  d="M7.76766 126.933L1.77148 23.5068L22.7523 22.2904L74.9068 83.1618L71.2149 19.4808L93.6732 18.1787L99.6694 121.605L80.3139 122.727L26.4141 59.8815L30.226 125.631L7.76766 126.933Z"
+                  fill="white"
+                />
+                <path
+                  d="M296.648 241.765C284.503 242.105 276.85 236.768 271.272 230.471L271.566 240.967L248.775 241.606L245.709 132.148L268.5 131.51L269.638 172.144C274.972 164.342 282.318 158.734 294.313 158.398C313.056 157.873 331.31 172.067 332.062 198.907L332.07 199.207C332.822 226.046 315.691 241.232 296.648 241.765ZM290.259 222.587C300.904 222.288 309.657 213.34 309.279 199.845L309.271 199.545C308.897 186.2 299.653 177.606 289.007 177.904C278.361 178.202 269.763 187.297 270.136 200.641L270.145 200.941C270.519 214.286 279.613 222.885 290.259 222.587Z"
+                  fill="white"
+                />
+                <path
+                  d="M182.871 244.953C167.727 245.377 155.043 237.179 154.593 221.135L154.585 220.835C154.098 203.442 167.212 194.822 186.254 194.288C194.501 194.057 200.087 195.251 205.989 197.037L205.951 195.687C205.682 186.091 199.692 181.157 188.296 181.476C179.45 181.724 173.494 183.391 166.227 186.446L160.042 169.212C168.783 165.216 177.404 162.273 191.049 161.891C203.644 161.538 212.429 164.444 218.44 170.128C224.606 175.957 227.553 184.728 227.855 195.524L229.161 242.156L207.12 242.773L206.876 234.076C201.501 240.379 194.117 244.638 182.871 244.953ZM189.328 229.016C200.123 228.713 207.011 222.818 206.776 214.422L206.662 210.373C202.564 208.687 197.582 207.626 192.034 207.782C182.288 208.055 176.4 212.121 176.601 219.318L176.61 219.618C176.782 225.766 181.981 229.222 189.328 229.016Z"
+                  fill="white"
+                />
+                <path
+                  d="M69.604 246.625L66.6641 141.666L89.755 141.019L92.1069 224.986L144.436 223.521L145.024 244.512L69.604 246.625Z"
+                  fill="white"
+                />
+              </svg>
+              <svg
+                className="block lg:hidden"
+                width="268"
+                height="169"
+                viewBox="0 0 268 169"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M242.58 73.2346C226.641 74.1585 214.213 63.6553 213.272 47.4204L213.26 47.2224C212.382 32.0763 222.449 18.9775 237.892 18.0823C255.612 17.0549 264.527 30.3444 265.4 45.3915C265.469 46.5794 265.444 47.8721 265.432 49.3627L228.507 51.5035C230.387 58.2479 235.346 61.5362 242.078 61.146C247.126 60.8533 250.598 59.0627 254.631 54.9552L263.686 62.0784C258.998 68.6076 252.182 72.6778 242.58 73.2346ZM227.764 42.1105L250.433 40.7962C249.152 34.1163 244.928 29.7922 238.593 30.1595C232.257 30.5268 228.556 35.2111 227.764 42.1105Z"
+                  fill="white"
+                />
+                <path
+                  d="M177.439 75.8187L174.363 22.7577L189.41 21.8853L190.03 32.5767C192.68 25.1722 197.249 20.0403 206.281 19.9141L207.193 35.654L206.401 35.6999C196.403 36.2796 190.609 42.5751 191.35 55.3453L192.487 74.9457L177.439 75.8187Z"
+                  fill="white"
+                />
+                <path
+                  d="M144.449 18.632L143.674 5.26788L159.513 4.34961L160.288 17.7138L144.449 18.632ZM148.26 77.5103L145.183 24.4497L160.231 23.5774L163.307 76.6379L148.26 77.5103Z"
+                  fill="white"
+                />
+                <path
+                  d="M107.934 81.0407C91.5996 81.9874 78.6244 70.6216 77.7346 55.2778L77.7232 55.0798C76.8395 39.8347 88.397 26.7489 104.929 25.7905C121.263 24.8435 134.238 36.209 135.128 51.5531L135.14 51.7511C136.023 66.9961 124.466 80.082 107.934 81.0407ZM107.38 68.0608C115.992 67.5615 120.761 60.7294 120.302 52.81L120.29 52.612C119.837 44.7915 113.799 38.288 105.483 38.7701C96.8705 39.2694 92.1021 46.1014 92.561 54.0209L92.5724 54.2189C93.026 62.0394 99.0647 68.5426 107.38 68.0608Z"
+                  fill="white"
+                />
+                <path
+                  d="M5.20494 85.8048L1.1875 16.5093L15.2446 15.6943L50.1882 56.4781L47.7146 13.8119L62.7617 12.9395L66.7791 82.235L53.8109 82.9867L17.6981 40.8803L20.252 84.9324L5.20494 85.8048Z"
+                  fill="white"
+                />
+                <path
+                  d="M198.754 162.742C190.617 162.97 185.489 159.394 181.752 155.175L181.949 162.207L166.679 162.635L164.625 89.2986L179.895 88.8711L180.657 116.096C184.231 110.869 189.153 107.111 197.19 106.886C209.747 106.534 221.978 116.044 222.482 134.027L222.487 134.228C222.991 152.21 211.513 162.385 198.754 162.742ZM194.474 149.893C201.606 149.692 207.47 143.697 207.217 134.656L207.212 134.455C206.961 125.513 200.767 119.755 193.635 119.955C186.502 120.155 180.741 126.248 180.991 135.189L180.997 135.39C181.248 144.331 187.341 150.092 194.474 149.893Z"
+                  fill="white"
+                />
+                <path
+                  d="M122.523 164.878C112.376 165.162 103.878 159.669 103.577 148.92L103.571 148.719C103.245 137.065 112.031 131.29 124.79 130.932C130.315 130.778 134.058 131.577 138.012 132.774L137.987 131.87C137.806 125.44 133.793 122.135 126.158 122.348C120.231 122.514 116.24 123.631 111.371 125.678L107.227 114.131C113.084 111.454 118.86 109.482 128.002 109.226C136.441 108.99 142.327 110.937 146.354 114.745C150.485 118.651 152.46 124.527 152.662 131.76L153.537 163.004L138.77 163.417L138.606 157.59C135.005 161.813 130.058 164.667 122.523 164.878ZM126.849 154.2C134.082 153.997 138.697 150.047 138.539 144.422L138.463 141.709C135.717 140.58 132.379 139.869 128.662 139.973C122.132 140.156 118.187 142.88 118.322 147.702L118.328 147.903C118.443 152.023 121.927 154.338 126.849 154.2Z"
+                  fill="white"
+                />
+                <path
+                  d="M46.6338 165.997L44.6641 95.6747L60.135 95.2412L61.7107 151.499L96.7712 150.518L97.1652 164.582L46.6338 165.997Z"
+                  fill="white"
+                />
+              </svg>
             </div>
 
-            <div className="hidden md:block text-center text-[30px]">
+            <div className="hidden md:block text-center text-[30px] leading-[36px]">
               <span className="text-[#855CFF] font-bold">
                 Full-service studio
               </span>{" "}
@@ -269,7 +348,7 @@ export default function Home() {
               in development <br /> and promotion
             </div>
 
-            <div className="block md:hidden text-center text-[24px]">
+            <div className="block md:hidden text-center leading-[28.8px] text-[24px]">
               <span className="text-[#855CFF] font-bold">
                 Full-service studio
               </span>{" "}
@@ -277,34 +356,34 @@ export default function Home() {
             </div>
           </div>
 
-          <figure className="-z-10 md:z-0 h-[690px] w-[299px] absolute bottom-[-30px] md:top-1/2 left-[48%] transform -translate-x-1/2 md:-translate-y-1/2 overflow-hidden">
+          <figure className="-z-10 lg:z-0 h-[624px] lg:h-[690px] w-[299px] absolute bottom-[-30px] lg:top-1/2 left-[48%] transform -translate-x-1/2 lg:-translate-y-1/2 overflow-hidden">
             <img src="/girl2.png" className="object-cover h-full" alt="girl" />
           </figure>
 
-          <div className="flex flex-col gap-[12px] md:gap-[40px] w-full md:w-[480px] mt-[320px] md:m-0">
+          <div className="flex flex-col items-center gap-[12px] lg:gap-[40px] w-full lg:w-[480px] mt-[228px] lg:m-0">
             <Link href="/roadmap">
-              <div className="bg-[#855CFF] rounded-[38px] h-[166px] md:h-[228px] p-[28px] md:p-[40px]">
-                <p className="text-[36px] md:text-[45px] font-bold text-center leading-9 md:leading-[45px] uppercase mb-[12px] md:mb-[16px]">
+              <div className="w-[330px] lg:max-w-full lg:w-auto bg-[#855CFF] rounded-[38px] h-[166px] lg:h-[228px] p-[28px] lg:p-[40px]">
+                <p className="text-[36px] lg:text-[45px] font-bold text-center leading-9 lg:leading-[45px] uppercase mb-[12px] lg:mb-[16px]">
                   PARTNERSHIP <br /> ROADMAP
                 </p>
                 <div className="flex items-center gap-[12px] w-max mx-auto">
-                  <p className="text-[18px] md:text-[24px]">Check now</p>{" "}
-                  <div className="hidden md:block">{arrowOutlined}</div>
-                  <div className="md:hidden block">{arrowOutlinedSmall}</div>
+                  <p className="text-[18px] lg:text-[24px]">Check now</p>{" "}
+                  <div className="hidden lg:block">{arrowOutlined}</div>
+                  <div className="lg:hidden block">{arrowOutlinedSmall}</div>
                 </div>
               </div>
             </Link>
 
             <Link href="/tools">
-              <div className="border-[6px] border-[#855CFF] rounded-[38px] h-[166px] md:h-[228px] p-[28px] md:p-[40px]">
-                <p className="text-[36px] md:text-[45px] font-bold text-center leading-9 md:leading-[45px] uppercase mb-[12px] md:mb-[16px]">
+              <div className="w-[330px] lg:max-w-full lg:max-w-auto  lg:w-auto border-[6px] border-[#855CFF] rounded-[38px] h-[166px] lg:h-[228px] p-[28px] lg:p-[40px]">
+                <p className="text-[36px] lg:text-[45px] font-bold text-center leading-9 lg:leading-[45px] uppercase mb-[12px] lg:mb-[16px]">
                   Promotion <br /> tools
                 </p>
 
                 <div className="flex items-center gap-[12px] w-max mx-auto">
-                  <p className="text-[18px] md:text-[24px]">Check now</p>
-                  <div className="hidden md:block">{arrowOutlined}</div>
-                  <div className="md:hidden block">{arrowOutlinedSmall}</div>
+                  <p className="text-[18px] lg:text-[24px]">Check now</p>
+                  <div className="hidden lg:block">{arrowOutlined}</div>
+                  <div className="lg:hidden block">{arrowOutlinedSmall}</div>
                 </div>
               </div>
             </Link>
