@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
 import { Footer } from "./components";
+import { Navigation } from "./components.client";
+import "./globals.css";
 
 const gotham = localFont({
   src: [
@@ -17,7 +18,7 @@ const gotham = localFont({
   variable: "--font-gotham",
   weight: "100 900",
   display: "swap",
-  preload: true
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -38,6 +39,7 @@ export default function RootLayout({
         }}
         className={`antialiased bg-[#0E0C12] text-white`}
       >
+        <Navigation />
         <main className="overflow-hidden">{children}</main>
         <Footer />
       </body>

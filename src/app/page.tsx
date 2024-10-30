@@ -2,6 +2,7 @@ import { Button } from "@/components/Button";
 import {
   arrowOutlined,
   arrowOutlinedSmall,
+  house,
   logo,
   logoSmall,
   ourServices,

@@ -33,13 +33,10 @@ export const Footer = () => {
           </Link>
         </div>
         <div className="hidden md:flex flex-wrap justify-center gap-[50px] mx-auto">
-          {instagram}
-
-          {behance}
-
-          {linkedin}
-
-          {dribble}
+          <div className="h-[33.6px]">{instagram}</div>
+          <div className="h-[33.6px]">{behance}</div>
+          <div className="h-[33.6px]">{linkedin}</div>
+          <div className="h-[33.6px]">{dribble}</div>
         </div>
         <div className="md:hidden grid grid-cols-2 place-items-center mx-auto gap-[16px]">
           {instagramSmall}
