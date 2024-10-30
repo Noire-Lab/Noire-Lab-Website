@@ -107,7 +107,7 @@ export const NavigationCases = () => {
 
 export const Navigation = () => {
   const path = usePathname();
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const isActive = (match: string, currentPath = path) => {
     return currentPath.includes(match);
