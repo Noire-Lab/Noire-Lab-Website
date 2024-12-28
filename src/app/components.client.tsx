@@ -249,7 +249,7 @@ export const ProductItem = (props: {
       >
         <figure>
           <img
-            alt="Screenshot of Game 4"
+            alt="Screenshot of Game"
             className="w-full rounded-[8px]"
             src={props.image}
             loading="lazy"
