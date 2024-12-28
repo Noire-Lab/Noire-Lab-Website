@@ -152,7 +152,7 @@ export default function Page() {
               type="button"
               variant="outline"
               onClick={() => setValue("price", prices.entryLevel)}
-              className={`w-[176px] h-[56px] px-[32px] ${
+              className={`w-[176px] h-[56px] px-[32px] hover:bg-white hover:text-[#191520] ease-in-out duration-150 ${
                 selectedPriceWatcher === prices.entryLevel &&
                 "bg-white text-[#0E0C12!important]"
               }`}
@@ -164,7 +164,7 @@ export default function Page() {
               type="button"
               variant="outline"
               onClick={() => setValue("price", prices.budget)}
-              className={`w-[190px] h-[56px] px-[32px] ${
+              className={`w-[190px] h-[56px] px-[32px] hover:bg-white hover:text-[#191520] ease-in-out duration-150 ${
                 selectedPriceWatcher === prices.budget &&
                 "bg-white text-[#0E0C12!important]"
               }`}
@@ -176,7 +176,7 @@ export default function Page() {
               type="button"
               variant="outline"
               onClick={() => setValue("price", prices.standard)}
-              className={`w-[190px] h-[56px] px-[32px] ${
+              className={`w-[190px] h-[56px] px-[32px] hover:bg-white hover:text-[#191520] ease-in-out duration-150 ${
                 selectedPriceWatcher === prices.standard &&
                 "bg-white text-[#0E0C12!important]"
               }`}
@@ -188,7 +188,7 @@ export default function Page() {
               type="button"
               variant="outline"
               onClick={() => setValue("price", prices.premium)}
-              className={`w-[132px] h-[56px] px-[32px] ${
+              className={`w-[132px] h-[56px] px-[32px] hover:bg-white hover:text-[#191520] ease-in-out duration-150 ${
                 selectedPriceWatcher === prices.premium &&
                 "bg-white text-[#0E0C12!important]"
               }`}
@@ -225,7 +225,7 @@ export default function Page() {
               />
               <label
                 htmlFor="privacy-checkbox"
-                className="hover:cursor-pointer hidden peer-checked:block absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                className="hover:cursor-pointer hidden peer-checked:block absolute top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
               >
                 {check}
               </label>
