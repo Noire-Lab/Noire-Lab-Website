@@ -61,7 +61,7 @@ export default function Home() {
           <span className="">the IGaming Industry</span>
         </h1>
         <video
-          className="-z-10  absolute top-[67.5%] md:top-[68.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] max-w-[400px] md:max-w-max md:min-h-[550px] md:h-[550px]"
+          className="z-10 absolute top-[67.5%] md:top-[62.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] max-w-[400px] md:max-w-max md:min-h-[550px] md:h-[550px]"
           autoPlay
           loop
           muted
@@ -477,7 +477,7 @@ export default function Home() {
               type="video/quicktime;"
             />
             <source
-              src="/videos/girl thumbs down (safari).webm"
+              src="/videos/girl thumbs down (chrome).webm"
               type="video/webm;"
             />
           </video>
