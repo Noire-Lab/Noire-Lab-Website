@@ -177,7 +177,7 @@ export const Navigation = () => {
         <nav
           className={clsx(
             open ? "flex flex-col gap-[12px]" : "hidden",
-            "p-[12px] bg-[#0E0C12] w-[365px] rounded-[31px]"
+            "p-[12px] bg-[#0E0C12] w-[365px] rounded-[31px] duration-300 ease-in-out"
           )}
         >
           <div className="py-[18px] px-[24px] flex flex-col gap-[24px] text-[16px] font-[500]">
