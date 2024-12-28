@@ -1,6 +1,7 @@
 import { logo } from "@/svg";
+import { Dialog, DialogPanel } from "@headlessui/react";
 import Link from "next/link";
-import React from "react";
+import React, { FC, Fragment, useState } from "react";
 
 export const HeaderCases = () => {
   return (
@@ -53,36 +54,5 @@ export const HeaderCases = () => {
         </div>
       </div>
     </header>
-  );
-};
-
-export const ProductItem = (props: {
-  image: string;
-  title?: string;
-  description?: string;
-}) => {
-  return (
-    <div className="p-[10px] md:p-[25px] bg-[#191520] h-max rounded-[8px]">
-      <figure>
-        <img
-          alt="Screenshot of Game 4"
-          className="w-full rounded-[8px]"
-          src={props.image}
-          loading="lazy"
-        />
-      </figure>
-
-      {props?.title && (
-        <p className="font-bold text-[16px] md:text-[30px] md:leading-[36px] mt-[8px] md:mt-[35px]">
-          {props.title}
-        </p>
-      )}
-
-      {props?.description && (
-        <p className="text-[#8D8D8D] text-[14px] md:text-[25px] md:leading-[30px]">
-          {props.description}
-        </p>
-      )}
-    </div>
   );
 };

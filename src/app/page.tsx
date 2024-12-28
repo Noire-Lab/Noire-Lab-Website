@@ -2,7 +2,6 @@ import { Button } from "@/components/Button";
 import {
   arrowOutlined,
   arrowOutlinedSmall,
-  house,
   logo,
   logoSmall,
   ourServices,
@@ -57,15 +56,20 @@ export default function Home() {
       </header>
 
       <section className="py-[35px] px-[16px] md:p-[70px] h-[405px] md:h-[655px] relative">
-        <h1 className="md:text-[60px] leading-[40px] text-[32px] font-bold text-center md:leading-[60px]">
+        <h1 className="md:whitespace-nowrap md:text-[60px] leading-[40px] text-[32px] font-bold text-center md:leading-[60px]">
           <span className="text-[#855CFF]">Modern Solutions</span> for <br />
-          the IGaming Industry
+          <span className="">the IGaming Industry</span>
         </h1>
-        <img
-          src="/chemistry-flask.png"
-          className="z-10 absolute top-[58.5%] md:top-[57.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[374px] h-[300px] md:h-[477px] object-contain"
-          alt="flask"
-        />
+        <video
+          className="-z-10  absolute top-[67.5%] md:top-[68.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] max-w-[400px] md:max-w-max md:min-h-[550px] md:h-[550px]"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/videos/flask.mov" type="video/quicktime;" />
+          <source src="/videos/flask.webm" type="video/webm;" />
+        </video>
       </section>
 
       <section className="py-[35px] px-[16px] md:p-[70px]">
@@ -81,7 +85,7 @@ export default function Home() {
 
         <div className="h-[440px] md:h-[660px] w-[140%] mt-[30px] mb-[30px] md:mb-[60px] md:mt-[50px] landscape:translate-x-[-100px] translate-x-[-110px] rotate-[-3.41deg] relative overflow-hidden">
           <svg
-            className="hidden md:block absolute top-[19%] left-[50%] transform [@media(max-width:1024px)]:translate-x-[-56.5%] translate-x-[-68%] translate-y-[-50%] rotate-[5deg]"
+            className="hidden md:block absolute top-[19%] left-[50%] transform [@media(max-width:1024px)]:translate-x-[-53.5%] translate-x-[-68%] translate-y-[-50%] rotate-[5deg]"
             width="771"
             height="315"
             viewBox="0 0 771 315"
@@ -99,7 +103,7 @@ export default function Home() {
           </svg>
 
           <svg
-            className="md:hidden absolute top-[17.5%] left-[50%] transform landscape:translate-x-[-62%]  translate-x-[-40%] -translate-y-1/2 rotate-[3.41deg]"
+            className="md:hidden absolute top-[17.5%] left-[55%] transform landscape:translate-x-[-62%]  translate-x-[-45%] -translate-y-1/2 rotate-[3.41deg]"
             width="299"
             height="176"
             viewBox="0 0 299 176"
@@ -117,19 +121,16 @@ export default function Home() {
           </svg>
 
           <div className="rotate-[3.41deg] w-full h-[356px] absolute bottom-0 ">
-            <img
-              loading="lazy"
-              src="/girl3.png"
-              className="block lg:hidden absolute z-[1000] left-[50%] transform translate-x-[-40%] landscape:translate-x-[-50%] bottom-0 w-[450px] md:w-[788px]"
-              alt="girl"
-            />
-
-            <img
-              loading="lazy"
-              src="/girl3.png"
-              className="hidden lg:block absolute z-[1000] left-[50%] transform translate-x-[-60%] bottom-0 w-[450px] md:w-[788px]"
-              alt="girl"
-            />
+            <video
+              className="absolute z-[1000] left-[50%] transform translate-x-[-40%] lg:translate-x-[-50%] bottom-[-140px] md:bottom-[-250px] max-h-[600px]  md:min-h-[900px] md:max-h-[900px]"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src="/videos/girl_home.mov" type="video/quicktime;" />
+              <source src="/videos/girl_home.webm" type="video/webm;" />
+            </video>
           </div>
 
           <div className="bg-[#191520] -z-10 h-[230px] md:h-[356px] w-full absolute bottom-0"></div>
@@ -140,7 +141,7 @@ export default function Home() {
             <Button
               type="button"
               variant="filled"
-              className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto"
+              className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-white hover:text-[#191520] ease-in-out duration-150"
               aria-label="See all cases"
             >
               See all cases
@@ -151,7 +152,7 @@ export default function Home() {
             <Button
               type="button"
               variant="outline"
-              className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto"
+              className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-white hover:text-[#191520] ease-in-out duration-150"
               aria-label="Make an order"
             >
               Make an order
@@ -192,7 +193,7 @@ export default function Home() {
             <Button
               type="button"
               variant="filled"
-              className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto"
+              className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-white hover:text-[#191520] ease-in-out duration-150"
               aria-label="To the games"
             >
               To the games
@@ -203,7 +204,7 @@ export default function Home() {
             <Button
               type="button"
               variant="outline"
-              className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto"
+              className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-white hover:text-[#191520] ease-in-out duration-150"
               aria-label="Make an order"
             >
               Make an order
@@ -217,24 +218,46 @@ export default function Home() {
           <h2 className="font-bold text-[21px] leading-[25px] md:leading-normal md:text-[36px] text-center mb-[30px] md:mb-[40px]">
             Products for promotion
           </h2>
-
-          <img
-            src="/tv.png"
+          <video
             className="hidden md:block w-full mx-auto mb-[40px]"
-            alt="tv"
-          />
-          <img
-            src="/tv2.png"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source
+              src="/videos/TV animation (safari).mov"
+              type="video/quicktime;"
+            />
+            <source
+              src="/videos/TV animation (chrome).webm"
+              type="video/webm;"
+            />
+          </video>
+
+          <video
             className="block md:hidden object-contain w-full max-h-[325px] mx-auto mb-[30px]"
-            alt="tv"
-          />
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source
+              src="/videos/TV animation (safari mobile).mov"
+              type="video/quicktime;"
+            />
+            <source
+              src="/videos/TV animation (chrome mobile).webm"
+              type="video/webm;"
+            />
+          </video>
 
           <div className="flex flex-wrap flex-col md:flex-row items-center justify-center gap-[12px] md:gap-[20px]">
             <Link href="/cases/products-gambling">
               <Button
                 type="button"
                 variant="filled"
-                className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto"
+                className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-white hover:text-[#191520] ease-in-out duration-150"
               >
                 See all products
               </Button>
@@ -244,7 +267,7 @@ export default function Home() {
               <Button
                 type="button"
                 variant="outline"
-                className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto"
+                className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-white hover:text-[#191520] ease-in-out duration-150"
               >
                 See all products
               </Button>
@@ -358,7 +381,22 @@ export default function Home() {
           </div>
 
           <figure className="-z-10 lg:z-0 h-[624px] lg:h-[690px] w-[299px] absolute bottom-[-30px] lg:top-1/2 left-[48%] transform -translate-x-1/2 lg:-translate-y-1/2 overflow-hidden">
-            <img src="/girl2.png" className="object-cover h-full" alt="girl" />
+            <video
+              className="object-cover h-full"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source
+                src="/videos/girl 2 (safari).mov"
+                type="video/quicktime;"
+              />
+              <source
+                src="/videos/girl 2 (chrome).webm"
+                type="video/webm;"
+              />
+            </video>
           </figure>
 
           <div className="flex flex-col items-center gap-[12px] lg:gap-[40px] w-full lg:w-[480px] mt-[228px] lg:m-0">
@@ -367,7 +405,7 @@ export default function Home() {
                 <p className="text-[36px] lg:text-[45px] font-bold text-center leading-9 lg:leading-[45px] uppercase mb-[12px] lg:mb-[16px]">
                   PARTNERSHIP <br /> ROADMAP
                 </p>
-                <div className="flex items-center gap-[12px] w-max mx-auto">
+                <div className="flex items-center gap-[12px] w-max mx-auto hover:opacity-80 ease-in-out duration-150">
                   <p className="text-[18px] lg:text-[24px]">Check now</p>{" "}
                   <div className="hidden lg:block">{arrowOutlined}</div>
                   <div className="lg:hidden block">{arrowOutlinedSmall}</div>
@@ -381,7 +419,7 @@ export default function Home() {
                   Promotion <br /> tools
                 </p>
 
-                <div className="flex items-center gap-[12px] w-max mx-auto">
+                <div className="flex items-center gap-[12px] w-max mx-auto hover:opacity-80 ease-in-out duration-150">
                   <p className="text-[18px] lg:text-[24px]">Check now</p>
                   <div className="hidden lg:block">{arrowOutlined}</div>
                   <div className="lg:hidden block">{arrowOutlinedSmall}</div>
@@ -424,15 +462,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-[35px] md:pt-[136px] md:pb-[40px] px-[16px]">
-        <div className="bg-[#855CFF] mx-auto hidden xl:flex h-[224px] w-full max-w-[1235px] justify-between items-center text-[95px] font-bold uppercase relative rounded-[500px] px-[91px]">
+      <section className="overflow-hidden pt-[35px] mb-[35px] md:pt-[136px] md:mb-[40px] px-[16px]">
+        <div className=" bg-[#855CFF] mx-auto hidden xl:flex h-[224px] w-full max-w-[1235px] justify-between items-center text-[95px] font-bold uppercase relative rounded-[500px] px-[91px]">
           <p>LET&#96;S</p>
-          <img
-            loading="lazy"
-            src="/girl1-desktop.png"
-            className="w-[548px] absolute bottom-0 left-1/2 transform -translate-x-1/2"
-            alt="girl"
-          />
+          <video
+            className="w-[625px] absolute bottom-[-200px] left-[50%] transform -translate-x-1/2"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source
+              src="/videos/girl thumbs down (safari).mov"
+              type="video/quicktime;"
+            />
+            <source
+              src="/videos/girl thumbs down (safari).webm"
+              type="video/webm;"
+            />
+          </video>
           <p>talk</p>
         </div>
 
@@ -441,12 +489,22 @@ export default function Home() {
             <span>LET&#96;S</span> <span>talk</span>
           </p>
           <div className="h-[360px]">
-            <img
-              loading="lazy"
-              src="/girl1-mobile.png"
-              className="z-10 h-[360px] object-contain min-w-[500px] absolute bottom-0 left-1/2 transform -translate-x-1/2"
-              alt="girl"
-            />
+            <video
+              className="z-10 h-[760px] min-w-[600px] scale-x-[-1] absolute bottom-[-300px] left-1/2 transform -translate-x-1/2"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source
+                src="/videos/girl thumbs down (safari).mov"
+                type="video/quicktime;"
+              />
+              <source
+                src="/videos/girl thumbs down (chrome).webm"
+                type="video/webm;"
+              />
+            </video>
           </div>
         </div>
       </section>

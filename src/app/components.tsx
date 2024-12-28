@@ -20,14 +20,14 @@ export const Footer = () => {
           <Link href="/contact-us">
             <Button
               variant="outline"
-              className="h-[60px] leading-3 mb-[-20px] whitespace-nowrap"
+              className="h-[60px] leading-3 mb-[-20px]  whitespace-nowrap hover:bg-white hover:text-[#191520] ease-in-out duration-150"
             >
               Contact us
             </Button>
           </Link>
 
           <Link href="https://t.me/noire_lab_contacts" target="_blank">
-            <Button variant="outline" className="h-[60px]">
+            <Button variant="outline" className="h-[60px] hover:bg-white hover:text-[#191520] ease-in-out duration-150">
               Telegram
             </Button>
           </Link>

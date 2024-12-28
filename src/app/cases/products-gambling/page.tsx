@@ -1,4 +1,4 @@
-import { ProductItem } from "../components";
+import { ProductItem } from "@/app/components.client";
 
 const list = [
   {
