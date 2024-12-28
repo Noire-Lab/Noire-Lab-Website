@@ -454,7 +454,7 @@ export default function Home() {
               key={index}
               className={`${
                 index === 8 && "hidden md:flex"
-              } px-[16px] h-[90px] md:h-[180px] w-full bg-[#191520] flex items-center justify-center rounded-[7.5px] md:rounded-[15px]`}
+              } px-[16px] h-[90px] md:h-[180px] w-full bg-[#191520] flex items-center justify-center rounded-[7.5px] md:rounded-[15px] hover:bg-[#131018] duration-150 ease-in-out`}
             >
               <img src={"/casinos/" + name + extension} alt={name} />
             </div>

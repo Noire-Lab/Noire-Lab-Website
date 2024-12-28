@@ -214,7 +214,7 @@ export const Navigation = () => {
             <Link
               href="/contact-us"
               onClick={() => setOpen(false)}
-              className="bg-[#A863FF] rounded-[500px] flex items-center justify-center h-[48px]"
+              className="bg-[#A863FF] rounded-[500px] flex items-center justify-center h-[48px] hover:bg-[#131018]"
             >
               <p>Contact us</p>
             </Link>
