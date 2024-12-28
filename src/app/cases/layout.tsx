@@ -18,7 +18,7 @@ export default function Layout({
           <Button
             type="button"
             variant="filled"
-            className=" h-[41px] md:h-[56px] font-bold text-[16px] md:text-[20px]"
+            className="h-[41px] md:h-[56px] font-bold text-[16px] md:text-[20px] hover:bg-[#563AA7]"
             aria-label="Make an order"
             title="Make an order"
           >

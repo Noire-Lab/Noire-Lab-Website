@@ -141,7 +141,7 @@ export default function Home() {
             <Button
               type="button"
               variant="filled"
-              className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-white hover:text-[#191520] ease-in-out duration-150"
+              className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-[#563AA7] ease-in-out duration-150"
               aria-label="See all cases"
             >
               See all cases
@@ -257,7 +257,7 @@ export default function Home() {
               <Button
                 type="button"
                 variant="filled"
-                className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-white hover:text-[#191520] ease-in-out duration-150"
+                className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-[#563AA7] ease-in-out duration-150"
               >
                 See all products
               </Button>
@@ -267,7 +267,7 @@ export default function Home() {
               <Button
                 type="button"
                 variant="outline"
-                className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-white hover:text-[#191520] ease-in-out duration-150"
+                className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-[#563AA7] ease-in-out duration-150"
               >
                 See all products
               </Button>
