@@ -66,12 +66,12 @@ export const Footer = () => {
           <li className="h-[33.6px]">
             <img
               src="/instagram.svg"
-              className="h-[33.6px]"
+              className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out"
               loading="eager"
               alt="instagram"
             />
           </li>
-          <li className="h-[33.6px]">
+          <li className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out">
             <img
               src="/behance.svg"
               className="h-[33.6px]"
@@ -79,7 +79,7 @@ export const Footer = () => {
               alt="behance"
             />
           </li>
-          <li className="h-[33.6px]">
+          <li className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out">
             <img
               src="/linkedin.svg"
               className="h-[33.6px]"
@@ -87,7 +87,7 @@ export const Footer = () => {
               alt="linkedin"
             />
           </li>
-          <li className="h-[33.6px]">
+          <li className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out">
             <img
               src="/dribble.png"
               className="h-[33.6px]"
