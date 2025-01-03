@@ -565,7 +565,7 @@ export const MakeOrderButton = () => {
   );
 };
 
-export const ContactImagePreviewModal: FC = () => {
+export const ContactForm: FC = () => {
   const open = useAppStore((s) => s.open);
   const setOpen = useAppStore((s) => s.setOpen);
   const onClose = () => setOpen(false);

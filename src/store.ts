@@ -6,6 +6,6 @@ type AppStore = {
 };
 
 export const useAppStore = create<AppStore>()((set) => ({
-  open: true,
+  open: false,
   setOpen: (open) => set({ open }),
 }));
