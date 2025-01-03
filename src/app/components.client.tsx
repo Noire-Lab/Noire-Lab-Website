@@ -517,7 +517,7 @@ export const ConctactForm = () => {
             id="privacy-checkbox"
             type="checkbox"
             className={
-              "hover:cursor-pointer peer appearance-none w-[21px] h-[21px] border-2 border-white rounded-[8px] bg-transparent " +
+              "hover:cursor-pointer peer appearance-none w-[21px] h-[21px] border-2 border-white rounded-[4px] bg-transparent " +
               `${
                 !!errors.acceptedTerms?.message &&
                 "text-red-500 border-red-500 border"
