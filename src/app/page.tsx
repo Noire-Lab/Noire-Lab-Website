@@ -119,7 +119,7 @@ export default async function Home() {
 
           <div className="rotate-[3.41deg] w-full h-[356px] absolute bottom-0">
             <video
-              className="absolute z-[1000] left-[50%] transform translate-x-[-61.5%] md:translate-x-[-50%] bottom-[-140px] md:bottom-[-250px] max-h-[600px] md:min-h-[900px] md:max-h-[900px]"
+              className="absolute z-[1000] left-[50%] transform translate-x-[-61.5%] md:translate-x-[-52%] bottom-[-140px] md:bottom-[-250px] max-h-[600px] md:min-h-[900px] md:max-h-[900px]"
               autoPlay
               loop
               muted
