@@ -1,13 +1,22 @@
-import React, { FC } from "react";
-import { HeaderCases } from "../cases/components";
 import { Slot } from "../components";
-
 
 export default function Page() {
   return (
     <div>
-      <HeaderCases />
-
+      <picture>
+        <source
+          srcSet="/roadmap-mobile.png"
+          media="(max-width: 768px)"
+          type="image/png"
+        />
+        <source
+          srcSet="/roadmap.png"
+          media="(min-width: 769px)"
+          type="image/png"
+        />
+        <img src="/roadmap.png" loading="lazy" alt="roadmap" />
+      </picture>
+      
       <section className="py-[35px] px-[16px] md:py-[70px] mx-auto max-w-[846px] grid md:grid-cols-2 gap-y-[16px] md:gap-y-0 md:gap-x-[12px]">
         <div className="hidden md:flex items-center justify-center">
           <h3 className="uppercase font-bold text-[100px] scale-x-90">

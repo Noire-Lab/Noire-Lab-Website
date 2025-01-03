@@ -1,23 +1,17 @@
 "use client";
-import { Button } from "@/components/Button";
-import {
-  bag,
-  behance,
-  burgerMenu,
-  close,
-  dribble,
-  house,
-  instagram,
-  linkedin,
-  phone,
-} from "@/svg";
+import { Button } from "@/app/components";
+import { useAppStore } from "@/store";
+import { bag, burgerMenu, check, close, house, phone } from "@/svg";
 import { Dialog, DialogPanel } from "@headlessui/react";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { clsx } from "clsx/lite";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FC, Fragment, useMemo, useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import * as yup from "yup";
 
-export const NavigationCases = () => {
+export const NavigateProducts = () => {
   const path = usePathname();
 
   const isActive = (match: string, currentPath = path) => {
@@ -47,9 +41,10 @@ export const NavigationCases = () => {
 
         <Link href="/cases/games">
           <Button
+            disabled
             variant="outline"
-            className={`hover:bg-[#855CFF33] h-[41px] md:h-[53px] px-[36px] border-[#855CFF!important] border-[2px!important] ${
-              isGames ? " bg-[#855CFF] border-[#855CFF!important]" : ""
+            className={`hover:bg-[#855CFF33] hover:cursor-not-allowed h-[41px] md:h-[53px] px-[36px] text-[#2F293C] border-[#2F293C!important] border-[2px!important] ${
+              isGames ? " bg-[#2F293C] border-[#855CFF!important]" : ""
             }`}
             aria-label="Games"
           >
@@ -201,12 +196,40 @@ export const Navigation = () => {
             </div>
             <hr className="border-t border-[#FFFFFF26] w-full" />
             <div>
-              <div className="flex flex-col gap-[8px] justify-start">
-                <div className="w-[81px] h-[16px]">{instagram}</div>
-                <div className="w-[73px] h-[16px]">{behance}</div>
-                <div className="w-[66px] h-[16px]">{dribble}</div>
-                <div className="w-[73px] h-[16px]">{linkedin}</div>
-              </div>
+              <ul className="flex flex-col gap-[8px] justify-start">
+                <li className="w-[66px] h-[16px]">
+                  <img
+                    src="/instagram.svg"
+                    className="h-[16px]"
+                    loading="eager"
+                    alt="instagram"
+                  />
+                </li>
+                <li className="w-[66px] h-[16px]">
+                  <img
+                    src="/behance.svg"
+                    className="h-[16px]"
+                    loading="eager"
+                    alt="behance"
+                  />
+                </li>
+                <li className="w-[66px] h-[16px]">
+                  <img
+                    src="/linkedin.svg"
+                    className="h-[16px]"
+                    loading="eager"
+                    alt="linkedin"
+                  />
+                </li>
+                <li className="w-[66px] h-[16px]">
+                  <img
+                    src="/dribble.png"
+                    className="h-[16px]"
+                    loading="eager"
+                    alt="dribble"
+                  />
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -241,10 +264,11 @@ export const ProductItem = (props: {
   description?: string;
 }) => {
   const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
   return (
     <Fragment>
       <div
-        onClick={() => setOpen(true)}
+        onClick={handleOpen}
         className="p-[10px] md:p-[25px] bg-[#191520] h-max rounded-[8px] hover:bg-purple group duration-150 ease-in-out cursor-pointer"
       >
         <figure>
@@ -268,12 +292,16 @@ export const ProductItem = (props: {
           </p>
         )}
       </div>
-      <Modal open={open} onClose={() => setOpen(false)} image={props.image} />
+      <ImagePreviewModal
+        open={open}
+        onClose={() => setOpen(false)}
+        image={props.image}
+      />
     </Fragment>
   );
 };
 
-export const Modal: FC<{
+export const ImagePreviewModal: FC<{
   open: boolean;
   onClose: () => void;
   image: string;
@@ -281,7 +309,7 @@ export const Modal: FC<{
   return (
     <Dialog open={open} onClose={onClose}>
       <div className="fixed z-50 top-0 left-0 right-0 bottom-0 grid place-items-center bg-[rgba(0,0,0,0.5)] px-[12px]">
-        <DialogPanel className="relative max-lg:h-[80vh] lg:w-[80vw] landscape:max-md:w-[80vh]  duration-150 ease-in-out rounded-[24px] overflow-hidden">
+        <DialogPanel className="relative max-h-screen max-lg:h-[80vh] lg:w-[80vw] landscape:max-md:w-[80vh]  duration-150 ease-in-out rounded-[24px] overflow-hidden">
           <figure className="relative w-full h-full">
             <button
               onClick={onClose}
@@ -305,12 +333,256 @@ export const Modal: FC<{
               </svg>
             </button>
             <img
-              loading="lazy"
               src={image}
-              alt="picture"
               className="w-full h-full object-contain"
+              loading="lazy"
+              alt="picture"
             />
           </figure>
+        </DialogPanel>
+      </div>
+    </Dialog>
+  );
+};
+
+type FormPayload = {
+  name: string;
+  email: string;
+  message: string;
+  price: string;
+  acceptedTerms: boolean;
+};
+
+const prices = {
+  entryLevel: "$25 - $500",
+  budget: "$500 - $10K",
+  standard: "$10K - $50K",
+  premium: "$50K+",
+};
+
+const validationSchema = yup.object().shape({
+  name: yup.string().min(2).max(100).required(),
+  email: yup.string().min(2).max(100).required(),
+  message: yup.string().min(10).max(1000).required(),
+  price: yup.string().required(),
+  acceptedTerms: yup.boolean().required(),
+});
+
+export const ConctactForm = () => {
+  const [loading, setLoading] = useState(false);
+  const {
+    watch,
+    setValue,
+    register,
+    handleSubmit,
+    reset,
+    clearErrors,
+    formState: { errors, isDirty, isValid },
+  } = useForm<FormPayload>({
+    resolver: yupResolver(validationSchema),
+    defaultValues: {
+      email: "",
+      name: "",
+      message: "",
+      price: prices.entryLevel,
+    },
+    mode: "all",
+  });
+
+  const selectedPriceWatcher = watch("price");
+
+  const onSubmit: SubmitHandler<FormPayload> = async (formData) => {
+    setLoading(true);
+    try {
+      await fetch(window.location.origin + "/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+    } catch (error) {
+    } finally {
+      reset();
+      clearErrors();
+      setLoading(false);
+    }
+  };
+
+  return (
+    <form
+      id="contact-form"
+      autoComplete="on"
+      className="max-w-[825px] flex flex-wrap flex-col gap-[24px]"
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <div className="flex flex-col gap-[12px]">
+        <input
+          type="text"
+          placeholder="Your Name"
+          autoComplete="name"
+          className={clsx(
+            !!errors.email?.message && "text-red-500 border-red-500 border-2",
+            "h-[32px] bg-[#0E0C12] rounded-[8px] py-[8px] px-[16px] text-[18px] placeholder-[#352D43]"
+          )}
+          {...register("name")}
+        />
+
+        <input
+          type="text"
+          placeholder="Your Email or Messenger"
+          autoComplete="email"
+          className={clsx(
+            !!errors.email?.message && "text-red-500 border-red-500 border-2",
+            "h-[32px] bg-[#0E0C12] rounded-[8px] py-[8px] px-[16px] text-[18px] placeholder-[#352D43]"
+          )}
+          {...register("email")}
+        />
+
+        <textarea
+          placeholder="Your Message"
+          autoComplete="off"
+          className={clsx(
+            !!errors.message?.message && "text-red-500 border-red-500 border-2",
+            "bg-[#0E0C12] min-h-[32px] h-[92px] rounded-[8px] py-[8px] leading-[20px] px-[16px] text-[18px] placeholder-[#352D43]"
+          )}
+          {...register("message")}
+        />
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-[12px] text-[20px] text-nowrap font-bold">
+        <Button
+          type="button"
+          variant="outline"
+          onClick={() => setValue("price", prices.entryLevel)}
+          className={`w-[176px] h-[56px] px-[32px] hover:bg-white hover:text-[#191520] ease-in-out duration-150 ${
+            selectedPriceWatcher === prices.entryLevel &&
+            "bg-white text-[#0E0C12!important]"
+          }`}
+        >
+          {prices.entryLevel}
+        </Button>
+
+        <Button
+          type="button"
+          variant="outline"
+          onClick={() => setValue("price", prices.budget)}
+          className={`w-[190px] h-[56px] px-[32px] hover:bg-white hover:text-[#191520] ease-in-out duration-150 ${
+            selectedPriceWatcher === prices.budget &&
+            "bg-white text-[#0E0C12!important]"
+          }`}
+        >
+          {prices.budget}
+        </Button>
+
+        <Button
+          type="button"
+          variant="outline"
+          onClick={() => setValue("price", prices.standard)}
+          className={`w-[190px] h-[56px] px-[32px] hover:bg-white hover:text-[#191520] ease-in-out duration-150 ${
+            selectedPriceWatcher === prices.standard &&
+            "bg-white text-[#0E0C12!important]"
+          }`}
+        >
+          {prices.standard}
+        </Button>
+
+        <Button
+          type="button"
+          variant="outline"
+          onClick={() => setValue("price", prices.premium)}
+          className={`w-[132px] h-[56px] px-[32px] hover:bg-white hover:text-[#191520] ease-in-out duration-150 ${
+            selectedPriceWatcher === prices.premium &&
+            "bg-white text-[#0E0C12!important]"
+          }`}
+        >
+          {prices.premium}
+        </Button>
+      </div>
+
+      <Button
+        type="submit"
+        variant="filled"
+        disabled={!isDirty || !isValid}
+        className={`h-[56px] px-[60px] py-[12px] mx-auto text-[20px] font-bold disabled:bg-[#563AA7] ${
+          (!isDirty || !isValid) && "text-[#D9D9D9] hover:cursor-not-allowed"
+        }`}
+      >
+        {loading ? "Sending..." : "Send a message"}
+      </Button>
+
+      <div className="flex justify-center gap-[8px] mx-auto">
+        <div className="relative flex items-center justify-center">
+          <input
+            id="privacy-checkbox"
+            type="checkbox"
+            className={
+              "hover:cursor-pointer peer appearance-none w-[21px] h-[21px] border-2 border-white rounded-[8px] bg-transparent " +
+              `${
+                !!errors.acceptedTerms?.message &&
+                "text-red-500 border-red-500 border"
+              } `
+            }
+            {...register("acceptedTerms")}
+          />
+          <label
+            htmlFor="privacy-checkbox"
+            className="hover:cursor-pointer hidden peer-checked:block absolute top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          >
+            {check}
+          </label>
+        </div>
+
+        <label
+          htmlFor="privacy-checkbox"
+          className="hover:cursor-pointer text-[16px] font-normal leading-[20px]"
+        >
+          By checking this box, I agree <br className="md:hidden" /> to the
+          Noire Lab{" "}
+          <Link href="/privacy-policy" className="text-[#855CFF]">
+            Privacy Policy
+          </Link>
+        </label>
+      </div>
+    </form>
+  );
+};
+
+export const MakeOrderButton = () => {
+  const setOpen = useAppStore((s) => s.setOpen);
+  const handleClick = () => setOpen(true);
+
+  return (
+    <Button
+      type="button"
+      variant="outline"
+      onClick={handleClick}
+      className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-white hover:text-[#191520] ease-in-out duration-150"
+      aria-label="Make an order"
+    >
+      Make an order
+    </Button>
+  );
+};
+
+export const ContactImagePreviewModal: FC = () => {
+  const open = useAppStore((s) => s.open);
+  const setOpen = useAppStore((s) => s.setOpen);
+  const onClose = () => setOpen(false);
+
+  return (
+    <Dialog open={open} onClose={onClose}>
+      <div className="fixed z-50 top-0 left-0 right-0 bottom-0 grid place-items-center bg-[rgba(0,0,0,0.5)] px-[12px]">
+        <DialogPanel className="bg-[#191520] p-[16px] md:p-[50px] rounded-[32px] relative duration-150 ease-in-out overflow-hidden">
+          <h1 className="text-center text-[16px] font-bold mb-[24px] md:text-[40px] md:leading-[50px]">
+            <div className="text-nowrap">
+              Hello!{" "}
+              <span className="text-purple">Tell us how we can help you</span>{" "}
+              and
+            </div>
+            <span className="">we`ll write you back as fast as we can</span>
+          </h1>
+          <ConctactForm />
         </DialogPanel>
       </div>
     </Dialog>

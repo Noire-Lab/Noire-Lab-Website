@@ -1,12 +1,26 @@
-import React, { FC } from "react";
-import { HeaderCases } from "../cases/components";
 import { SlotTools } from "../components";
 
 export default function Page() {
   return (
     <div>
-      <HeaderCases />
-
+      <picture>
+        <source
+          srcSet="/tools-mobile.png"
+          media="(max-width: 768px)"
+          type="image/png"
+        />
+        <source
+          srcSet="/tools.png"
+          media="(min-width: 769px)"
+          type="image/png"
+        />
+        <img
+          src="/tools.png"
+          loading="lazy"
+          alt="tools"
+        />
+      </picture>
+      
       <div className="py-[35px] px-[16px] md:py-[70px] mx-auto max-w-[846px] grid grid-cols-1 md:grid-cols-2 gap-y-[16px] md:gap-y-0 md:gap-x-[12px]">
         <SlotTools
           header={

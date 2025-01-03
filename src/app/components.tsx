@@ -1,16 +1,43 @@
-import { Button } from "@/components/Button";
-import {
-  behance,
-  behanceSmall,
-  dribble,
-  dribbleSmall,
-  instagram,
-  instagramSmall,
-  linkedin,
-  linkedinSmall,
-} from "@/svg";
 import Link from "next/link";
-import { FC } from "react";
+import { NotNull } from "yup";
+import { ButtonHTMLAttributes, FC, PropsWithChildren } from "react";
+
+type ButtonProps = PropsWithChildren<{
+  variant: "filled" | "outline";
+}> &
+  ButtonHTMLAttributes<HTMLButtonElement>;
+
+export const Button: FC<ButtonProps> = ({
+  children,
+  variant = "filled",
+  ...props
+}) => {
+  const baseStyles: ButtonProps["className"] =
+    "flex items-center justify-center rounded-[63px] px-[40px] leading-[20px]";
+
+  const variantStyles = (
+    type: ButtonProps["variant"]
+  ): ButtonProps["className"] => {
+    switch (type) {
+      case "filled":
+        return "bg-[#855CFF] text-white";
+      case "outline":
+        return "border-[3px] border-solid border-white text-white";
+    }
+  };
+
+  const combinedClassName: ButtonProps["className"] = `${baseStyles} ${variantStyles(
+    variant
+  )} ${props.className}`;
+
+  delete props.className;
+
+  return (
+    <button className={combinedClassName} {...props}>
+      {children}
+    </button>
+  );
+};
 
 export const Footer = () => {
   return (
@@ -27,22 +54,73 @@ export const Footer = () => {
           </Link>
 
           <Link href="https://t.me/noire_lab_contacts" target="_blank">
-            <Button variant="outline" className="h-[60px] hover:bg-white hover:text-[#191520] ease-in-out duration-150">
+            <Button
+              variant="outline"
+              className="h-[60px] hover:bg-white hover:text-[#191520] ease-in-out duration-150"
+            >
               Telegram
             </Button>
           </Link>
         </div>
-        <div className="hidden md:flex flex-wrap justify-center gap-[50px] mx-auto">
-          <div className="h-[33.6px]">{instagram}</div>
-          <div className="h-[33.6px]">{behance}</div>
-          <div className="h-[33.6px]">{linkedin}</div>
-          <div className="h-[33.6px]">{dribble}</div>
-        </div>
+        <ul className="hidden md:flex flex-wrap justify-center gap-[50px] mx-auto">
+          <li className="h-[33.6px]">
+            <img
+              src="/instagram.svg"
+              className="h-[33.6px]"
+              loading="eager"
+              alt="instagram"
+            />
+          </li>
+          <li className="h-[33.6px]">
+            <img
+              src="/behance.svg"
+              className="h-[33.6px]"
+              loading="eager"
+              alt="behance"
+            />
+          </li>
+          <li className="h-[33.6px]">
+            <img
+              src="/linkedin.svg"
+              className="h-[33.6px]"
+              loading="eager"
+              alt="linkedin"
+            />
+          </li>
+          <li className="h-[33.6px]">
+            <img
+              src="/dribble.png"
+              className="h-[33.6px]"
+              loading="eager"
+              alt="dribble"
+            />
+          </li>
+        </ul>
         <div className="md:hidden grid grid-cols-2 place-items-center mx-auto gap-[16px]">
-          {instagramSmall}
-          {behanceSmall}
-          {linkedinSmall}
-          {dribbleSmall}
+          <img
+            src="/instagram.svg"
+            className="h-[20px]"
+            loading="eager"
+            alt="instagram"
+          />
+          <img
+            src="/behance.svg"
+            className="h-[20px]"
+            loading="eager"
+            alt="behance"
+          />
+          <img
+            src="/linkedin.svg"
+            className="h-[20px]"
+            loading="eager"
+            alt="linkedin"
+          />
+          <img
+            src="/dribble.png"
+            className="h-[20px]"
+            loading="eager"
+            alt="dribble"
+          />
         </div>
         <div className="flex flex-wrap gap-[24px] md:justify-between justify-center items-center text-[16px] leading-[16px] font-light">
           <div className="flex gap-[46px] whitespace-nowrap">
@@ -61,12 +139,17 @@ export const Footer = () => {
 export const Slot: FC<{
   header?: React.ReactNode;
   descriptionList: React.ReactNode[];
-  color: string;
+  color: NotNull<React.CSSProperties["color"]>;
 }> = (props) => {
+  console.log(props.color);
   return (
     <div
-      style={{ backgroundColor: props.color }}
-      className={`p-[32px] md:px-[40px] md:py-[60px] rounded-[30px] flex flex-col gap-[20px] md:gap-[40px]`}
+      style={{
+        backgroundColor: props.color,
+        borderColor: props.color,
+        borderWidth: "5px",
+      }}
+      className={`hover:bg-[transparent!important] duration-300 ease-in-out p-[32px] md:px-[40px] md:py-[60px] rounded-[30px] flex flex-col gap-[20px] md:gap-[40px]`}
     >
       {props?.header && props.header}
       <ul className="text-[16px] md:text-[24px] leading-[25px] flex flex-col gap-[12px] md:gap-[38px]">
@@ -102,8 +185,12 @@ export const SlotTools: FC<{
 }> = (props) => {
   return (
     <div
-      style={{ backgroundColor: props.color }}
-      className={`p-[32px] md:px-[40px] md:py-[60px] rounded-[30px] flex flex-col gap-[20px] md:gap-[40px]`}
+      style={{
+        backgroundColor: props.color,
+        borderColor: props.color,
+        borderWidth: "5px",
+      }}
+      className={`hover:bg-[transparent!important] duration-300 ease-in-out p-[32px] md:px-[40px] md:py-[60px] rounded-[30px] flex flex-col gap-[20px] md:gap-[40px]`}
     >
       <div className="max-h-[102px] w-full flex items-center md:items-baseline justify-self-start md:text-center md:justify-center">
         {props?.header && <p className="mr-[12px]">{props.header}</p>}
@@ -119,3 +206,4 @@ export const SlotTools: FC<{
     </div>
   );
 };
+

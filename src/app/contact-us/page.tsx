@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/Button";
+import { Button } from "@/app/components";
 import { check, logo } from "@/svg";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Link from "next/link";
@@ -73,7 +73,7 @@ export default function Page() {
 
   return (
     <div className="bg-[#0E0C12]">
-      <header className="max-w-[1440px] h-[108px] relative md:h-[308px] overflow-hidden mx-auto">
+      <header className="relative ">
         <Link
           href="/"
           className="absolute z-10 mx-auto left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0  md:left-[calc(50%-90px)] md:top-[40px]"
@@ -81,20 +81,22 @@ export default function Page() {
           {logo}
         </Link>
 
-        <img
-          src="/bg2.webp"
-          loading="eager"
-          className="hidden md:block absolute md:top-[-290px] object-center w-full"
-          alt="background"
-        />
-         <img
-          src="/contact.png"
-          loading="eager"
-          className="block md:hidden absolute object-cover w-full"
-          alt="background"
-        />
+        <picture>
+          <source
+            srcSet="/contact-mobile.png"
+            media="(max-width: 768px)"
+            type="image/png"
+          />
+          <source
+            srcSet="/contact.png"
+            media="(min-width: 769px)"
+            type="image/png"
+          />
+          <img src="/contact.png" loading="lazy" alt="contact" />
+        </picture>
       </header>
-      <section className="py-[35px] md:py-[70px] px-[16px] w-full mx-auto">
+
+      <section className="py-[35px] md:py-[70px] px-[16px] w-full mx-auto bg-[#0E0C12]">
         <h1 className=" md:text-[40px] text-center md:leading-[50px] font-bold">
           <span className="text-[50px] leading-[28px] md:leading-normal md:text-[40px] text-purple md:text-white">
             Hello!
@@ -104,7 +106,7 @@ export default function Page() {
             Tell us how we can help you
           </span>
         </h1>
-        <h2 className="text-[16px] md:text-[24px] text-center md:leading-[50px] font-normal">
+        <h2 className="text-[16px] md:text-[24px] text-center md:leading-[50px] font-normal mb-[12px]">
           and we`ll write you back as fast as we can
         </h2>
 
@@ -145,7 +147,9 @@ export default function Page() {
             />
           </div>
 
-          <p className="text-[16px] text-center font-[500] md:hidden block">Your budget</p>
+          <p className="text-[16px] text-center font-[500] md:hidden block">
+            Your budget
+          </p>
 
           <div className="flex flex-wrap justify-center gap-[12px] text-[20px] text-nowrap font-bold">
             <Button
@@ -235,7 +239,8 @@ export default function Page() {
               htmlFor="privacy-checkbox"
               className="hover:cursor-pointer text-[16px] font-normal leading-[20px]"
             >
-              By checking this box, I agree <br className="md:hidden" /> to the Noire Lab{" "}
+              By checking this box, I agree <br className="md:hidden" /> to the
+              Noire Lab{" "}
               <Link href="/privacy-policy" className="text-[#855CFF]">
                 Privacy Policy
               </Link>

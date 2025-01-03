@@ -1,13 +1,9 @@
-import { Button } from "@/components/Button";
-import {
-  arrowOutlined,
-  arrowOutlinedSmall,
-  logo,
-  logoSmall,
-  ourServices,
-  ourServicesSmall,
-} from "@/svg";
+"use server";
+import { Button } from "@/app/components";
+import { arrowOutlined, arrowOutlinedSmall, logo, logoMobile } from "@/svg";
 import Link from "next/link";
+import { Fragment } from "react";
+import { ContactModal, MakeOrderButton } from "./components.client";
 
 const list = [
   {
@@ -36,7 +32,7 @@ const list = [
   },
   {
     name: "vavada",
-    extension: ".svg",
+    extension: ".png",
   },
   {
     name: "1xbet",
@@ -48,9 +44,10 @@ const list = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
   return (
-    <div className="">
+    <Fragment>
+      <ContactModal/>
       <header className="h-[50px] md:h-[108px] flex items-center justify-center">
         <Link href="/">{logo}</Link>
       </header>
@@ -75,7 +72,7 @@ export default function Home() {
       <section className="py-[35px] px-[16px] md:p-[70px]">
         <div className="translate-x-[-100px] h-[55px] w-[140%] bg-[#191520] flex items-center gap-[35px] rotate-[-3.41deg]">
           {Array(20)
-            .fill(logoSmall)
+            .fill(logoMobile)
             .map((logo, index) => (
               <div key={index} className="rotate-[5deg]">
                 {logo}
@@ -148,47 +145,26 @@ export default function Home() {
             </Button>
           </Link>
 
-          <Link href="/contact-us">
-            <Button
-              type="button"
-              variant="outline"
-              className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-white hover:text-[#191520] ease-in-out duration-150"
-              aria-label="Make an order"
-            >
-              Make an order
-            </Button>
-          </Link>
+          <MakeOrderButton />
         </div>
       </section>
 
-      <section className="py-[35px] md:p-[70px] flex flex-col gap-[30px] md:gap-[40px]">
-        <div className="h-[60px] md:h-[75px] px-[40px] flex items-center justify-center mx-auto w-max bg-[#191520] rounded-[40px]">
-          <h2 className="font-bold text-[21px] md:text-[36px]">
+      <section className="py-[35px] px-[16px] flex flex-col gap-[30px] md:gap-[40px]">
+        <div className="h-[60px] md:h-[75px] px-[40px] flex items-center justify-center mx-auto  bg-[#191520] rounded-[40px]">
+          <h2 className="font-bold text-[21px] md:text-[36px] text-center">
             Casino games development
           </h2>
         </div>
-
-        <div className="flex w-max mx-auto">
+        <div className="flex justify-center mx-auto max-w-[450px] md:max-w-[1050px]">
           <img
-            src="/game1.png"
-            className="object-contain w-[374px!important] md:w-[344px!important] h-[344px!important]"
-            alt="game"
-          />
-
-          <img
-            src="/game2.png"
-            className="hidden md:block object-contain w-[344px!important] h-[344px!important]"
-            alt="game"
-          />
-
-          <img
-            src="/game3.png"
-            className="hidden xl:block object-contain w-[344px!important] h-[344px!important]"
-            alt="game"
+            src="/coming soon.png"
+            className="object-cover  "
+            loading="lazy"
+            alt="Coming soon"
           />
         </div>
 
-        <div className="flex flex-wrap flex-col md:flex-row items-center justify-center gap-[12px] md:gap-[20px]">
+        {/* <div className="flex flex-wrap flex-col md:flex-row items-center justify-center gap-[12px] md:gap-[20px]">
           <Link href="/cases/games">
             <Button
               type="button"
@@ -210,7 +186,7 @@ export default function Home() {
               Make an order
             </Button>
           </Link>
-        </div>
+        </div> */}
       </section>
 
       <section className="py-[35px] px-[16px] md:p-[70px]">
@@ -392,10 +368,7 @@ export default function Home() {
                 src="/videos/girl 2 (safari).mov"
                 type="video/quicktime;"
               />
-              <source
-                src="/videos/girl 2 (chrome).webm"
-                type="video/webm;"
-              />
+              <source src="/videos/girl 2 (chrome).webm" type="video/webm;" />
             </video>
           </figure>
 
@@ -436,8 +409,24 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center mx-auto w-full max-w-[1296px]">
-          <div className="hidden md:block md:scale-100 ">{ourServices}</div>
-          <div className="block md:hidden ">{ourServicesSmall}</div>
+          <video
+            className="object-contain h-full md:hidden"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/videos/services mobile.mp4" type="video/mp4" />
+          </video>
+          <video
+            className="object-contain h-full hidden md:block"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/videos/services.mp4" type="video/mp4" />
+          </video>
         </div>
       </section>
 
@@ -508,6 +497,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </Fragment>
   );
 }
