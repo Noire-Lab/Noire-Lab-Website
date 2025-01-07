@@ -5,18 +5,18 @@ export default function Page() {
     <div>
       <picture>
         <source
-          srcSet="/tools-mobile.png"
+          srcSet="/tools-mobile.webp"
           media="(max-width: 768px)"
           type="image/png"
         />
         <source
-          srcSet="/tools.png"
+          srcSet="/tools.webp"
           media="(min-width: 769px)"
           type="image/png"
         />
         <img
-          src="/tools.png"
-          loading="lazy"
+          src="/tools.webp"
+          loading="eager"
           alt="tools"
         />
       </picture>
@@ -26,7 +26,7 @@ export default function Page() {
           header={
             <div className="md:hidden flex items-center">
               <img
-                src="/influencer.png"
+                src="/influencer.webp"
                 className="min-w-[85px] h-[85px] object-contain"
               />
             </div>
@@ -40,19 +40,19 @@ export default function Page() {
 
         <div className="hidden md:flex items-center">
           <img
-            src="/influencer.png"
+            src="/influencer.webp"
             className="scale-[.8] w-full object-contain"
           />
         </div>
         <div className="hidden md:flex items-center">
-          <img src="/media.png" className="scale-[.9] w-full object-cover" />
+          <img src="/media.webp" className="scale-[.9] w-full object-cover" />
         </div>
 
         <SlotTools
           header={
             <div className="md:hidden flex items-center">
               <img
-                src="/media.png"
+                src="/media.webp"
                 className="min-w-[85px] h-[85px] object-contain"
               />
             </div>
@@ -69,7 +69,7 @@ export default function Page() {
           header={
             <div className="md:hidden flex items-center">
               <img
-                src="/markets.png"
+                src="/markets.webp"
                 className="min-w-[85px] h-[85px] object-contain"
               />
             </div>
@@ -80,17 +80,17 @@ export default function Page() {
         />
 
         <div className="hidden md:flex items-center">
-          <img src="/markets.png" className="scale-[.9] w-full object-cover" />
+          <img src="/markets.webp" className="scale-[.9] w-full object-cover" />
         </div>
         <div className="hidden md:flex items-center">
-          <img src="/heart.png" className="scale-[.6] w-full object-cover" />
+          <img src="/heart.webp" className="scale-[.6] w-full object-cover" />
         </div>
 
         <SlotTools
           header={
             <div className="md:hidden flex items-center">
               <img
-                src="/heart.png"
+                src="/heart.webp"
                 className="min-w-[85px] h-[85px] object-contain"
               />
             </div>

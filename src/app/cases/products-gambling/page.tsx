@@ -1,32 +1,41 @@
-import { NavigateProducts, ProductItem } from "@/app/components.client";
+import {
+  NavigateProducts,
+  ProductItem,
+  ProductItemProps,
+} from "@/app/components.client";
 import { Button } from "@/app/components";
 import Link from "next/link";
 import { Fragment } from "react";
 
-const list = [
+const list: Pick<ProductItemProps, "link" | "type">[] = [
   {
-    image: "/products/product1.png",
+    link: "/videos/roobet.mp4",
+    type: "video",
   },
   {
-    image: "/products/product2.png",
+    link: "/products/product2.webp",
   },
   {
-    image: "/products/product3.png",
+    link: "/videos/sant.mp4",
+    type: "video",
   },
   {
-    image: "/products/product4.png",
+    link: "/videos/dante.mp4",
+    type: "video",
   },
   {
-    image: "/products/product5.png",
+    link: "/products/product5.webp",
   },
   {
-    image: "/products/product6.png",
+    link: "/products/product6.webp",
   },
   {
-    image: "/products/product7.png",
+    link: "/videos/tr.mp4",
+    type: "video",
   },
   {
-    image: "/products/product8.png",
+    link: "/videos/vulkan.mp4",
+    type: "video",
   },
 ];
 
@@ -35,18 +44,18 @@ export default function Page() {
     <Fragment>
       <picture>
         <source
-          srcSet="/gambling-products-mobile.png"
+          srcSet="/gambling-products-mobile.webp"
           media="(max-width: 768px)"
-          type="image/png"
+          type="image/webp"
         />
         <source
-          srcSet="/gambling-products.png"
+          srcSet="/gambling-products.webp"
           media="(min-width: 769px)"
-          type="image/png"
+          type="image/webp"
         />
         <img
-          src="/gambling-products.png"
-          loading="lazy"
+          src="/gambling-products.webp"
+          loading="eager"
           alt="web design gambling"
         />
       </picture>

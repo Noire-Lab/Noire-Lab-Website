@@ -102,7 +102,7 @@ export const Footer = () => {
           <li className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out">
             <a href="https://dribbble.com/NoireLab" target="_blank">
               <img
-                src="/dribble.png"
+                src="/dribble.webp"
                 className="h-[33.6px]"
                 loading="eager"
                 alt="dribble"
@@ -145,7 +145,7 @@ export const Footer = () => {
           </a>
           <a href="https://dribbble.com/NoireLab" target="_blank">
             <img
-              src="/dribble.png"
+              src="/dribble.webp"
               className="h-[20px]"
               loading="eager"
               alt="dribble"

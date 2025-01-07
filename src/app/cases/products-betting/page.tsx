@@ -4,25 +4,25 @@ import { Fragment } from "react";
 
 const list = [
   {
-    image: "/products/product9.png",
+    link: "/products/product9.webp",
   },
   {
-    image: "/products/product10.png",
+    link: "/products/product10.webp",
   },
   {
-    image: "/products/product11.png",
+    link: "/products/product11.webp",
   },
   {
-    image: "/products/product12.png",
+    link: "/products/product12.webp",
   },
   {
-    image: "/products/product13.png",
+    link: "/products/product13.webp",
   },
   {
-    image: "/products/product14.png",
+    link: "/products/product14.webp",
   },
   {
-    image: "/products/product15.png",
+    link: "/products/product15.webp",
   },
 ];
 
@@ -31,18 +31,18 @@ export default function Page() {
     <Fragment>
       <picture>
         <source
-          srcSet="/betting-products-mobile.png"
+          srcSet="/betting-products-mobile.webp"
           media="(max-width: 768px)"
-          type="image/png"
+          type="image/webp"
         />
         <source
-          srcSet="/betting-products.png"
+          srcSet="/betting-products.webp"
           media="(min-width: 769px)"
-          type="image/png"
+          type="image/webp"
         />
         <img
-          src="/betting-products.png"
-          loading="lazy"
+          src="/betting-products.webp"
+          loading="eager"
           alt="web design betting"
         />
       </picture>

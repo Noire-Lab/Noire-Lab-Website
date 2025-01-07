@@ -32,7 +32,7 @@ const list = [
   },
   {
     name: "vavada",
-    extension: ".png",
+    extension: ".webp",
   },
   {
     name: "1xbet",
@@ -58,7 +58,7 @@ export default async function Home() {
           <span className="">the IGaming Industry</span>
         </h1>
         <video
-          className="z-10 absolute top-[67.5%] md:top-[62.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] max-w-[400px] md:max-w-max md:min-h-[550px] md:h-[550px]"
+          className="z-10 absolute top-[67.5%] md:top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] max-w-[400px] md:max-w-max md:min-h-[550px] md:h-[550px]"
           autoPlay
           loop
           muted
@@ -151,13 +151,13 @@ export default async function Home() {
 
       <section className="py-[35px] px-[16px] flex flex-col gap-[30px] md:gap-[40px]">
         <div className="h-[60px] md:h-[75px] px-[40px] flex items-center justify-center mx-auto  bg-[#191520] rounded-[40px]">
-          <h2 className="font-bold text-[21px] md:text-[36px] text-center">
+          <h2 className="font-bold text-[21px] md:text-[36px] text-center text-nowrap">
             Casino games development
           </h2>
         </div>
         <div className="flex justify-center mx-auto max-w-[450px] md:max-w-[1050px]">
           <img
-            src="/coming soon.png"
+            src="/coming soon.webp"
             className="object-cover  "
             loading="lazy"
             alt="Coming soon"

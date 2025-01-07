@@ -5,32 +5,32 @@ import { Fragment } from "react";
 
 const list = [
   {
-    image: "/landings/landing1.png",
+    link: "/landings/landing1.webp",
     title: "Promo landing “Crypto Casino”",
     description: "Modern platform offering crypto betting with up to 100% bonuses.",
   },
   {
-    image: "/landings/landing2.png",
+    link: "/landings/landing2.webp",
     title: "Promo landing “Welcome Bonus”",
     description: "Exclusive welcome bonus of 1000 USDT for new players.",
   },
   {
-    image: "/landings/landing3.png",
+    link: "/landings/landing3.webp",
     title: "Promo landing “Sporting Events”",
     description: "Dynamic platform for betting on your favorite sporting competitions.",
   },
   {
-    image: "/landings/landing4.png",
+    link: "/landings/landing4.webp",
     title: "Promo landing “India Cricket”",
     description: "Celebrate the passion for cricket with exclusive betting offers.",
   },
   {
-    image: "/landings/landing5.png",
+    link: "/landings/landing5.webp",
     title: "Promo landing “E-Sports”",
     description: "Elevate your e-sports experience with exclusive bonuses and bets.",
   },
   {
-    image: "/landings/landing6.png",
+    link: "/landings/landing6.webp",
     title: "Promo landing “EPL”",
     description: "Your ultimate destination for betting on the Premier League.",
   },
@@ -41,18 +41,18 @@ export default function Page() {
     <Fragment>
       <picture>
         <source
-          srcSet="/web-design-betting-mobile.png"
+          srcSet="/web-design-betting-mobile.webp"
           media="(max-width: 768px)"
-          type="image/png"
+          type="image/webp"
         />
         <source
-          srcSet="/web-design-betting.png"
+          srcSet="/web-design-betting.webp"
           media="(min-width: 769px)"
-          type="image/png"
+          type="image/webp"
         />
         <img
-          src="/web-design-betting.png"
-          loading="lazy"
+          src="/web-design-betting.webp"
+          loading="eager"
           alt="web design betting"
         />
       </picture>

@@ -223,7 +223,7 @@ export const Navigation = () => {
                 <li className="min-w-[66px] h-[16px]">
                   <a href="https://dribbble.com/NoireLab" target="_blank">
                     <img
-                      src="/dribble.png"
+                      src="/dribble.webp"
                       className="h-[16px]"
                       loading="eager"
                       alt="dribble"
@@ -271,11 +271,17 @@ export const Navigation = () => {
     </Fragment>
   );
 };
-
-export const ProductItem = (props: {
-  image: string;
+export interface ProductItemProps {
   title?: string;
   description?: string;
+  link: string;
+  type?: "video" | "image";
+}
+export const ProductItem: FC<ProductItemProps> = ({
+  link,
+  type = "image",
+  description,
+  title,
 }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -285,32 +291,41 @@ export const ProductItem = (props: {
         onClick={handleOpen}
         className="p-[10px] md:p-[25px] bg-[#191520] h-max rounded-[8px] hover:bg-purple group duration-150 ease-in-out cursor-pointer"
       >
-        <figure>
-          <img
-            alt="Screenshot of Game"
-            className="w-full rounded-[8px]"
-            src={props.image}
-            loading="lazy"
-          />
-        </figure>
+        {type === "image" && (
+          <figure>
+            <img
+              alt="Screenshot of Game"
+              className="w-full rounded-[8px]"
+              src={link}
+              loading="lazy"
+            />
+          </figure>
+        )}
+        {type === "video" && (
+          <video controls autoPlay loop muted playsInline>
+            <source className="w-full rounded-[8px]" src={link} />
+          </video>
+        )}
 
-        {props?.title && (
+        {title && (
           <p className="font-bold text-[16px] md:text-[30px] md:leading-[36px] mt-[10px] md:mt-[35px]">
-            {props.title}
+            {title}
           </p>
         )}
 
-        {props?.description && (
+        {description && (
           <p className="text-[#8D8D8D] max-md:mt-[4px] md:mt-[8px] text-[14px] md:text-[25px] md:leading-[30px] group-hover:text-white duration-150 ease-in-out">
-            {props.description}
+            {description}
           </p>
         )}
       </div>
-      <ImagePreviewModal
-        open={open}
-        onClose={() => setOpen(false)}
-        image={props.image}
-      />
+      {type === "image" && (
+        <ImagePreviewModal
+          link={link}
+          open={open}
+          onClose={() => setOpen(false)}
+        />
+      )}
     </Fragment>
   );
 };
@@ -318,12 +333,11 @@ export const ProductItem = (props: {
 export const ImagePreviewModal: FC<{
   open: boolean;
   onClose: () => void;
-  image: string;
-}> = ({ open, onClose, image }) => {
+  link: string;
+}> = ({ open, onClose, link }) => {
   return (
     <Dialog open={open} onClose={onClose}>
       <div className="fixed z-50 top-0 left-0 right-0 bottom-0 grid place-items-center bg-[rgba(0,0,0,0.5)] px-[12px]">
-        {/* max-h-screen max-lg:h-[80vh] lg:w-[80vw] landscape:max-md:w-[80vh]  duration-150 ease-in-out rounded-[24px] overflow-hidden */}
         <DialogPanel className="relative duration-150 ease-in-out rounded-[24px] p-[32px] max-sm:p-[8px] overflow-hidden">
           <figure className="relative">
             <button
@@ -331,7 +345,7 @@ export const ImagePreviewModal: FC<{
               type="button"
               className=" group absolute grid place-items-center z-1 w-[56px] h-[56px] top-[24px] right-[24px] bg-[#0E0C12] rounded-[12px] hover:bg-white duration-150 ease-in-out"
             >
-              <svg  
+              <svg
                 width="29"
                 height="29"
                 viewBox="0 0 29 29"
@@ -348,9 +362,8 @@ export const ImagePreviewModal: FC<{
               </svg>
             </button>
             <img
-              src={image}
-              className="max-h-[65vh]  max-sm:w-full"
-              // style={{ width: "auto", height: "auto" }}
+              src={link}
+              className="max-h-[65vh] max-sm:w-full"
               loading="lazy"
               alt="picture"
             />

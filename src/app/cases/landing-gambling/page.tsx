@@ -4,32 +4,32 @@ import { Fragment } from "react";
 
 const list = [
   {
-    image: "/landings/landing7.png",
+    link: "/landings/landing7.webp",
     title: "New Year's Wheel of Fortune",
     description: "Engaging holiday-themed game to boost player interaction and rewards.",
   },
   {
-    image: "/landings/landing8.png",
+    link: "/landings/landing8.webp",
     title: "Casino landing page with a registration for",
     description: "Optimized landing page design to enhance user registration.",
   },
   {
-    image: "/landings/landing9.png",
+    link: "/landings/landing9.webp",
     title: "Wheel of Fortune",
     description: "Exciting spin-to-win game offering free spins and big prizes.",
   },
   {
-    image: "/landings/landing10.png",
+    link: "/landings/landing10.webp",
     title: "Landing page with a preview of the Gates of Olympus game",
     description: "Stunning showcase of Gates of Olympus with extra rewards.",
   },
   {
-    image: "/landings/landing11.png",
+    link: "/landings/landing11.webp",
     title: "Landing page with a preview of the Sugar Rush game",
     description: "Colorful and fun landing page showcasing the Sugar Rush game with free spins bonuses.",
   },
   {
-    image: "/landings/landing12.png",
+    link: "/landings/landing12.webp",
     title: "Promo landing page for the game WANTED",
     description: "Immersive Wild West-themed landing page designed to captivate players.",
   },
@@ -40,18 +40,18 @@ export default function Page() {
     <Fragment>
       <picture>
         <source
-          srcSet="/web-design-gambling-mobile.png"
+          srcSet="/web-design-gambling-mobile.webp"
           media="(max-width: 768px)"
-          type="image/png"
+          type="image/webp"
         />
         <source
-          srcSet="/web-design-gambling.png"
+          srcSet="/web-design-gambling.webp"
           media="(min-width: 769px)"
-          type="image/png"
+          type="image/webp"
         />
         <img
-          src="/web-design-gambling.png"
-          loading="lazy"
+          src="/web-design-gambling.webp"
+          loading="eager"
           alt="web design gambling"
         />
       </picture>
