@@ -80,7 +80,7 @@ export default async function Home() {
             ))}
         </div>
 
-        <div className="h-[540px] md:h-[660px] w-[calc(100%+500px)] mt-[30px] mb-[30px] md:mb-[60px] md:mt-[50px] landscape:translate-x-[-100px] translate-x-[-110px] rotate-[-3.41deg] relative overflow-hidden">
+        <div className="h-[480px] md:h-[660px] w-[calc(100%+500px)] mt-[30px] mb-[30px] md:mb-[60px] md:mt-[50px] landscape:translate-x-[-100px] translate-x-[-110px] rotate-[-3.41deg] relative overflow-hidden">
           <svg
             className="hidden md:block absolute top-[19%] left-[50%] transform  translate-x-[-68%] translate-y-[-50%] rotate-[5deg]"
             width="771"
@@ -100,7 +100,7 @@ export default async function Home() {
           </svg>
 
           <svg
-            className="md:hidden absolute top-[13.5%] left-[52%] transform translate-x-[-100%] -translate-y-1/2 rotate-[3.41deg]"
+            className="md:hidden absolute top-[15%] left-[52%] transform translate-x-[-100%] -translate-y-1/2 rotate-[3.41deg]"
             width="299"
             height="176"
             viewBox="0 0 299 176"
@@ -119,7 +119,7 @@ export default async function Home() {
 
           <div className="rotate-[3.41deg] w-full h-[356px] absolute bottom-0">
             <video
-              className="absolute z-[1000] left-[50%] transform translate-x-[-61.5%] md:translate-x-[-52%] bottom-[-140px] md:bottom-[-250px] max-h-[600px] md:min-h-[900px] md:max-h-[900px]"
+              className="absolute max-md:left-[47.5%] z-[1000] left-[50%] transform translate-x-[-61.5%] md:translate-x-[-52%] bottom-[-140px] md:bottom-[-250px] max-h-[540px] md:min-h-[900px] md:max-h-[900px]"
               autoPlay
               loop
               muted
@@ -416,7 +416,8 @@ export default async function Home() {
             muted
             playsInline
           >
-            <source src="/videos/services mobile.mp4" type="video/mp4" />
+            <source src="/videos/services-mobile.mov" type="video/quicktime;" />
+            <source src="/videos/services-mobile.webm" type="video/webm;" />
           </video>
           <video
             className="object-contain h-full hidden md:block"
@@ -425,7 +426,8 @@ export default async function Home() {
             muted
             playsInline
           >
-            <source src="/videos/services.mp4" type="video/mp4" />
+            <source src="/videos/services.mov" type="video/quicktime;" />
+            <source src="/videos/services.webm" type="video/webm;" />
           </video>
         </div>
       </section>

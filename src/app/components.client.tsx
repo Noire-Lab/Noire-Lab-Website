@@ -172,7 +172,7 @@ export const Navigation = () => {
         <nav
           className={clsx(
             open ? "flex flex-col gap-[12px]" : "hidden",
-            "p-[12px] bg-[#0E0C12] w-[365px] rounded-[31px] duration-300 ease-in-out"
+            "p-[12px] bg-[#0E0C12] w-[365px] border border-purple rounded-[31px] duration-300 ease-in-out"
           )}
         >
           <div className="py-[18px] px-[24px] flex flex-col gap-[24px] text-[16px] font-[500]">
@@ -197,37 +197,51 @@ export const Navigation = () => {
             <hr className="border-t border-[#FFFFFF26] w-full" />
             <div>
               <ul className="flex flex-col gap-[8px] justify-start">
-                <li className="w-[66px] h-[16px]">
-                  <img
-                    src="/instagram.svg"
-                    className="h-[16px]"
-                    loading="eager"
-                    alt="instagram"
-                  />
+                <li className="min-w-[66px] h-[16px]">
+                  <a
+                    href="https://www.instagram.com/noire_lab?igsh=MXFvZWE1eHNubXVjaQ%3D%3D&utm_source=qr"
+                    target="_blank"
+                  >
+                    <img
+                      src="/instagram.svg"
+                      className="h-[16px]"
+                      loading="eager"
+                      alt="instagram"
+                    />
+                  </a>
                 </li>
-                <li className="w-[66px] h-[16px]">
-                  <img
-                    src="/behance.svg"
-                    className="h-[16px]"
-                    loading="eager"
-                    alt="behance"
-                  />
+                <li className="min-w-[66px] h-[16px]">
+                  <a href="https://www.behance.net/noirelab" target="_blank">
+                    <img
+                      src="/behance.svg"
+                      className="h-[16px]"
+                      loading="eager"
+                      alt="behance"
+                    />
+                  </a>
                 </li>
-                <li className="w-[66px] h-[16px]">
-                  <img
-                    src="/linkedin.svg"
-                    className="h-[16px]"
-                    loading="eager"
-                    alt="linkedin"
-                  />
+                <li className="min-w-[66px] h-[16px]">
+                  <a href="https://dribbble.com/NoireLab" target="_blank">
+                    <img
+                      src="/dribble.png"
+                      className="h-[16px]"
+                      loading="eager"
+                      alt="dribble"
+                    />
+                  </a>
                 </li>
-                <li className="w-[66px] h-[16px]">
-                  <img
-                    src="/dribble.png"
-                    className="h-[16px]"
-                    loading="eager"
-                    alt="dribble"
-                  />
+                <li className="min-w-[66px] h-[16px]">
+                  <a
+                    href="https://www.linkedin.com/in/noire-lab-73a9b4344/"
+                    target="_blank"
+                  >
+                    <img
+                      src="/linkedin.svg"
+                      className="h-[16px]"
+                      loading="eager"
+                      alt="linkedin"
+                    />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -237,7 +251,7 @@ export const Navigation = () => {
             <Link
               href="/contact-us"
               onClick={() => setOpen(false)}
-              className="bg-[#A863FF] rounded-[500px] flex items-center justify-center h-[48px] hover:bg-[#563AA7]"
+              className="bg-[#A863FF] rounded-[500px] text-[16px] flex items-center justify-center h-[48px] hover:bg-[#563AA7]"
             >
               <p>Contact us</p>
             </Link>
@@ -281,13 +295,13 @@ export const ProductItem = (props: {
         </figure>
 
         {props?.title && (
-          <p className="font-bold text-[16px] md:text-[30px] md:leading-[36px] mt-[8px] md:mt-[35px]">
+          <p className="font-bold text-[16px] md:text-[30px] md:leading-[36px] mt-[10px] md:mt-[35px]">
             {props.title}
           </p>
         )}
 
         {props?.description && (
-          <p className="text-[#8D8D8D] text-[14px] md:text-[25px] md:leading-[30px] group-hover:text-white duration-150 ease-in-out">
+          <p className="text-[#8D8D8D] max-md:mt-[4px] md:mt-[8px] text-[14px] md:text-[25px] md:leading-[30px] group-hover:text-white duration-150 ease-in-out">
             {props.description}
           </p>
         )}
@@ -309,14 +323,15 @@ export const ImagePreviewModal: FC<{
   return (
     <Dialog open={open} onClose={onClose}>
       <div className="fixed z-50 top-0 left-0 right-0 bottom-0 grid place-items-center bg-[rgba(0,0,0,0.5)] px-[12px]">
-        <DialogPanel className="relative max-h-screen max-lg:h-[80vh] lg:w-[80vw] landscape:max-md:w-[80vh]  duration-150 ease-in-out rounded-[24px] overflow-hidden">
-          <figure className="relative w-full h-full">
+        {/* max-h-screen max-lg:h-[80vh] lg:w-[80vw] landscape:max-md:w-[80vh]  duration-150 ease-in-out rounded-[24px] overflow-hidden */}
+        <DialogPanel className="relative duration-150 ease-in-out rounded-[24px] p-[32px] max-sm:p-[8px] overflow-hidden">
+          <figure className="relative">
             <button
               onClick={onClose}
               type="button"
-              className="group absolute grid place-items-center z-1 w-[56px] h-[56px] top-[24px] right-[24px] bg-[#0E0C12] rounded-[12px] hover:bg-white duration-150 ease-in-out"
+              className=" group absolute grid place-items-center z-1 w-[56px] h-[56px] top-[24px] right-[24px] bg-[#0E0C12] rounded-[12px] hover:bg-white duration-150 ease-in-out"
             >
-              <svg
+              <svg  
                 width="29"
                 height="29"
                 viewBox="0 0 29 29"
@@ -334,7 +349,8 @@ export const ImagePreviewModal: FC<{
             </button>
             <img
               src={image}
-              className="w-full h-full object-contain"
+              className="max-h-[65vh]  max-sm:w-full"
+              // style={{ width: "auto", height: "auto" }}
               loading="lazy"
               alt="picture"
             />

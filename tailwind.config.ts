@@ -8,9 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      screens: {
-        xs: { min: "320px" },
-      },
       colors: {
         purple: "#855CFF",
       },

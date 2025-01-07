@@ -73,7 +73,7 @@ export default function Page() {
 
   return (
     <div className="bg-[#0E0C12]">
-      <header className="relative ">
+      <header className="relative">
         <Link
           href="/"
           className="absolute z-10 mx-auto left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0  md:left-[calc(50%-90px)] md:top-[40px]"

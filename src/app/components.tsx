@@ -64,63 +64,93 @@ export const Footer = () => {
         </div>
         <ul className="hidden md:flex flex-wrap justify-center gap-[50px] mx-auto">
           <li className="h-[33.6px]">
-            <img
-              src="/instagram.svg"
-              className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out"
-              loading="eager"
-              alt="instagram"
-            />
+            <a
+              href="https://www.instagram.com/noire_lab?igsh=MXFvZWE1eHNubXVjaQ%3D%3D&utm_source=qr"
+              target="_blank"
+            >
+              <img
+                src="/instagram.svg"
+                className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out"
+                loading="eager"
+                alt="instagram"
+              />
+            </a>
           </li>
           <li className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out">
-            <img
-              src="/behance.svg"
-              className="h-[33.6px]"
-              loading="eager"
-              alt="behance"
-            />
+            <a href="https://www.behance.net/noirelab" target="_blank">
+              <img
+                src="/behance.svg"
+                className="h-[33.6px]"
+                loading="eager"
+                alt="behance"
+              />
+            </a>
           </li>
           <li className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out">
-            <img
-              src="/linkedin.svg"
-              className="h-[33.6px]"
-              loading="eager"
-              alt="linkedin"
-            />
+            <a
+              href="https://www.linkedin.com/in/noire-lab-73a9b4344/"
+              target="_blank"
+            >
+              <img
+                src="/linkedin.svg"
+                className="h-[33.6px]"
+                loading="eager"
+                alt="linkedin"
+              />
+            </a>
           </li>
           <li className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out">
-            <img
-              src="/dribble.png"
-              className="h-[33.6px]"
-              loading="eager"
-              alt="dribble"
-            />
+            <a href="https://dribbble.com/NoireLab" target="_blank">
+              <img
+                src="/dribble.png"
+                className="h-[33.6px]"
+                loading="eager"
+                alt="dribble"
+              />
+            </a>
           </li>
         </ul>
         <div className="md:hidden grid grid-cols-2 place-items-center mx-auto gap-[16px]">
-          <img
-            src="/instagram.svg"
-            className="h-[20px]"
-            loading="eager"
-            alt="instagram"
-          />
-          <img
-            src="/behance.svg"
-            className="h-[20px]"
-            loading="eager"
-            alt="behance"
-          />
-          <img
-            src="/linkedin.svg"
-            className="h-[20px]"
-            loading="eager"
-            alt="linkedin"
-          />
-          <img
-            src="/dribble.png"
-            className="h-[20px]"
-            loading="eager"
-            alt="dribble"
-          />
+          <a
+            href="https://www.instagram.com/noire_lab?igsh=MXFvZWE1eHNubXVjaQ%3D%3D&utm_source=qr"
+            target="_blank"
+          >
+            <img
+              src="/instagram.svg"
+              className="h-[20px]"
+              loading="eager"
+              alt="instagram"
+            />
+          </a>
+
+          <a href="https://www.behance.net/noirelab" target="_blank">
+            <img
+              src="/behance.svg"
+              className="h-[20px]"
+              loading="eager"
+              alt="behance"
+            />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/noire-lab-73a9b4344/"
+            target="_blank"
+          >
+            <img
+              src="/linkedin.svg"
+              className="h-[20px]"
+              loading="eager"
+              alt="linkedin"
+            />
+          </a>
+          <a href="https://dribbble.com/NoireLab" target="_blank">
+            <img
+              src="/dribble.png"
+              className="h-[20px]"
+              loading="eager"
+              alt="dribble"
+            />
+          </a>
         </div>
         <div className="flex flex-wrap gap-[24px] md:justify-between justify-center items-center text-[16px] leading-[16px] font-light">
           <div className="flex gap-[46px] whitespace-nowrap">
@@ -206,4 +236,3 @@ export const SlotTools: FC<{
     </div>
   );
 };
-
