@@ -623,11 +623,23 @@ export const LoadingModal = () => {
     document.body.classList.toggle("overflow-hidden");
     document.documentElement.classList.toggle("overflow-hidden");
   }, []);
+  // const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  // const handleVideoLoaded = () => {
+  //   setIsVideoLoaded(true);
+  // };
+
   return (
     <div
       id="loading-modal"
       className="absolute inset-0 h-full w-full flex justify-center items-center z-[100000] bg-[#0E0C12]"
     >
+      {/* <img
+          src="/favicon-96x96.png"
+          loading="eager"
+          className="w-[100px] h-[100px]"
+          alt="loading..."
+        /> */}
       <video
         playsInline
         autoPlay

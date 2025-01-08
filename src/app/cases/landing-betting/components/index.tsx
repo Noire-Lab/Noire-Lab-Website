@@ -7,9 +7,9 @@ export const Picture = () => {
     const modal = document.getElementById("loading-modal");
 
     if (modal) {
-      modal.classList.add("hidden");
-      document.body.classList.toggle('overflow-hidden');
-      document.documentElement.classList.toggle('overflow-hidden');
+      // modal.classList.add("hidden");
+      // document.body.classList.toggle('overflow-hidden');
+      // document.documentElement.classList.toggle('overflow-hidden');
     }
   };
 
