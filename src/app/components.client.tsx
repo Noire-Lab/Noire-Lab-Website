@@ -302,7 +302,7 @@ export const ProductItem: FC<ProductItemProps> = ({
           </figure>
         )}
         {type === "video" && (
-          <video controls autoPlay loop muted preload="auto">
+          <video controls loop muted preload="metadata">
             <source className="w-full rounded-[8px]" src={link} />
           </video>
         )}
