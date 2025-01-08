@@ -7,7 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { clsx } from "clsx/lite";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FC, Fragment, useMemo, useState } from "react";
+import { FC, Fragment, useLayoutEffect, useMemo, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import * as yup from "yup";
 
@@ -618,8 +618,11 @@ export const ContactForm: FC = () => {
   );
 };
 
-
 export const LoadingModal = () => {
+  useLayoutEffect(() => {
+    document.body.classList.toggle("overflow-hidden");
+    document.documentElement.classList.toggle("overflow-hidden");
+  }, []);
   return (
     <div
       id="loading-modal"
