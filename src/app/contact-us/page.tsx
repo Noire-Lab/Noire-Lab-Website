@@ -120,7 +120,7 @@ export default function Page() {
               type="text"
               placeholder="Your Name"
               autoComplete="name"
-              className={`h-[32px] bg-[#0E0C12] rounded-[4px] py-[8px] px-[16px] text-[18px] placeholder-current ${
+              className={`h-[32px] bg-[#0E0C12] rounded-[4px] py-[8px] px-[16px] text-[18px] placeholder-fog ${
                 !!errors.name?.message && "text-red-500 border-red-500 border"
               } `}
               {...register("name")}
@@ -130,7 +130,7 @@ export default function Page() {
               type="text"
               placeholder="Your Email or Messenger"
               autoComplete="email"
-              className={`h-[32px] bg-[#0E0C12] rounded-[4px] py-[8px] px-[16px] text-[18px] placeholder-current ${
+              className={`h-[32px] bg-[#0E0C12] rounded-[4px] py-[8px] px-[16px] text-[18px] placeholder-fog ${
                 !!errors.email?.message && "text-red-500 border-red-500 border"
               } `}
               {...register("email")}
@@ -139,7 +139,7 @@ export default function Page() {
             <textarea
               placeholder="Your Message"
               autoComplete="off"
-              className={`bg-[#0E0C12] min-h-[32px] h-[92px] rounded-[4px] py-[8px] leading-[20px] px-[16px] text-[18px] placeholder-current ${
+              className={`bg-[#0E0C12] min-h-[32px] h-[92px] rounded-[4px] py-[8px] leading-[20px] px-[16px] text-[18px] placeholder-fog ${
                 !!errors.message?.message &&
                 "text-red-500 border-red-500 border"
               } `}
