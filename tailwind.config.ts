@@ -11,6 +11,22 @@ const config: Config = {
       colors: {
         purple: "#855CFF",
       },
+      animation: {
+        "infinite-scroll": "infinite-scroll 80s linear infinite",
+      },
+      keyframes: {
+        "infinite-scroll": {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "50%": {
+            transform: "translateX(-110%)",
+          },
+          "100%": {
+            transform: "translateX(0)",
+          },
+        },
+      },
     },
   },
   plugins: [],

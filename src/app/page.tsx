@@ -70,12 +70,14 @@ export default async function Home() {
       </section>
 
       <section className="py-[35px] px-[16px] md:p-[70px]">
-        <div className="translate-x-[-100px] h-[55px] w-[140%] bg-[#191520] flex items-center gap-[35px] rotate-[-3.41deg]">
-          {Array(20)
+        <div className="translate-x-[-100px] w-[200%] h-[55px] flex items-center  rotate-[-3.41deg] animate-infinite-scroll">
+          {Array(80)
             .fill(logoMobile)
             .map((logo, index) => (
-              <div key={index} className="rotate-[5deg]">
-                {logo}
+              <div key={index} className="bg-[#191520] h-full flex items-center justify-center pr-[35px]">
+                <div key={index} className="rotate-[5deg]">
+                  {logo}
+                </div>
               </div>
             ))}
         </div>
