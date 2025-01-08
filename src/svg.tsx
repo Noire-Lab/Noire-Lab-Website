@@ -92,7 +92,7 @@ export const check = (
       height="19"
       rx="3"
       stroke="white"
-      stroke-width="2"
+      strokeWidth="2"
     />
     <g clip-path="url(#clip0_643_2753)">
       <path

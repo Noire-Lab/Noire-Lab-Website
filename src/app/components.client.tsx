@@ -617,3 +617,25 @@ export const ContactForm: FC = () => {
     </Dialog>
   );
 };
+
+
+export const LoadingModal = () => {
+  return (
+    <div
+      id="loading-modal"
+      className="absolute inset-0 h-full w-full flex justify-center items-center z-[100000] bg-[#0E0C12]"
+    >
+      <video
+        playsInline
+        autoPlay
+        loop
+        muted
+        controls={false}
+        preload="auto"
+        className="w-[100px] h-[100px]"
+      >
+        <source src="/videos/logo.mov" type="video/quicktime;" />
+      </video>
+    </div>
+  );
+};

@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+import { LoadingModal } from "../components.client";
 
 export default function Layout({
   children,
@@ -5,8 +7,9 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
+    <Fragment>
+      <LoadingModal />
       {children}
-    </div>
+    </Fragment>
   );
 }

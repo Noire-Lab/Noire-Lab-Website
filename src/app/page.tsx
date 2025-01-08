@@ -63,6 +63,7 @@ export default async function Home() {
           loop
           muted
           playsInline
+          preload="auto"
         >
           <source src="/videos/flask.mov" type="video/quicktime;" />
           <source src="/videos/flask.webm" type="video/webm;" />
@@ -74,7 +75,10 @@ export default async function Home() {
           {Array(80)
             .fill(logoMobile)
             .map((logo, index) => (
-              <div key={index} className="bg-[#191520] h-full flex items-center justify-center pl-[35px]">
+              <div
+                key={index}
+                className="bg-[#191520] h-full flex items-center justify-center pl-[35px]"
+              >
                 <div key={index} className="rotate-[5deg]">
                   {logo}
                 </div>

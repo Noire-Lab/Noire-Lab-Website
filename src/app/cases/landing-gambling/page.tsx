@@ -1,12 +1,15 @@
 import { NavigateProducts, ProductItem } from "@/app/components.client";
-import { Button } from "@/app/components";import Link from "next/link";
+import { Button } from "@/app/components";
+import Link from "next/link";
 import { Fragment } from "react";
+import { Picture } from "./components";
 
 const list = [
   {
     link: "/landings/landing7.webp",
     title: "New Year's Wheel of Fortune",
-    description: "Engaging holiday-themed game to boost player interaction and rewards.",
+    description:
+      "Engaging holiday-themed game to boost player interaction and rewards.",
   },
   {
     link: "/landings/landing8.webp",
@@ -16,7 +19,8 @@ const list = [
   {
     link: "/landings/landing9.webp",
     title: "Wheel of Fortune",
-    description: "Exciting spin-to-win game offering free spins and big prizes.",
+    description:
+      "Exciting spin-to-win game offering free spins and big prizes.",
   },
   {
     link: "/landings/landing10.webp",
@@ -26,35 +30,21 @@ const list = [
   {
     link: "/landings/landing11.webp",
     title: "Landing page with a preview of the Sugar Rush game",
-    description: "Colorful and fun landing page showcasing the Sugar Rush game with free spins bonuses.",
+    description:
+      "Colorful and fun landing page showcasing the Sugar Rush game with free spins bonuses.",
   },
   {
     link: "/landings/landing12.webp",
     title: "Promo landing page for the game WANTED",
-    description: "Immersive Wild West-themed landing page designed to captivate players.",
+    description:
+      "Immersive Wild West-themed landing page designed to captivate players.",
   },
 ];
 
 export default function Page() {
   return (
     <Fragment>
-      <picture>
-        <source
-          srcSet="/web-design-gambling-mobile.webp"
-          media="(max-width: 768px)"
-          type="image/webp"
-        />
-        <source
-          srcSet="/web-design-gambling.webp"
-          media="(min-width: 769px)"
-          type="image/webp"
-        />
-        <img
-          src="/web-design-gambling.webp"
-          loading="eager"
-          alt="web design gambling"
-        />
-      </picture>
+      <Picture />
 
       <div className="py-[35px] md:py-[70px] flex flex-col">
         <NavigateProducts />

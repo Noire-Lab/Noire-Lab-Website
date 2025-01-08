@@ -1,6 +1,8 @@
 import { NavigateProducts, ProductItem } from "@/app/components.client";
-import { Button } from "@/app/components";import Link from "next/link";
+import { Button } from "@/app/components";
+import Link from "next/link";
 import { Fragment } from "react";
+import { Picture } from "./components";
 
 const list = [
   {
@@ -29,23 +31,7 @@ const list = [
 export default function Page() {
   return (
     <Fragment>
-      <picture>
-        <source
-          srcSet="/betting-products-mobile.webp"
-          media="(max-width: 768px)"
-          type="image/webp"
-        />
-        <source
-          srcSet="/betting-products.webp"
-          media="(min-width: 769px)"
-          type="image/webp"
-        />
-        <img
-          src="/betting-products.webp"
-          loading="eager"
-          alt="web design betting"
-        />
-      </picture>
+      <Picture />
 
       <div className="py-[35px] md:py-[70px] flex flex-col">
         <NavigateProducts />

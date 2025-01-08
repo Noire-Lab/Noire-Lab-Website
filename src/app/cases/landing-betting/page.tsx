@@ -2,12 +2,14 @@ import { Button } from "@/app/components";
 import { NavigateProducts, ProductItem } from "@/app/components.client";
 import Link from "next/link";
 import { Fragment } from "react";
+import { Picture } from "./components";
 
 const list = [
   {
     link: "/landings/landing1.webp",
     title: "Promo landing “Crypto Casino”",
-    description: "Modern platform offering crypto betting with up to 100% bonuses.",
+    description:
+      "Modern platform offering crypto betting with up to 100% bonuses.",
   },
   {
     link: "/landings/landing2.webp",
@@ -17,17 +19,20 @@ const list = [
   {
     link: "/landings/landing3.webp",
     title: "Promo landing “Sporting Events”",
-    description: "Dynamic platform for betting on your favorite sporting competitions.",
+    description:
+      "Dynamic platform for betting on your favorite sporting competitions.",
   },
   {
     link: "/landings/landing4.webp",
     title: "Promo landing “India Cricket”",
-    description: "Celebrate the passion for cricket with exclusive betting offers.",
+    description:
+      "Celebrate the passion for cricket with exclusive betting offers.",
   },
   {
     link: "/landings/landing5.webp",
     title: "Promo landing “E-Sports”",
-    description: "Elevate your e-sports experience with exclusive bonuses and bets.",
+    description:
+      "Elevate your e-sports experience with exclusive bonuses and bets.",
   },
   {
     link: "/landings/landing6.webp",
@@ -39,23 +44,7 @@ const list = [
 export default function Page() {
   return (
     <Fragment>
-      <picture>
-        <source
-          srcSet="/web-design-betting-mobile.webp"
-          media="(max-width: 768px)"
-          type="image/webp"
-        />
-        <source
-          srcSet="/web-design-betting.webp"
-          media="(min-width: 769px)"
-          type="image/webp"
-        />
-        <img
-          src="/web-design-betting.webp"
-          loading="eager"
-          alt="web design betting"
-        />
-      </picture>
+      <Picture />
 
       <div className="py-[35px] md:py-[70px] flex flex-col">
         <NavigateProducts />
