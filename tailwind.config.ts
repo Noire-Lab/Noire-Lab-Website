@@ -17,13 +17,13 @@ const config: Config = {
       keyframes: {
         "infinite-scroll": {
           "0%": {
-            transform: "translateX(-200px)",
+            transform: "translateX(-200px) rotate(-3.41deg)",
           },
           "50%": {
-            transform: "translateX(-110%)",
+            transform: "translateX(-110%) rotate(-3.41deg)",
           },
           "100%": {
-            transform: "translateX(-200px)",
+            transform: "translateX(-200px) rotate(-3.41deg)",
           },
         },
       },

@@ -125,14 +125,14 @@ export default async function Home() {
 
           <div className="rotate-[3.41deg] w-full h-[356px] absolute bottom-0">
             <video
-              className="absolute max-md:left-[47.5%] z-[1000] left-[50%] transform translate-x-[-61.5%] md:translate-x-[-52%] bottom-[-140px] md:bottom-[-250px] max-h-[540px] md:min-h-[900px] md:max-h-[900px]"
+              className="absolute max-md:left-[43.3%] max-md:max-w-[540px] z-[1000] left-[50%] transform translate-x-[-61.5%] md:translate-x-[-58%] bottom-[-84px] md:bottom-[-116px] max-h-[540px] md:min-h-[800px] md:max-h-[800px]"
               autoPlay
               loop
               muted
               playsInline
             >
-              <source src="/videos/girl_home.mov" type="video/quicktime;" />
-              <source src="/videos/girl_home.webm" type="video/webm;" />
+              <source src="/videos/girl.mov" type="video/quicktime;" />
+              <source src="/videos/girl.webm" type="video/webm;" />
             </video>
           </div>
 
