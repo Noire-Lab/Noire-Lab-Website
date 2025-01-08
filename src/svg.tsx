@@ -94,7 +94,7 @@ export const check = (
       stroke="white"
       strokeWidth="2"
     />
-    <g clip-path="url(#clip0_643_2753)">
+    <g clipPath="url(#clip0_643_2753)">
       <path
         d="M14.3951 5.64453L9.35488 12.2896L6.375 9.31191L5 10.6869L9.58262 15.2695L16 7.01953L14.3951 5.64453Z"
         fill="#191520"
