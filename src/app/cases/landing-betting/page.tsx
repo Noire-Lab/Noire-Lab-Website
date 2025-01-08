@@ -1,5 +1,9 @@
 import { Button } from "@/app/components";
-import { NavigateProducts, ProductItem } from "@/app/components.client";
+import {
+  LoadingModal,
+  NavigateProducts,
+  ProductItem,
+} from "@/app/components.client";
 import Link from "next/link";
 import { Fragment } from "react";
 import { Picture } from "./components";
@@ -44,6 +48,7 @@ const list = [
 export default function Page() {
   return (
     <Fragment>
+      <LoadingModal />
       <Picture />
 
       <div className="py-[35px] md:py-[70px] flex flex-col">

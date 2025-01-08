@@ -8,8 +8,8 @@ export const Picture = () => {
 
     if (modal) {
       modal.classList.add("hidden");
-      document.body.classList.toggle("overflow-hidden");
-      document.documentElement.classList.toggle("overflow-hidden");
+      document.body.classList.remove("overflow-hidden");
+      document.documentElement.classList.remove("overflow-hidden");
     }
   };
 

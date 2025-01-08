@@ -1,4 +1,5 @@
 import {
+  LoadingModal,
   NavigateProducts,
   ProductItem,
   ProductItemProps,
@@ -43,6 +44,7 @@ const list: Pick<ProductItemProps, "link" | "type">[] = [
 export default function Page() {
   return (
     <Fragment>
+      <LoadingModal />
       <Picture />
 
       <div className="py-[35px] md:py-[70px] flex flex-col">
