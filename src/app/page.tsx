@@ -52,13 +52,13 @@ export default async function Home() {
         <Link href="/">{logo}</Link>
       </header>
 
-      <section className="py-[35px] px-[16px] md:p-[70px] h-[405px] md:h-[655px] relative">
+      <section className="py-[35px] px-[16px] md:p-[70px] h-[360px] md:h-[655px] relative">
         <h1 className="md:whitespace-nowrap md:text-[60px] leading-[40px] text-[32px] font-bold text-center md:leading-[60px]">
           <span className="text-[#855CFF]">Modern Solutions</span> for <br />
           <span className="">the IGaming Industry</span>
         </h1>
         <video
-          className="z-10 absolute top-[67.5%] md:top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] max-w-[400px] md:max-w-max md:min-h-[550px] md:h-[550px]"
+          className="z-10 absolute top-[64%] md:top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] max-w-[400px] md:max-w-max md:min-h-[550px] md:h-[550px]"
           autoPlay
           loop
           muted
