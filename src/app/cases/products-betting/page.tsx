@@ -1,4 +1,5 @@
 import {
+  IntersectionObserverWrapper,
   LoadingModal,
   NavigateProducts,
   ProductItem,
@@ -35,6 +36,7 @@ const list = [
 export default function Page() {
   return (
     <Fragment>
+      <IntersectionObserverWrapper />
       <LoadingModal />
       <Picture />
 

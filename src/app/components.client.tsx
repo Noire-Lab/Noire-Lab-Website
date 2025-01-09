@@ -7,7 +7,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { clsx } from "clsx/lite";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FC, Fragment, useLayoutEffect, useMemo, useState } from "react";
+import {
+  FC,
+  Fragment,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useState,
+} from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import * as yup from "yup";
 
@@ -271,6 +278,38 @@ export const Navigation = () => {
     </Fragment>
   );
 };
+
+export const useIntersectionObserver = () => {
+  useEffect(() => {
+    const options = {
+      threshold: 0.2,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("open");
+        } else {
+          entry.target.classList.remove("open");
+        }
+      });
+    }, options);
+
+    const elements = document.querySelectorAll(".animated-appear");
+
+    elements.forEach((element) => observer.observe(element));
+
+    return () => {
+      elements.forEach((element) => observer.unobserve(element));
+    };
+  }, []);
+};
+
+export const IntersectionObserverWrapper = () => {
+  useIntersectionObserver();
+  return null;
+};
+
 export interface ProductItemProps {
   title?: string;
   description?: string;
@@ -285,11 +324,12 @@ export const ProductItem: FC<ProductItemProps> = ({
 }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
+
   return (
     <Fragment>
       <div
         onClick={handleOpen}
-        className="p-[10px] md:p-[25px] bg-[#191520] h-max rounded-[8px] hover:bg-purple group duration-150 ease-in-out cursor-pointer"
+        className="animated-appear p-[10px] md:p-[25px] bg-[#191520] h-max rounded-[8px] hover:bg-purple group duration-150 ease-in-out cursor-pointer"
       >
         {type === "image" && (
           <figure>

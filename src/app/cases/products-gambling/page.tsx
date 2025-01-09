@@ -1,4 +1,5 @@
 import {
+  IntersectionObserverWrapper,
   LoadingModal,
   NavigateProducts,
   ProductItem,
@@ -8,6 +9,7 @@ import { Button } from "@/app/components";
 import Link from "next/link";
 import { Fragment } from "react";
 import { Picture } from "./components";
+import clsx from "clsx";
 
 const list: Pick<ProductItemProps, "link" | "type">[] = [
   {
@@ -44,6 +46,7 @@ const list: Pick<ProductItemProps, "link" | "type">[] = [
 export default function Page() {
   return (
     <Fragment>
+      <IntersectionObserverWrapper />
       <LoadingModal />
       <Picture />
 
@@ -51,19 +54,21 @@ export default function Page() {
         <NavigateProducts />
 
         <section className="flex flex-col pt-[30px] md:pt-[40px] px-[16px]">
-          <div className="columns-2 gap-[8px] md:gap-[30px] max-w-[884px] mx-auto">
-            {list.map((props, index) => (
-              <div
-                key={index}
-                className={
-                  index === 0
-                    ? ""
-                    : "mt-[8px] md:mt-[30px]" + " break-inside-avoid"
-                }
-              >
-                <ProductItem {...props} />
-              </div>
-            ))}
+          <div className="flex gap-[8px] md:gap-[30px] max-w-[884px] mx-auto">
+            <div className="flex flex-col gap-[8px] md:gap-[30px]">
+              {list.slice(0, 4).map((props, index) => (
+                <div key={index}>
+                  <ProductItem {...props} />
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col gap-[8px] md:gap-[30px]">
+              {list.slice(5, 8).map((props, index) => (
+                <div key={index}>
+                  <ProductItem {...props} />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

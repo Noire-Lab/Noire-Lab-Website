@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { LoadingModal } from "../components.client";
+import { IntersectionObserverWrapper } from "../components.client";
 
 export default function Layout({
   children,
