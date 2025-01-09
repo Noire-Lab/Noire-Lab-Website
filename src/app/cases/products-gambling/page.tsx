@@ -9,7 +9,6 @@ import { Button } from "@/app/components";
 import Link from "next/link";
 import { Fragment } from "react";
 import { Picture } from "./components";
-import clsx from "clsx";
 
 const list: Pick<ProductItemProps, "link" | "type" | "poster">[] = [
   {
@@ -40,13 +39,11 @@ const list: Pick<ProductItemProps, "link" | "type" | "poster">[] = [
     link: "/videos/tr.mp4",
     type: "video",
     poster: "/products/product7.png",
-
   },
   {
     link: "/videos/vulkan.mp4",
     type: "video",
     poster: "/products/product8.png",
-
   },
 ];
 

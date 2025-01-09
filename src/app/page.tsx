@@ -71,22 +71,24 @@ export default async function Home() {
       </section>
 
       <section className="py-[35px] px-[16px] md:p-[70px]">
-        <div className="translate-x-[-200px] w-[200%] h-[55px] flex items-center rotate-[-3.41deg] animate-infinite-scroll">
-          {Array(80)
-            .fill(logoMobile)
-            .map((logo, index) => (
-              <div
-                key={index}
-                className="bg-[#191520] h-full flex items-center justify-center pl-[35px]"
-              >
-                <div key={index} className="rotate-[5deg]">
-                  {logo}
+        <div className="rotate-[-3.41deg]">
+          <div className="flex items-center translate-x-[-200px] w-[200%] h-[55px] animate-infinite-scroll">
+            {Array(80)
+              .fill(logoMobile)
+              .map((logo, index) => (
+                <div
+                  key={index}
+                  className="bg-[#191520] h-full flex items-center justify-center pl-[35px]"
+                >
+                  <div key={index} className="rotate-[5deg]">
+                    {logo}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
         </div>
 
-        <div className="h-[480px] md:h-[660px] w-[calc(100%+500px)] mt-[30px] mb-[30px] md:mb-[60px] md:mt-[50px] landscape:translate-x-[-100px] translate-x-[-110px] rotate-[-3.41deg] relative overflow-hidden">
+        <div className="h-[440px] md:h-[660px] w-[calc(100%+500px)] mt-[30px] mb-[30px] md:mb-[60px] md:mt-[50px] landscape:translate-x-[-100px] translate-x-[-110px] rotate-[-3.41deg] relative overflow-hidden">
           <svg
             className="hidden md:block absolute top-[19%] left-[50%] transform  translate-x-[-68%] translate-y-[-50%] rotate-[5deg]"
             width="771"
@@ -106,7 +108,7 @@ export default async function Home() {
           </svg>
 
           <svg
-            className="md:hidden absolute top-[15%] left-[52%] transform translate-x-[-100%] -translate-y-1/2 rotate-[3.41deg]"
+            className="md:hidden absolute top-[20%] left-[52%] transform translate-x-[-100%] -translate-y-1/2 rotate-[3.41deg]"
             width="299"
             height="176"
             viewBox="0 0 299 176"
@@ -125,7 +127,7 @@ export default async function Home() {
 
           <div className="rotate-[3.41deg] w-full h-[356px] absolute bottom-0">
             <video
-              className="absolute max-md:left-[43.3%] max-md:max-w-[540px] z-[1000] left-[50%] transform translate-x-[-61.5%] md:translate-x-[-58%] bottom-[-84px] md:bottom-[-116px] max-h-[540px] md:min-h-[800px] md:max-h-[800px]"
+              className="absolute max-md:left-[41.3%] max-md:max-w-[480px] z-[1000] left-[50%] transform translate-x-[-61.5%] md:translate-x-[-58%] bottom-[-72px] md:bottom-[-116px] max-h-[540px] md:min-h-[800px] md:max-h-[800px]"
               autoPlay
               loop
               muted
@@ -481,13 +483,13 @@ export default async function Home() {
           <p>talk</p>
         </div>
 
-        <div className="overflow-visible  max-w-[600px] pt-[40px] mx-auto block xl:hidden rounded-[60px] relative bg-[#855CFF]">
+        <div className="overflow-visible max-w-[600px] pt-[40px] mx-auto block xl:hidden rounded-[60px] relative bg-[#855CFF]">
           <p className="text-center text-[85px] font-bold uppercase leading-[60px] [@media(max-width:548px)]:leading-[74px]">
             <span>LET&#96;S</span> <span>talk</span>
           </p>
           <div className="h-[360px]">
             <video
-              className="z-10 h-[760px] min-w-[600px] scale-x-[-1] absolute bottom-[-300px] left-1/2 transform -translate-x-1/2"
+              className="z-10 h-[760px] min-w-[600px] scale-x-[-1] absolute bottom-[-300px] left-1/2 transform translate-x-[-48.5%]"
               autoPlay
               loop
               muted

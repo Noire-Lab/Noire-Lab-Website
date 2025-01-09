@@ -281,7 +281,7 @@ export const Navigation = () => {
 
 export const useIntersectionObserver = () => {
   useEffect(() => {
-    const options = {
+    const options: IntersectionObserverInit = {
       threshold: 0.2,
     };
 
@@ -379,7 +379,7 @@ export const ImagePreviewModal: FC<{
 }> = ({ open, onClose, link }) => {
   return (
     <Dialog open={open} onClose={onClose}>
-      <div className="fixed z-50 top-0 left-0 right-0 bottom-0 grid place-items-center bg-[rgba(0,0,0,0.5)] px-[12px]">
+      <div className="fixed z-50 top-0 left-0 right-0 bottom-0 grid place-items-center bg-[rgba(9,9,9,0.85)] px-[12px]">
         <DialogPanel className="relative duration-150 ease-in-out rounded-[24px] p-[32px] max-sm:p-[8px] overflow-hidden">
           <figure className="relative">
             <button
@@ -643,7 +643,7 @@ export const ContactForm: FC = () => {
 
   return (
     <Dialog open={open} onClose={onClose}>
-      <div className="fixed z-50 top-0 left-0 right-0 bottom-0 grid place-items-center bg-[rgba(0,0,0,0.5)] px-[12px]">
+      <div className="fixed z-50 top-0 left-0 right-0 bottom-0 grid place-items-center bg-[rgba(9,9,9,0.85)] px-[12px]">
         <DialogPanel className="bg-[#191520] p-[16px] md:p-[50px] rounded-[32px] relative duration-150 ease-in-out overflow-hidden">
           <h1 className="text-center text-[16px] font-bold mb-[24px] md:text-[40px] md:leading-[50px]">
             <div className="text-nowrap">
