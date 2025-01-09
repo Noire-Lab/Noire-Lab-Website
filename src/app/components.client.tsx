@@ -315,14 +315,14 @@ export interface ProductItemProps {
   description?: string;
   link: string;
   type?: "video" | "image";
-  poster?: string
+  poster?: string;
 }
 export const ProductItem: FC<ProductItemProps> = ({
   link,
   type = "image",
   description,
   title,
-  poster
+  poster,
 }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -380,16 +380,17 @@ export const ImagePreviewModal: FC<{
   return (
     <Dialog open={open} onClose={onClose}>
       <div className="fixed z-50 top-0 left-0 right-0 bottom-0 grid place-items-center bg-[rgba(9,9,9,0.85)] px-[12px]">
-        <DialogPanel className="relative duration-150 ease-in-out rounded-[24px] p-[32px] max-sm:p-[8px] overflow-hidden">
+        <DialogPanel className="relative duration-150 ease-in-out rounded-[24px] p-[16px] md:p-[32px] max-sm:p-[8px] overflow-hidden">
           <figure className="relative">
             <button
               onClick={onClose}
               type="button"
-              className=" group absolute grid place-items-center z-1 w-[56px] h-[56px] top-[24px] right-[24px] bg-[#0E0C12] rounded-[12px] hover:bg-white duration-150 ease-in-out"
+              className="group absolute grid place-items-center z-1 w-[28px] h-[28px] md:w-[56px] md:h-[56px] top-[8px] right-[8px] md:top-[24px] md:right-[24px] bg-[#0E0C12] rounded-[4px] md:rounded-[12px] hover:bg-white duration-150 ease-in-out"
             >
               <svg
-                width="29"
-                height="29"
+                className="max-md:w-[15px] max-md:h-[15px] w-[30px] h-[30px]"
+                // width="29"
+                // height="29"
                 viewBox="0 0 29 29"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -405,7 +406,7 @@ export const ImagePreviewModal: FC<{
             </button>
             <img
               src={link}
-              className="max-h-[65vh] max-sm:w-full"
+              className="max-h-[65vh] "
               loading="lazy"
               alt="picture"
             />
