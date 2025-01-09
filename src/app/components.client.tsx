@@ -315,12 +315,14 @@ export interface ProductItemProps {
   description?: string;
   link: string;
   type?: "video" | "image";
+  poster?: string
 }
 export const ProductItem: FC<ProductItemProps> = ({
   link,
   type = "image",
   description,
   title,
+  poster
 }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -342,7 +344,7 @@ export const ProductItem: FC<ProductItemProps> = ({
           </figure>
         )}
         {type === "video" && (
-          <video controls loop muted preload="auto">
+          <video controls loop muted preload="auto" poster={poster}>
             <source className="w-full rounded-[8px]" src={link} />
           </video>
         )}

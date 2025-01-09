@@ -11,10 +11,11 @@ import { Fragment } from "react";
 import { Picture } from "./components";
 import clsx from "clsx";
 
-const list: Pick<ProductItemProps, "link" | "type">[] = [
+const list: Pick<ProductItemProps, "link" | "type" | "poster">[] = [
   {
     link: "/videos/roobet.mp4",
     type: "video",
+    poster: "/products/product1.png",
   },
   {
     link: "/products/product2.webp",
@@ -22,10 +23,12 @@ const list: Pick<ProductItemProps, "link" | "type">[] = [
   {
     link: "/videos/sant.mp4",
     type: "video",
+    poster: "/products/product3.png",
   },
   {
     link: "/videos/dante.mp4",
     type: "video",
+    poster: "/products/product4.png",
   },
   {
     link: "/products/product5.webp",
@@ -36,10 +39,14 @@ const list: Pick<ProductItemProps, "link" | "type">[] = [
   {
     link: "/videos/tr.mp4",
     type: "video",
+    poster: "/products/product7.png",
+
   },
   {
     link: "/videos/vulkan.mp4",
     type: "video",
+    poster: "/products/product8.png",
+
   },
 ];
 
