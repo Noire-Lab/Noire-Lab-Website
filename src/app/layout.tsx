@@ -4,6 +4,7 @@ import { Footer } from "./components";
 import { LoadingModal, Navigation } from "./components.client";
 import "./globals.css";
 import Head from "next/head";
+import Script from "next/script";
 
 const gotham = localFont({
   src: [
@@ -24,7 +25,8 @@ const gotham = localFont({
 
 export const metadata: Metadata = {
   title: "Noire Lab",
-  description: "Casino marketing, promotion, and development services for gambling platforms. Full-cycle agency for casinos including IT support, design, and SEO optimization.",
+  description:
+    "Casino marketing, promotion, and development services for gambling platforms. Full-cycle agency for casinos including IT support, design, and SEO optimization.",
   keywords: [
     "Casino promotion",
     "Creating a casino from scratch",
@@ -121,7 +123,7 @@ export const metadata: Metadata = {
     "Разработка интерфейса для казино под ключ",
     "Как продвигать онлайн-казино в интернете",
     "Создание уникального дизайна для гемблинг-платформы",
-    "SEO для казино"
+    "SEO для казино",
   ],
   icons: {
     icon: [
@@ -149,12 +151,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <Script src="./gtm.js" strategy="afterInteractive" />
+      </Head>
+
       <body
         style={{
           fontFamily: gotham.style.fontFamily,
         }}
         className={`antialiased bg-[#0E0C12] text-white`}
       >
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WQ5CV9WF"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <Navigation />
         <main className="overflow-hidden">{children}</main>
         <Footer />
