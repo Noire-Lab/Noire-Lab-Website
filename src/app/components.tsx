@@ -53,7 +53,7 @@ export const Footer = () => {
             </Button>
           </Link>
 
-          <Link href="https://t.me/noire_lab_contacts" target="_blank">
+          <Link href="https://t.me/noire_lab_igaming" target="_blank">
             <Button
               variant="outline"
               className="h-[60px] hover:bg-white hover:text-[#191520] ease-in-out duration-150"
