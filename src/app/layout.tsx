@@ -165,6 +165,16 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-WQ5CV9WF');
         `}
         </Script>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-0K99EZ5547"
+        ></Script>
+        <Script>
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0K99EZ5547');`}
+        </Script>
       </Head>
 
       <body
