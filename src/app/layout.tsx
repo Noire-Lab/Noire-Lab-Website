@@ -151,9 +151,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <Script id="google-tag-manager" strategy="afterInteractive">
-          {`
+      <Script id="google-tag-manager" strategy="afterInteractive">
+        {`
           (function(w,d,s,l,i){
             w[l]=w[l]||[];
             w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
@@ -164,18 +163,17 @@ export default function RootLayout({
             f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-WQ5CV9WF');
         `}
-        </Script>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-0K99EZ5547"
-        ></Script>
-        <Script>
-          {`window.dataLayer = window.dataLayer || [];
+      </Script>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-0K99EZ5547"
+      ></Script>
+      <Script>
+        {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-0K99EZ5547');`}
-        </Script>
-      </Head>
+      </Script>
 
       <body
         style={{
