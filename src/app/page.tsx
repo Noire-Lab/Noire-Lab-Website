@@ -3,7 +3,7 @@ import { Button } from "@/app/components";
 import { arrowOutlined, arrowOutlinedSmall, logo, logoMobile } from "@/svg";
 import Link from "next/link";
 import { Fragment } from "react";
-import { ContactForm, MakeOrderButton } from "./components.client";
+import { ContactFormModal, MakeOrderButton } from "./components.client";
 
 const list = [
   {
@@ -47,7 +47,7 @@ const list = [
 export default async function Home() {
   return (
     <Fragment>
-      <ContactForm />
+      <ContactFormModal />
       <header className="h-[50px] md:h-[108px] flex items-center justify-center">
         <Link href="/">{logo}</Link>
       </header>
