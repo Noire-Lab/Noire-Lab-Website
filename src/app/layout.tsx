@@ -151,6 +151,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta
+          name="p:domain_verify"
+          content="2ee59a50d53647b0c4204b05365c4935"
+        />
+      </Head>
       <Script id="google-tag-manager" strategy="afterInteractive">
         {`
           (function(w,d,s,l,i){
