@@ -65,7 +65,7 @@ export const Footer = () => {
         <ul className="hidden md:flex flex-wrap justify-center gap-[50px] mx-auto">
           <li className="h-[33.6px]">
             <a
-              href="https://www.instagram.com/noire_lab?igsh=MXFvZWE1eHNubXVjaQ%3D%3D&utm_source=qr"
+              href="https://www.instagram.com/noire_lab_world?igsh=MXc1ejE2YmY4Z2RkYg%3D%3D&utm_source=qr"
               target="_blank"
             >
               <img
@@ -112,7 +112,7 @@ export const Footer = () => {
         </ul>
         <div className="md:hidden grid grid-cols-2 place-items-center mx-auto gap-[16px]">
           <a
-            href="https://www.instagram.com/noire_lab?igsh=MXFvZWE1eHNubXVjaQ%3D%3D&utm_source=qr"
+            href="https://www.instagram.com/noire_lab_world?igsh=MXc1ejE2YmY4Z2RkYg%3D%3D&utm_source=qr"
             target="_blank"
           >
             <img

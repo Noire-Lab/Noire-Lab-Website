@@ -206,7 +206,7 @@ export const Navigation = () => {
               <ul className="flex flex-col gap-[8px] justify-start">
                 <li className="">
                   <a
-                    href="https://www.instagram.com/noire_lab?igsh=MXFvZWE1eHNubXVjaQ%3D%3D&utm_source=qr"
+                    href="https://www.instagram.com/noire_lab_world?igsh=MXc1ejE2YmY4Z2RkYg%3D%3D&utm_source=qr"
                     target="_blank"
                   >
                     <svg
