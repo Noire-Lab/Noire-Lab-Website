@@ -23,10 +23,10 @@ export const NavigationProducts = () => {
         <Link href="/cases/landing-betting">
           <Button
             variant="outline"
-            className={`h-[41px] border-2 border-purple px-[36px] hover:bg-purple-500 hover:opacity-20 md:h-[53px] ${
-              isLanding ? 'border-purple bg-purple' : ''
+            className={`h-[41px] border-2 !border-purple px-[36px] hover:bg-[#855CFF33] md:h-[53px] ${
+              isProduct ? '!border-purple !bg-purple' : ''
             }`}
-            aria-label="Landings | Sites"
+            aria-label="Products"
           >
             Landings | Sites
           </Button>
@@ -37,7 +37,7 @@ export const NavigationProducts = () => {
             disabled
             variant="outline"
             className={`h-[41px] border-2 border-[#2F293C!important] px-[36px] text-[#2F293C] hover:cursor-not-allowed hover:bg-[#855CFF33] md:h-[53px] ${
-              isGames ? 'border-[#855CFF!important] bg-[#2F293C]' : ''
+              isGames ? '!border-purple bg-[#2F293C]' : ''
             }`}
             aria-label="Games"
           >
@@ -48,8 +48,8 @@ export const NavigationProducts = () => {
         <Link href="/cases/products-betting">
           <Button
             variant="outline"
-            className={`h-[41px] border-2 border-[#855CFF!important] px-[36px] hover:bg-[#855CFF33] md:h-[53px] ${
-              isProduct ? 'border-[#855CFF!important] bg-[#855CFF]' : ''
+            className={`h-[41px] border-2 !border-purple px-[36px] hover:bg-[#855CFF33] md:h-[53px] ${
+              isProduct ? '!border-purple !bg-purple' : ''
             }`}
             aria-label="Products"
           >
