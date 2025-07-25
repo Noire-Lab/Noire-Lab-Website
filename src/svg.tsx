@@ -161,7 +161,7 @@ export const arrowOutlinedSmall = (
   </svg>
 );
 
-export const house = (fill = "#0E0C12") => (
+export const house = (fill = '#0E0C12') => (
   <svg
     width="16"
     height="16"
@@ -193,7 +193,7 @@ export const house = (fill = "#0E0C12") => (
   </svg>
 );
 
-export const bag = (fill = "#0E0C12") => (
+export const bag = (fill = '#0E0C12') => (
   <svg
     width="16"
     height="16"
@@ -215,7 +215,7 @@ export const bag = (fill = "#0E0C12") => (
   </svg>
 );
 
-export const phone = (fill = "#0E0C12") => (
+export const phone = (fill = '#0E0C12') => (
   <svg
     width="16"
     height="16"
@@ -288,6 +288,172 @@ export const close = (
           transform="translate(0 0.900391)"
         />
       </clipPath>
+    </defs>
+  </svg>
+);
+
+export const star = () => (
+  <svg
+    width="21"
+    height="21"
+    viewBox="0 0 21 21"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clipPath="url(#clip0_1101_1603)">
+      <path
+        d="M9.9995 17.5927L5.15211 20.8031C4.93797 20.9529 4.71409 21.0171 4.48048 20.9957C4.24687 20.9743 4.04246 20.8887 3.86726 20.7389C3.69205 20.5891 3.55578 20.402 3.45844 20.1777C3.3611 19.9534 3.34164 19.7017 3.40004 19.4226L4.68489 13.3551L0.392319 9.27792C0.197644 9.0853 0.0761673 8.86571 0.027888 8.61915C-0.0203912 8.3726 -0.00598538 8.13204 0.0711057 7.89747C0.148197 7.6629 0.265001 7.47027 0.42152 7.3196C0.578038 7.16893 0.79218 7.07262 1.06395 7.03067L6.72897 6.48491L8.91906 0.770485C9.0164 0.513656 9.16746 0.321035 9.37226 0.192621C9.57706 0.0642069 9.78614 0 9.9995 0C10.2129 0 10.4219 0.0642069 10.6267 0.192621C10.8315 0.321035 10.9826 0.513656 11.0799 0.770485L13.27 6.48491L18.9351 7.03067C19.2076 7.07348 19.4217 7.16979 19.5775 7.3196C19.7332 7.46942 19.85 7.66204 19.9279 7.89747C20.0058 8.13289 20.0206 8.37388 19.9723 8.62044C19.924 8.86699 19.8021 9.08615 19.6067 9.27792L15.3141 13.3551L16.599 19.4226C16.6574 19.7009 16.6379 19.9526 16.5406 20.1777C16.4432 20.4029 16.307 20.5899 16.1317 20.7389C15.9565 20.8878 15.7521 20.9734 15.5185 20.9957C15.2849 21.018 15.061 20.9538 14.8469 20.8031L9.9995 17.5927Z"
+        fill="white"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_1101_1603">
+        <rect width="21" height="21" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const noireStart = () => (
+  <svg
+    className="absolute inset-0 min-h-full object-cover"
+    width="393"
+    height="822"
+    viewBox="0 0 393 822"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect width="393" height="822" fill="#191520" fillOpacity="0.5" />
+    <rect width="393" height="822" fill="url(#paint0_linear_8113_12212)" />
+    <rect
+      width="393"
+      height="822"
+      fill="url(#paint1_radial_8113_12212)"
+      fillOpacity="0.25"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_8113_12212"
+        x1="196.5"
+        y1="0"
+        x2="196.5"
+        y2="822"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#1F1A28" />
+        <stop offset="1" stopColor="#14111A" />
+      </linearGradient>
+      <radialGradient
+        id="paint1_radial_8113_12212"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(196.5 760.203) rotate(90) scale(204.519 438.292)"
+      >
+        <stop stopColor="#CBA2FF" />
+        <stop offset="1" stopColor="#CBA2FF" stopOpacity="0" />
+      </radialGradient>
+    </defs>
+  </svg>
+);
+
+export const noirePro = () => (
+  <svg
+    className="absolute inset-0 min-h-full object-cover"
+    width="393"
+    height="822"
+    viewBox="0 0 393 822"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect width="393" height="822" rx="36" fill="#191520" fillOpacity="0.5" />
+    <rect
+      width="393"
+      height="822"
+      rx="36"
+      fill="url(#paint0_linear_8114_17990)"
+    />
+    <rect
+      width="393"
+      height="822"
+      rx="36"
+      fill="url(#paint1_radial_8114_17990)"
+      fillOpacity="0.25"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_8114_17990"
+        x1="196.5"
+        y1="0"
+        x2="196.5"
+        y2="822"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#1F1A28" />
+        <stop offset="1" stopColor="#14111A" />
+      </linearGradient>
+      <radialGradient
+        id="paint1_radial_8114_17990"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(196.5 760.203) rotate(90) scale(204.519 438.292)"
+      >
+        <stop stopColor="#7C51FF" />
+        <stop offset="1" stopColor="#7C51FF" stopOpacity="0" />
+      </radialGradient>
+    </defs>
+  </svg>
+);
+
+export const noireMax = () => (
+  <svg
+    className="absolute inset-0 min-h-full object-cover"
+    width="393"
+    height="822"
+    viewBox="0 0 393 822"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect width="393" height="822" rx="36" fill="#191520" fillOpacity="0.5" />
+    <rect
+      width="393"
+      height="822"
+      rx="36"
+      fill="url(#paint0_linear_8114_18082)"
+    />
+    <rect
+      width="393"
+      height="822"
+      rx="36"
+      fill="url(#paint1_radial_8114_18082)"
+      fillOpacity="0.25"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_8114_18082"
+        x1="196.5"
+        y1="0"
+        x2="196.5"
+        y2="822"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#1F1A28" />
+        <stop offset="1" stopColor="#14111A" />
+      </linearGradient>
+      <radialGradient
+        id="paint1_radial_8114_18082"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(196.5 760.203) rotate(90) scale(204.519 438.292)"
+      >
+        <stop stopColor="#FC51FF" />
+        <stop offset="1" stopColor="#FC51FF" stopOpacity="0" />
+      </radialGradient>
     </defs>
   </svg>
 );

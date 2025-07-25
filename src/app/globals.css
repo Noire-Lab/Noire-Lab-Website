@@ -1,45 +1,71 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-.font-stretch {
+@theme inline {
+  /* Default Sans body font using Gotham */
+  --font-gotham: var(--font-gotham);
+
+  /* Additional XNarrow variant available as utility `font-xnarrow` */
+  --font-gotham-xnarrow: var(--font-gotham-x-narrow);
+}
+
+@theme {
+  --color-purple: #a863ff;
+  --color-purple-200: #855cff;
+  --color-purple-300: #2f293c;
+
+  --color-black-800: #0e0c12;
+
+  --animate-infinite-scroll: infinite-scroll 80s linear infinite;
+
+  @keyframes infinite-scroll {
+    0% {
+      transform: translateX(-200px);
+    }
+    50% {
+      transform: translateX(-110%);
+    }
+    100% {
+      transform: translateX(-200px);
+    }
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility font-expanded {
+  font-stretch: expanded;
+}
+
+@utility font-condensed {
+  font-stretch: condensed;
+}
+
+@utility font-narrower {
+  font-stretch: narrower;
+}
+
+@utility font-extra-condensed {
   font-stretch: extra-condensed;
 }
 
-@layer utilities {
-  .font-expanded {
-    font-stretch: expanded;
-  }
+@utility font-semi-condensed {
+  font-stretch: semi-condensed;
 }
 
-@layer utilities {
-  .font-condensed {
-    font-stretch: condensed;
-  }
+@utility font-ultra-condensed {
+  font-stretch: ultra-condensed;
 }
 
-@layer utilities {
-  .font-narrower {
-    font-stretch: narrower;
-  }
-}
-
-@layer utilities {
-  .font-extra-condensed {
-    font-stretch: extra-condensed;
-  }
-}
-
-@layer utilities {
-  .font-semi-condensed {
-    font-stretch: semi-condensed;
-  }
-}
-
-@layer utilities {
-  .font-ultra-condensed {
-    font-stretch: ultra-condensed;
-  }
+.font-stretch {
+  font-stretch: extra-condensed;
 }
 
 .animated-appear {

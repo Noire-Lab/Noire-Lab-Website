@@ -1,4 +1,4 @@
-import { Slot } from "../components";
+import { Slot } from "@/components";
 
 export default function Page() {
   return (

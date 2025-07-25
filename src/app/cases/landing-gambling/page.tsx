@@ -1,10 +1,10 @@
 import {
   IntersectionObserverWrapper,
   LoadingModal,
-  NavigateProducts,
+  NavigationProducts,
   ProductItem,
-} from "@/app/components.client";
-import { Button } from "@/app/components";
+} from "@/components";
+import { Button } from "@/components";
 import Link from "next/link";
 import { Fragment } from "react";
 import { Picture } from "./components";
@@ -54,7 +54,7 @@ export default function Page() {
       <Picture />
 
       <div className="py-[35px] md:py-[70px] flex flex-col">
-        <NavigateProducts />
+        <NavigationProducts />
         <section className="flex flex-col pt-[30px] md:pt-[40px] px-[16px]">
           <div className="grid md:grid-cols-2 gap-[8px] md:gap-[30px] max-w-[1296px] mx-auto">
             {list.map((props, index) => (

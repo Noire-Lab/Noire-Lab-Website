@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import { IntersectionObserverWrapper } from "../components.client";
 
 export default function Layout({
   children,

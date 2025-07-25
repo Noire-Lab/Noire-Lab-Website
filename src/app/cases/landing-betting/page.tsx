@@ -1,48 +1,48 @@
-import { Button } from "@/app/components";
+import { Button } from '@/components';
 import {
   IntersectionObserverWrapper,
   LoadingModal,
-  NavigateProducts,
+  NavigationProducts,
   ProductItem,
-} from "@/app/components.client";
-import Link from "next/link";
-import { Fragment } from "react";
-import { Picture } from "./components";
+} from '@/components';
+import Link from 'next/link';
+import { Fragment } from 'react';
+import { Picture } from './components';
 
 const list = [
   {
-    link: "/landings/landing1.webp",
-    title: "Promo landing “Crypto Casino”",
+    link: '/landings/landing1.webp',
+    title: 'Promo landing “Crypto Casino”',
     description:
-      "Modern platform offering crypto betting with up to 100% bonuses.",
+      'Modern platform offering crypto betting with up to 100% bonuses.',
   },
   {
-    link: "/landings/landing2.webp",
-    title: "Promo landing “Welcome Bonus”",
-    description: "Exclusive welcome bonus of 1000 USDT for new players.",
+    link: '/landings/landing2.webp',
+    title: 'Promo landing “Welcome Bonus”',
+    description: 'Exclusive welcome bonus of 1000 USDT for new players.',
   },
   {
-    link: "/landings/landing3.webp",
-    title: "Promo landing “Sporting Events”",
+    link: '/landings/landing3.webp',
+    title: 'Promo landing “Sporting Events”',
     description:
-      "Dynamic platform for betting on your favorite sporting competitions.",
+      'Dynamic platform for betting on your favorite sporting competitions.',
   },
   {
-    link: "/landings/landing4.webp",
-    title: "Promo landing “India Cricket”",
+    link: '/landings/landing4.webp',
+    title: 'Promo landing “India Cricket”',
     description:
-      "Celebrate the passion for cricket with exclusive betting offers.",
+      'Celebrate the passion for cricket with exclusive betting offers.',
   },
   {
-    link: "/landings/landing5.webp",
-    title: "Promo landing “E-Sports”",
+    link: '/landings/landing5.webp',
+    title: 'Promo landing “E-Sports”',
     description:
-      "Elevate your e-sports experience with exclusive bonuses and bets.",
+      'Elevate your e-sports experience with exclusive bonuses and bets.',
   },
   {
-    link: "/landings/landing6.webp",
-    title: "Promo landing “EPL”",
-    description: "Your ultimate destination for betting on the Premier League.",
+    link: '/landings/landing6.webp',
+    title: 'Promo landing “EPL”',
+    description: 'Your ultimate destination for betting on the Premier League.',
   },
 ];
 
@@ -53,21 +53,21 @@ export default function Page() {
       <LoadingModal />
       <Picture />
 
-      <div className="py-[35px] md:py-[70px] flex flex-col">
-        <NavigateProducts />
-        <section className="flex flex-col pt-[30px] md:pt-[40px] px-[16px]">
-          <div className="grid md:grid-cols-2 gap-[8px] md:gap-[30px] max-w-[1296px] mx-auto">
+      <div className="flex flex-col py-[35px] md:py-[70px]">
+        <NavigationProducts />
+        <section className="flex flex-col px-[16px] pt-[30px] md:pt-[40px]">
+          <div className="mx-auto grid max-w-[1296px] gap-[8px] md:grid-cols-2 md:gap-[30px]">
             {list.map((props, index) => (
               <ProductItem key={index} {...props} />
             ))}
           </div>
         </section>
 
-        <Link href="/contact-us" className="mx-auto w-max mt-[40px]">
+        <Link href="/contact-us" className="mx-auto mt-[40px] w-max">
           <Button
             type="button"
             variant="filled"
-            className="h-[41px] md:h-[56px] font-bold text-[16px] md:text-[20px] hover:bg-[#563AA7]"
+            className="h-[41px] text-[16px] font-bold hover:bg-[#563AA7] md:h-[56px] md:text-[20px]"
             aria-label="Make an order"
             title="Make an order"
           >

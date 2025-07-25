@@ -1,4 +1,4 @@
-import { SlotTools } from "../components";
+import { SlotTools } from "@/components";
 
 export default function Page() {
   return (

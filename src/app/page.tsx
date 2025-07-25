@@ -1,46 +1,44 @@
-"use server";
-import { Button } from "@/app/components";
-import { arrowOutlined, arrowOutlinedSmall, logo, logoMobile } from "@/svg";
-import Link from "next/link";
-import { Fragment } from "react";
-import { ContactFormModal, MakeOrderButton } from "./components.client";
+import { Button, ContactFormModal, OrderButton } from '@/components';
+import { arrowOutlined, arrowOutlinedSmall, logo, logoMobile } from '@/svg';
+import Link from 'next/link';
+import { Fragment } from 'react';
 
 const list = [
   {
-    name: "slotoking",
-    extension: ".svg",
+    name: 'slotoking',
+    extension: '.svg',
   },
   {
-    name: "leon",
-    extension: ".svg",
+    name: 'leon',
+    extension: '.svg',
   },
   {
-    name: "favbet",
-    extension: ".svg",
+    name: 'favbet',
+    extension: '.svg',
   },
   {
-    name: "betboom",
-    extension: ".svg",
+    name: 'betboom',
+    extension: '.svg',
   },
   {
-    name: "oasis",
-    extension: ".png",
+    name: 'oasis',
+    extension: '.png',
   },
   {
-    name: "pokerdom",
-    extension: ".svg",
+    name: 'pokerdom',
+    extension: '.svg',
   },
   {
-    name: "vavada",
-    extension: ".webp",
+    name: 'vavada',
+    extension: '.webp',
   },
   {
-    name: "1xbet",
-    extension: ".svg",
+    name: '1xbet',
+    extension: '.svg',
   },
   {
-    name: "22bet",
-    extension: ".svg",
+    name: '22bet',
+    extension: '.svg',
   },
 ];
 
@@ -48,17 +46,17 @@ export default async function Home() {
   return (
     <Fragment>
       <ContactFormModal />
-      <header className="h-[50px] md:h-[108px] flex items-center justify-center">
+      <header className="flex h-[50px] items-center justify-center md:h-[108px]">
         <Link href="/">{logo}</Link>
       </header>
 
-      <section className="py-[35px] px-[16px] md:p-[70px] h-[360px] md:h-[655px] relative">
-        <h1 className="md:whitespace-nowrap md:text-[60px] leading-[40px] text-[32px] font-bold text-center md:leading-[60px]">
+      <section className="relative h-[360px] px-[16px] py-[35px] md:h-[655px] md:p-[70px]">
+        <h1 className="text-center text-[32px] leading-[40px] font-bold md:text-[60px] md:leading-[60px] md:whitespace-nowrap">
           <span className="text-[#855CFF]">Modern Solutions</span> for <br />
           <span className="">the IGaming Industry</span>
         </h1>
         <video
-          className="z-10 absolute top-[64%] md:top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] max-w-[400px] md:max-w-max md:min-h-[550px] md:h-[550px]"
+          className="absolute top-[64%] left-1/2 z-10 w-full max-w-[400px] -translate-x-1/2 -translate-y-1/2 transform md:top-[60%] md:h-[550px] md:min-h-[550px] md:max-w-max"
           autoPlay
           loop
           muted
@@ -70,15 +68,15 @@ export default async function Home() {
         </video>
       </section>
 
-      <section className="py-[35px] px-[16px] md:p-[70px]">
+      <section className="px-[16px] py-[35px] md:p-[70px]">
         <div className="rotate-[-3.41deg]">
-          <div className="flex items-center translate-x-[-200px] w-[200%] h-[55px] animate-infinite-scroll">
+          <div className="flex h-[55px] w-[200%] translate-x-[-200px] animate-infinite-scroll items-center">
             {Array(80)
               .fill(logoMobile)
               .map((logo, index) => (
                 <div
                   key={index}
-                  className="bg-[#191520] h-full flex items-center justify-center pl-[35px]"
+                  className="flex h-full items-center justify-center bg-[#191520] pl-[35px]"
                 >
                   <div key={index} className="rotate-[5deg]">
                     {logo}
@@ -88,9 +86,9 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="h-[440px] md:h-[660px] w-[calc(100%+500px)] mt-[30px] mb-[30px] md:mb-[60px] md:mt-[50px] landscape:translate-x-[-100px] translate-x-[-110px] rotate-[-3.41deg] relative overflow-hidden">
+        <div className="relative mt-[30px] mb-[30px] h-[440px] w-[calc(100%+500px)] translate-x-[-110px] rotate-[-3.41deg] overflow-hidden md:mt-[50px] md:mb-[60px] md:h-[660px] landscape:translate-x-[-100px]">
           <svg
-            className="hidden md:block absolute top-[19%] left-[50%] transform  translate-x-[-68%] translate-y-[-50%] rotate-[5deg]"
+            className="absolute top-[19%] left-[50%] hidden translate-x-[-68%] translate-y-[-50%] rotate-[5deg] transform md:block"
             width="771"
             height="315"
             viewBox="0 0 771 315"
@@ -108,7 +106,7 @@ export default async function Home() {
           </svg>
 
           <svg
-            className="md:hidden absolute top-[20%] left-[52%] transform translate-x-[-100%] -translate-y-1/2 rotate-[3.41deg]"
+            className="absolute top-[20%] left-[52%] -translate-x-full -translate-y-1/2 rotate-[3.41deg] transform md:hidden"
             width="299"
             height="176"
             viewBox="0 0 299 176"
@@ -125,9 +123,9 @@ export default async function Home() {
             />
           </svg>
 
-          <div className="rotate-[3.41deg] w-full h-[356px] absolute bottom-0">
+          <div className="absolute bottom-0 h-[356px] w-full rotate-[3.41deg]">
             <video
-              className="absolute max-md:left-[41.3%] max-md:max-w-[480px] z-[1000] left-[50%] transform translate-x-[-61.5%] md:translate-x-[-58%] bottom-[-72px] md:bottom-[-116px] max-h-[540px] md:min-h-[800px] md:max-h-[800px]"
+              className="absolute bottom-[-72px] left-[50%] z-1000 max-h-[540px] translate-x-[-61.5%] transform max-md:left-[41.3%] max-md:max-w-[480px] md:bottom-[-116px] md:max-h-[800px] md:min-h-[800px] md:translate-x-[-58%]"
               autoPlay
               loop
               muted
@@ -138,35 +136,35 @@ export default async function Home() {
             </video>
           </div>
 
-          <div className="bg-[#191520] -z-10 h-[230px] md:h-[356px] w-full absolute bottom-0"></div>
+          <div className="absolute bottom-0 -z-10 h-[230px] w-full bg-[#191520] md:h-[356px]"></div>
         </div>
 
-        <div className="flex flex-wrap flex-col md:flex-row items-center justify-center gap-[12px] md:gap-[20px]">
+        <div className="flex flex-col flex-wrap items-center justify-center gap-[12px] md:flex-row md:gap-[20px]">
           <Link href="/cases/landing-gambling">
             <Button
               type="button"
               variant="filled"
-              className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-[#563AA7] ease-in-out duration-150"
+              className="h-[51px] w-[236px] text-[16px] font-bold duration-150 ease-in-out hover:bg-[#563AA7] md:h-[56px] md:w-auto md:text-[20px]"
               aria-label="See all cases"
             >
               See all cases
             </Button>
           </Link>
 
-          <MakeOrderButton />
+          <OrderButton />
         </div>
       </section>
 
-      <section className="py-[35px] px-[16px] flex flex-col gap-[30px] md:gap-[40px]">
-        <div className="h-[60px] md:h-[75px] px-[40px] flex items-center justify-center mx-auto  bg-[#191520] rounded-[40px]">
-          <h2 className="font-bold text-[21px] md:text-[36px] text-center text-nowrap">
+      <section className="flex flex-col gap-[30px] px-[16px] py-[35px] md:gap-[40px]">
+        <div className="mx-auto flex h-[60px] items-center justify-center rounded-[40px] bg-[#191520] px-[40px] md:h-[75px]">
+          <h2 className="text-center text-[21px] font-bold text-nowrap md:text-[36px]">
             Casino games development
           </h2>
         </div>
-        <div className="flex justify-center mx-auto max-w-[450px] md:max-w-[1050px]">
+        <div className="mx-auto flex max-w-[450px] justify-center md:max-w-[1050px]">
           <img
             src="/coming soon.webp"
-            className="object-cover  "
+            className="object-cover"
             loading="lazy"
             alt="Coming soon"
           />
@@ -197,13 +195,13 @@ export default async function Home() {
         </div> */}
       </section>
 
-      <section className="py-[35px] px-[16px] md:p-[70px]">
+      <section className="px-[16px] py-[35px] md:p-[70px]">
         <div className="rounded-[30px] bg-[#191520] py-[35px] md:p-[50px]">
-          <h2 className="font-bold text-[21px] leading-[25px] md:leading-normal md:text-[36px] text-center mb-[30px] md:mb-[40px]">
+          <h2 className="mb-[30px] text-center text-[21px] leading-[25px] font-bold md:mb-[40px] md:text-[36px] md:leading-normal">
             Products for promotion
           </h2>
           <video
-            className="hidden md:block w-full mx-auto mb-[40px]"
+            className="mx-auto mb-[40px] hidden w-full md:block"
             autoPlay
             loop
             muted
@@ -220,7 +218,7 @@ export default async function Home() {
           </video>
 
           <video
-            className="block md:hidden object-contain w-full max-h-[325px] mx-auto mb-[30px]"
+            className="mx-auto mb-[30px] block max-h-[325px] w-full object-contain md:hidden"
             autoPlay
             loop
             muted
@@ -236,12 +234,12 @@ export default async function Home() {
             />
           </video>
 
-          <div className="flex flex-wrap flex-col md:flex-row items-center justify-center gap-[12px] md:gap-[20px]">
+          <div className="flex flex-col flex-wrap items-center justify-center gap-[12px] md:flex-row md:gap-[20px]">
             <Link href="/cases/products-gambling">
               <Button
                 type="button"
                 variant="filled"
-                className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-[#563AA7] ease-in-out duration-150"
+                className="h-[51px] w-[236px] text-[16px] font-bold duration-150 ease-in-out hover:bg-[#563AA7] md:h-[56px] md:w-auto md:text-[20px]"
               >
                 See all products
               </Button>
@@ -251,7 +249,7 @@ export default async function Home() {
               <Button
                 type="button"
                 variant="outline"
-                className="font-bold text-[16px] md:text-[20px] h-[51px] md:h-[56px] w-[236px] md:w-auto hover:bg-white hover:text-[#0E0C12] ease-in-out duration-150"
+                className="h-[51px] w-[236px] text-[16px] font-bold duration-150 ease-in-out hover:bg-white hover:text-[#0E0C12] md:h-[56px] md:w-auto md:text-[20px]"
               >
                 See all products
               </Button>
@@ -260,10 +258,10 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="py-[35px] lg:py-[140px] px-[16px]">
-        <div className="relative flex flex-col lg:flex-row justify-between max-w-[1114px] mx-auto [@media(max-width:1024px)]:h-[860px]">
-          <div className="flex flex-col gap-[30px] lg:gap-[38px] lg:mt-[40px]">
-            <div className="flex justify-center ">
+      <section className="px-[16px] py-[35px] lg:py-[140px]">
+        <div className="relative mx-auto flex max-w-[1114px] flex-col justify-between lg:flex-row [@media(max-width:1024px)]:h-[860px]">
+          <div className="flex flex-col gap-[30px] lg:mt-[40px] lg:gap-[38px]">
+            <div className="flex justify-center">
               <svg
                 className="hidden lg:block"
                 width="400"
@@ -348,25 +346,25 @@ export default async function Home() {
               </svg>
             </div>
 
-            <div className="hidden md:block text-center text-[30px] leading-[36px]">
-              <span className="text-[#855CFF] font-bold">
+            <div className="hidden text-center text-[30px] leading-[36px] md:block">
+              <span className="font-bold text-[#855CFF]">
                 Full-service studio
-              </span>{" "}
+              </span>{' '}
               <br />
               in development and promotion
             </div>
 
-            <div className="block md:hidden text-center leading-[28.8px] text-[24px]">
-              <span className="text-[#855CFF] font-bold">
+            <div className="block text-center text-[24px] leading-[28.8px] md:hidden">
+              <span className="font-bold text-[#855CFF]">
                 Full-service studio
-              </span>{" "}
+              </span>{' '}
               in development and promotion
             </div>
           </div>
 
-          <figure className="-z-10 lg:z-0 h-[624px] lg:h-[690px] w-[299px] absolute bottom-[-30px] lg:top-1/2 left-[48%] transform -translate-x-1/2 lg:-translate-y-1/2 overflow-hidden">
+          <figure className="absolute bottom-[-30px] left-[48%] -z-10 h-[624px] w-[299px] -translate-x-1/2 transform overflow-hidden lg:top-1/2 lg:z-0 lg:h-[690px] lg:-translate-y-1/2">
             <video
-              className="object-cover h-full"
+              className="h-full object-cover"
               autoPlay
               loop
               muted
@@ -380,30 +378,30 @@ export default async function Home() {
             </video>
           </figure>
 
-          <div className="flex flex-col items-center gap-[12px] lg:gap-[40px] w-full lg:w-[480px] mt-[228px] lg:m-0">
+          <div className="mt-[228px] flex w-full flex-col items-center gap-[12px] lg:m-0 lg:w-[480px] lg:gap-[40px]">
             <Link href="/roadmap">
-              <div className="w-[330px] lg:max-w-full lg:w-auto bg-[#855CFF] rounded-[38px] h-[166px] lg:h-[228px] p-[28px] lg:p-[40px]">
-                <p className="text-[36px] lg:text-[45px] font-bold text-center leading-9 lg:leading-[45px] uppercase mb-[12px] lg:mb-[16px]">
+              <div className="h-[166px] w-[330px] rounded-[38px] bg-[#855CFF] p-[28px] lg:h-[228px] lg:w-auto lg:max-w-full lg:p-[40px]">
+                <p className="mb-[12px] text-center text-[36px] leading-9 font-bold uppercase lg:mb-[16px] lg:text-[45px] lg:leading-[45px]">
                   PARTNERSHIP <br /> ROADMAP
                 </p>
-                <div className="flex items-center gap-[12px] w-max mx-auto hover:opacity-80 ease-in-out duration-150">
-                  <p className="text-[18px] lg:text-[24px]">Check now</p>{" "}
+                <div className="mx-auto flex w-max items-center gap-[12px] duration-150 ease-in-out hover:opacity-80">
+                  <p className="text-[18px] lg:text-[24px]">Check now</p>{' '}
                   <div className="hidden lg:block">{arrowOutlined}</div>
-                  <div className="lg:hidden block">{arrowOutlinedSmall}</div>
+                  <div className="block lg:hidden">{arrowOutlinedSmall}</div>
                 </div>
               </div>
             </Link>
 
             <Link href="/tools">
-              <div className="w-[330px] lg:max-w-full lg:max-w-auto  lg:w-auto border-[6px] border-[#855CFF] rounded-[38px] h-[166px] lg:h-[228px] p-[28px] lg:p-[40px]">
-                <p className="text-[36px] lg:text-[45px] font-bold text-center leading-9 lg:leading-[45px] uppercase mb-[12px] lg:mb-[16px]">
+              <div className="lg:max-w-auto h-[166px] w-[330px] rounded-[38px] border-[6px] border-[#855CFF] p-[28px] lg:h-[228px] lg:w-auto lg:max-w-full lg:p-[40px]">
+                <p className="mb-[12px] text-center text-[36px] leading-9 font-bold uppercase lg:mb-[16px] lg:text-[45px] lg:leading-[45px]">
                   Promotion <br /> tools
                 </p>
 
-                <div className="flex items-center gap-[12px] w-max mx-auto hover:opacity-80 ease-in-out duration-150">
+                <div className="mx-auto flex w-max items-center gap-[12px] duration-150 ease-in-out hover:opacity-80">
                   <p className="text-[18px] lg:text-[24px]">Check now</p>
                   <div className="hidden lg:block">{arrowOutlined}</div>
-                  <div className="lg:hidden block">{arrowOutlinedSmall}</div>
+                  <div className="block lg:hidden">{arrowOutlinedSmall}</div>
                 </div>
               </div>
             </Link>
@@ -412,13 +410,13 @@ export default async function Home() {
       </section>
 
       <section className="py-[35px] md:py-[70px]">
-        <div className="mb-[35px] md:mb-[70px] h-[60px] md:h-[75px] px-[40px] flex items-center justify-center mx-auto w-max bg-[#191520] rounded-[40px]">
-          <h2 className="font-bold text-[24px] md:text-[36px]">Our services</h2>
+        <div className="mx-auto mb-[35px] flex h-[60px] w-max items-center justify-center rounded-[40px] bg-[#191520] px-[40px] md:mb-[70px] md:h-[75px]">
+          <h2 className="text-[24px] font-bold md:text-[36px]">Our services</h2>
         </div>
 
-        <div className="flex justify-center mx-auto w-full max-w-[1296px]">
+        <div className="mx-auto flex w-full max-w-[1296px] justify-center">
           <video
-            className="object-contain h-full md:hidden"
+            className="h-full object-contain md:hidden"
             autoPlay
             loop
             muted
@@ -428,7 +426,7 @@ export default async function Home() {
             <source src="/videos/services-mobile.webm" type="video/webm;" />
           </video>
           <video
-            className="object-contain h-full hidden md:block"
+            className="hidden h-full object-contain md:block"
             autoPlay
             loop
             muted
@@ -440,32 +438,32 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="py-[35px] px-[16px] md:py-[70px]">
-        <div className="mb-[35px] md:mb-[70px] h-[60px] md:h-[75px] px-[40px] flex items-center justify-center mx-auto w-max bg-[#191520] rounded-[40px]">
-          <h2 className="font-bold text-[24px] md:text-[36px]">
+      <section className="px-[16px] py-[35px] md:py-[70px]">
+        <div className="mx-auto mb-[35px] flex h-[60px] w-max items-center justify-center rounded-[40px] bg-[#191520] px-[40px] md:mb-[70px] md:h-[75px]">
+          <h2 className="text-[24px] font-bold md:text-[36px]">
             We worked with
           </h2>
         </div>
 
-        <div className="mx-auto grid grid-cols-2 md:grid-cols-3 gap-[10px] md:gap-[20px] max-w-[1114px] w-full">
+        <div className="mx-auto grid w-full max-w-[1114px] grid-cols-2 gap-[10px] md:grid-cols-3 md:gap-[20px]">
           {list.map(({ name, extension }, index) => (
             <div
               key={index}
               className={`${
-                index === 8 && "hidden md:flex"
-              } px-[16px] h-[90px] md:h-[180px] w-full bg-[#191520] flex items-center justify-center rounded-[7.5px] md:rounded-[15px] hover:bg-[#131018] duration-150 ease-in-out`}
+                index === 8 && 'hidden md:flex'
+              } flex h-[90px] w-full items-center justify-center rounded-[7.5px] bg-[#191520] px-[16px] duration-150 ease-in-out hover:bg-[#131018] md:h-[180px] md:rounded-[15px]`}
             >
-              <img src={"/casinos/" + name + extension} alt={name} />
+              <img src={'/casinos/' + name + extension} alt={name} />
             </div>
           ))}
         </div>
       </section>
 
-      <section className="overflow-hidden pt-[35px] mb-[35px] md:pt-[136px] md:mb-[40px] px-[16px]">
-        <div className=" bg-[#855CFF] mx-auto hidden xl:flex h-[224px] w-full max-w-[1235px] justify-between items-center text-[95px] font-bold uppercase relative rounded-[500px] px-[91px]">
+      <section className="mb-[35px] overflow-hidden px-[16px] pt-[35px] md:mb-[40px] md:pt-[136px]">
+        <div className="relative mx-auto hidden h-[224px] w-full max-w-[1235px] items-center justify-between rounded-[500px] bg-[#855CFF] px-[91px] text-[95px] font-bold uppercase xl:flex">
           <p>LET&#96;S</p>
           <video
-            className="w-[625px] absolute bottom-[-200px] left-[50%] transform -translate-x-1/2"
+            className="absolute bottom-[-200px] left-[50%] w-[625px] -translate-x-1/2 transform"
             autoPlay
             loop
             muted
@@ -483,13 +481,13 @@ export default async function Home() {
           <p>talk</p>
         </div>
 
-        <div className="overflow-visible max-w-[600px] pt-[40px] mx-auto block xl:hidden rounded-[60px] relative bg-[#855CFF]">
-          <p className="text-center text-[85px] font-bold uppercase leading-[60px] [@media(max-width:548px)]:leading-[74px]">
+        <div className="relative mx-auto block max-w-[600px] overflow-visible rounded-[60px] bg-[#855CFF] pt-[40px] xl:hidden">
+          <p className="text-center text-[85px] leading-[60px] font-bold uppercase [@media(max-width:548px)]:leading-[74px]">
             <span>LET&#96;S</span> <span>talk</span>
           </p>
           <div className="h-[360px]">
             <video
-              className="z-10 h-[760px] min-w-[600px] scale-x-[-1] absolute bottom-[-300px] left-1/2 transform translate-x-[-48.5%]"
+              className="absolute bottom-[-300px] left-1/2 z-10 h-[760px] min-w-[600px] translate-x-[-48.5%] scale-x-[-1] transform"
               autoPlay
               loop
               muted

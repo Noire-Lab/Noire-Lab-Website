@@ -1,12 +1,11 @@
-"use client";
-import { Button } from "@/app/components";
-import { check, logo } from "@/svg";
-import { yupResolver } from "@hookform/resolvers/yup";
-import Link from "next/link";
-import { useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
-import * as yup from "yup";
-import { ContactForm } from "../components.client";
+'use client';
+import { ContactForm } from '@/components';
+import { logo } from '@/svg';
+import { yupResolver } from '@hookform/resolvers/yup';
+import Link from 'next/link';
+import { useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import * as yup from 'yup';
 
 type FormPayload = {
   name: string;
@@ -17,10 +16,10 @@ type FormPayload = {
 };
 
 const prices = {
-  entryLevel: "$25 - $500",
-  budget: "$500 - $10K",
-  standard: "$10K - $50K",
-  premium: "$50K+",
+  entryLevel: '$25 - $500',
+  budget: '$500 - $10K',
+  standard: '$10K - $50K',
+  premium: '$50K+',
 };
 
 const validationSchema = yup.object().shape({
@@ -44,23 +43,23 @@ export default function Page() {
   } = useForm<FormPayload>({
     resolver: yupResolver(validationSchema),
     defaultValues: {
-      email: "",
-      name: "",
-      message: "",
+      email: '',
+      name: '',
+      message: '',
       price: prices.entryLevel,
     },
-    mode: "all",
+    mode: 'all',
   });
 
-  const selectedPriceWatcher = watch("price");
+  const selectedPriceWatcher = watch('price');
 
   const onSubmit: SubmitHandler<FormPayload> = async (formData) => {
     setLoading(true);
     try {
-      await fetch(window.location.origin + "/api/email", {
-        method: "POST",
+      await fetch(window.location.origin + '/api/email', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
@@ -77,7 +76,7 @@ export default function Page() {
       <header className="relative">
         <Link
           href="/"
-          className="absolute z-10 mx-auto left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0  md:left-[calc(50%-90px)] md:top-[40px]"
+          className="absolute top-[45%] left-1/2 z-10 mx-auto -translate-x-1/2 -translate-y-1/2 md:top-[40px] md:left-[calc(50%-90px)] md:translate-x-0 md:translate-y-0"
         >
           {logo}
         </Link>
@@ -97,20 +96,20 @@ export default function Page() {
         </picture>
       </header>
 
-      <section className="py-[35px] md:py-[70px] px-[16px] w-full mx-auto bg-[#0E0C12]">
-        <h1 className=" md:text-[40px] text-center md:leading-[50px] font-bold">
-          <span className="text-[50px] leading-[28px] md:leading-normal md:text-[40px] text-purple md:text-white">
+      <section className="mx-auto w-full bg-[#0E0C12] px-[16px] py-[35px] md:py-[70px]">
+        <h1 className="text-center font-bold md:text-[40px] md:leading-[50px]">
+          <span className="text-[50px] leading-[28px] text-purple md:text-[40px] md:leading-normal md:text-white">
             Hello!
           </span>
-          <br className="md:hidden" />{" "}
+          <br className="md:hidden" />{' '}
           <span className="text-[24px] md:text-[40px]">
             Tell us how we can help you
           </span>
         </h1>
-        <h2 className="text-[16px] md:text-[24px] text-center md:leading-[50px] font-normal mb-[12px]">
+        <h2 className="mb-[12px] text-center text-[16px] font-normal md:text-[24px] md:leading-[50px]">
           and we`ll write you back as fast as we can
         </h2>
-        <div className="bg-[#191520] rounded-[32px] px-[16px] py-[24px] max-w-[825px] mx-auto">
+        <div className="mx-auto max-w-[825px] rounded-[32px] bg-[#191520] px-[16px] py-[24px]">
           <ContactForm />
         </div>
       </section>
