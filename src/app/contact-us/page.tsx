@@ -83,16 +83,16 @@ export default function Page() {
 
         <picture>
           <source
-            srcSet="/contact-mobile.webp"
+            srcSet="/images/contact-mobile.webp"
             media="(max-width: 768px)"
             type="image/png"
           />
           <source
-            srcSet="/contact.webp"
+            srcSet="/images/contact.webp"
             media="(min-width: 769px)"
             type="image/png"
           />
-          <img src="/contact.webp" loading="eager" alt="contact" />
+          <img src="/images/contact.webp" loading="eager" alt="contact" />
         </picture>
       </header>
 

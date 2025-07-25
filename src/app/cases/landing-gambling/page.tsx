@@ -11,35 +11,35 @@ import { Picture } from "./components";
 
 const list = [
   {
-    link: "/landings/landing7.webp",
+    link: "/images/landings/landing7.webp",
     title: "New Year's Wheel of Fortune",
     description:
       "Engaging holiday-themed game to boost player interaction and rewards.",
   },
   {
-    link: "/landings/landing8.webp",
+    link: "/images/landings/landing8.webp",
     title: "Casino landing page with a registration for",
     description: "Optimized landing page design to enhance user registration.",
   },
   {
-    link: "/landings/landing9.webp",
+    link: "/images/landings/landing9.webp",
     title: "Wheel of Fortune",
     description:
       "Exciting spin-to-win game offering free spins and big prizes.",
   },
   {
-    link: "/landings/landing10.webp",
+    link: "/images/landings/landing10.webp",
     title: "Landing page with a preview of the Gates of Olympus game",
     description: "Stunning showcase of Gates of Olympus with extra rewards.",
   },
   {
-    link: "/landings/landing11.webp",
+    link: "/images/landings/landing11.webp",
     title: "Landing page with a preview of the Sugar Rush game",
     description:
       "Colorful and fun landing page showcasing the Sugar Rush game with free spins bonuses.",
   },
   {
-    link: "/landings/landing12.webp",
+    link: "/images/landings/landing12.webp",
     title: "Promo landing page for the game WANTED",
     description:
       "Immersive Wild West-themed landing page designed to captivate players.",

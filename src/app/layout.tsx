@@ -1,11 +1,10 @@
+import { Footer, Navigation } from '@/components';
+import clsx from 'clsx';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import './globals.css';
 import Head from 'next/head';
 import Script from 'next/script';
-import { Navigation } from '@/components/navigation';
-import { Footer } from '@/components';
-import clsx from 'clsx';
+import './globals.css';
 
 const gotham = localFont({
   src: [
@@ -191,9 +190,6 @@ export default function RootLayout({
       </Script>
 
       <body
-        // style={{
-        //   fontFamily: gotham.style.fontFamily,
-        // }}
         className={clsx(
           gotham.variable,
           gothamXNarrow.variable,

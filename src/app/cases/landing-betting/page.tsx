@@ -11,36 +11,36 @@ import { Picture } from './components';
 
 const list = [
   {
-    link: '/landings/landing1.webp',
+    link: '/images/landings/landing1.webp',
     title: 'Promo landing “Crypto Casino”',
     description:
       'Modern platform offering crypto betting with up to 100% bonuses.',
   },
   {
-    link: '/landings/landing2.webp',
+    link: '/images/landings/landing2.webp',
     title: 'Promo landing “Welcome Bonus”',
     description: 'Exclusive welcome bonus of 1000 USDT for new players.',
   },
   {
-    link: '/landings/landing3.webp',
+    link: '/images/landings/landing3.webp',
     title: 'Promo landing “Sporting Events”',
     description:
       'Dynamic platform for betting on your favorite sporting competitions.',
   },
   {
-    link: '/landings/landing4.webp',
+    link: '/images/landings/landing4.webp',
     title: 'Promo landing “India Cricket”',
     description:
       'Celebrate the passion for cricket with exclusive betting offers.',
   },
   {
-    link: '/landings/landing5.webp',
+    link: '/images/landings/landing5.webp',
     title: 'Promo landing “E-Sports”',
     description:
       'Elevate your e-sports experience with exclusive bonuses and bets.',
   },
   {
-    link: '/landings/landing6.webp',
+    link: '/images/landings/landing6.webp',
     title: 'Promo landing “EPL”',
     description: 'Your ultimate destination for betting on the Premier League.',
   },

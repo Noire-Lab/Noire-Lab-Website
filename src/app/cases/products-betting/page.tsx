@@ -11,25 +11,25 @@ import { Picture } from "./components";
 
 const list = [
   {
-    link: "/products/product9.webp",
+    link: "/images/products/product9.webp",
   },
   {
-    link: "/products/product10.webp",
+    link: "/images/products/product10.webp",
   },
   {
-    link: "/products/product11.webp",
+    link: "/images/products/product11.webp",
   },
   {
-    link: "/products/product12.webp",
+    link: "/images/products/product12.webp",
   },
   {
-    link: "/products/product13.webp",
+    link: "/images/products/product13.webp",
   },
   {
-    link: "/products/product14.webp",
+    link: "/images/products/product14.webp",
   },
   {
-    link: "/products/product15.webp",
+    link: "/images/products/product15.webp",
   },
 ];
 

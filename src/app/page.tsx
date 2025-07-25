@@ -163,7 +163,7 @@ export default async function Home() {
         </div>
         <div className="mx-auto flex max-w-[450px] justify-center md:max-w-[1050px]">
           <img
-            src="/coming soon.webp"
+            src="/images/coming soon.webp"
             className="object-cover"
             loading="lazy"
             alt="Coming soon"

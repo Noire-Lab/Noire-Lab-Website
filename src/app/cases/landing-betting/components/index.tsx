@@ -16,12 +16,12 @@ export const Picture = () => {
   return (
     <picture>
       <source
-        srcSet="/web-design-betting-mobile.webp"
+        srcSet="/images/web-design-betting-mobile.webp"
         media="(max-width: 768px)"
         type="image/webp"
       />
       <source
-        srcSet="/web-design-betting.webp"
+        srcSet="/images/web-design-betting.webp"
         media="(min-width: 769px)"
         type="image/webp"
       />
@@ -30,7 +30,7 @@ export const Picture = () => {
         onLoad={onLoad}
         width={5760}
         height={1944}
-        src="/web-design-betting.webp"
+        src="/images/web-design-betting.webp"
         loading="eager"
         alt="web design betting"
       />

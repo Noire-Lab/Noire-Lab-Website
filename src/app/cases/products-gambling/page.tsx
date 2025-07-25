@@ -14,36 +14,36 @@ const list: Pick<ProductItemProps, "link" | "type" | "poster">[] = [
   {
     link: "/videos/roobet.mp4",
     type: "video",
-    poster: "/products/product1.png",
+    poster: "/images/products/product1.png",
   },
   {
-    link: "/products/product2.webp",
+    link: "/images/products/product2.webp",
   },
   {
     link: "/videos/sant.mp4",
     type: "video",
-    poster: "/products/product3.png",
+    poster: "/images/products/product3.png",
   },
   {
     link: "/videos/dante.mp4",
     type: "video",
-    poster: "/products/product4.png",
+    poster: "/images/products/product4.png",
   },
   {
-    link: "/products/product5.webp",
+    link: "/images/products/product5.webp",
   },
   {
-    link: "/products/product6.webp",
+    link: "/images/products/product6.webp",
   },
   {
     link: "/videos/tr.mp4",
     type: "video",
-    poster: "/products/product7.png",
+    poster: "/images/products/product7.png",
   },
   {
     link: "/videos/vulkan.mp4",
     type: "video",
-    poster: "/products/product8.png",
+    poster: "/images/products/product8.png",
   },
 ];
 

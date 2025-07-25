@@ -31,7 +31,7 @@ export const Footer = () => {
               target="_blank"
             >
               <img
-                src="/instagram.svg"
+                src="/svg/instagram.svg"
                 className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out"
                 loading="eager"
                 alt="instagram"
@@ -41,7 +41,7 @@ export const Footer = () => {
           <li className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out">
             <a href="https://www.behance.net/noirelab" target="_blank">
               <img
-                src="/behance.svg"
+                src="/svg/behance.svg"
                 className="h-[33.6px]"
                 loading="eager"
                 alt="behance"
@@ -54,7 +54,7 @@ export const Footer = () => {
               target="_blank"
             >
               <img
-                src="/linkedin.svg"
+                src="/svg/linkedin.svg"
                 className="h-[33.6px]"
                 loading="eager"
                 alt="linkedin"
@@ -64,7 +64,7 @@ export const Footer = () => {
           <li className="h-[33.6px] hover:opacity-50 duration-300 ease-in-out">
             <a href="https://dribbble.com/NoireLab" target="_blank">
               <img
-                src="/dribble.webp"
+                src="/images/dribble.webp"
                 className="h-[33.6px]"
                 loading="eager"
                 alt="dribble"
@@ -87,7 +87,7 @@ export const Footer = () => {
 
           <a href="https://www.behance.net/noirelab" target="_blank">
             <img
-              src="/behance.svg"
+              src="/svg/behance.svg"
               className="h-[20px]"
               loading="eager"
               alt="behance"
@@ -99,7 +99,7 @@ export const Footer = () => {
             target="_blank"
           >
             <img
-              src="/linkedin.svg"
+              src="/svg/linkedin.svg"
               className="h-[20px]"
               loading="eager"
               alt="linkedin"
@@ -107,7 +107,7 @@ export const Footer = () => {
           </a>
           <a href="https://dribbble.com/NoireLab" target="_blank">
             <img
-              src="/dribble.webp"
+              src="/images/dribble.webp"
               className="h-[20px]"
               loading="eager"
               alt="dribble"

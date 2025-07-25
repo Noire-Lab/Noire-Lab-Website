@@ -76,9 +76,9 @@ export const PlanItem: FC<{
               </a>
             </Button>
 
-            <div
-              // href={learnMoreLink}
-              className="flex cursor-not-allowed items-center justify-center gap-2 pr-3"
+            <Link
+              href={learnMoreLink}
+              className="flex items-center justify-center gap-2 pr-3"
             >
               <span className="leading-4 text-[#9990AB]">Learn more</span>
               <svg
@@ -96,60 +96,11 @@ export const PlanItem: FC<{
                   strokeLinejoin="round"
                 />
               </svg>
-            </div>
+            </Link>
           </div>
         </div>
-        {/*  */}
 
         {background}
-
-        {/* <svg
-          className="absolute inset-0 min-h-full object-cover"
-          width="393"
-          height="822"
-          viewBox="0 0 393 822"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="393" height="822" fill="#191520" fillOpacity="0.5" />
-          <rect
-            width="393"
-            height="822"
-            fill="url(#paint0_linear_8113_12212)"
-          />
-          <rect
-            width="393"
-            height="822"
-            fill="url(#paint1_radial_8113_12212)"
-            fillOpacity="0.25"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_8113_12212"
-              x1="196.5"
-              y1="0"
-              x2="196.5"
-              y2="822"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#1F1A28" />
-              <stop offset="1" stopColor="#14111A" />
-            </linearGradient>
-            <radialGradient
-              id="paint1_radial_8113_12212"
-              cx="0"
-              cy="0"
-              r="1"
-              gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(196.5 760.203) rotate(90) scale(204.519 438.292)"
-            >
-              <stop stopColor="#CBA2FF" />
-              <stop offset="1" stopColor="#CBA2FF" stopOpacity="0" />
-            </radialGradient>
-          </defs>
-        </svg> */}
-
-        {/*  */}
       </div>
     </li>
   );

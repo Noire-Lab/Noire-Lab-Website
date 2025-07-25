@@ -18,3 +18,6 @@ export * from './modal.loading';
 export * from './intersection.observer';
 
 export * from './item.product';
+export * from './item.plan';
+
+export * from './faq';
