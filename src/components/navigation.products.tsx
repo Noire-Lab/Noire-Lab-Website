@@ -24,9 +24,9 @@ export const NavigationProducts = () => {
           <Button
             variant="outline"
             className={`h-[41px] border-2 !border-purple px-[36px] hover:bg-[#855CFF33] md:h-[53px] ${
-              isProduct ? '!border-purple !bg-purple' : ''
+              isLanding ? '!border-purple !bg-purple' : ''
             }`}
-            aria-label="Products"
+            aria-label="Landings | Sites"
           >
             Landings | Sites
           </Button>
