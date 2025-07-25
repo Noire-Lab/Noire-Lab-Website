@@ -380,7 +380,7 @@ export default async function Home() {
 
           <div className="mt-[228px] flex w-full flex-col items-center gap-[12px] lg:m-0 lg:w-[480px] lg:gap-[40px]">
             <Link href="/roadmap">
-              <div className="h-[166px] w-[330px] rounded-[38px] bg-[#855CFF] p-[28px] lg:h-[228px] lg:w-auto lg:max-w-full lg:p-[40px]">
+              <div className="h-[166px] w-[330px] rounded-[38px] !bg-purple p-[28px] lg:h-[228px] lg:w-auto lg:max-w-full lg:p-[40px]">
                 <p className="mb-[12px] text-center text-[36px] leading-9 font-bold uppercase lg:mb-[16px] lg:text-[45px] lg:leading-[45px]">
                   PARTNERSHIP <br /> ROADMAP
                 </p>
@@ -393,7 +393,7 @@ export default async function Home() {
             </Link>
 
             <Link href="/tools">
-              <div className="lg:max-w-auto h-[166px] w-[330px] rounded-[38px] border-[6px] border-[#855CFF] p-[28px] lg:h-[228px] lg:w-auto lg:max-w-full lg:p-[40px]">
+              <div className="lg:max-w-auto h-[166px] w-[330px] rounded-[38px] border-[6px] border-purple p-[28px] lg:h-[228px] lg:w-auto lg:max-w-full lg:p-[40px]">
                 <p className="mb-[12px] text-center text-[36px] leading-9 font-bold uppercase lg:mb-[16px] lg:text-[45px] lg:leading-[45px]">
                   Promotion <br /> tools
                 </p>
@@ -460,7 +460,7 @@ export default async function Home() {
       </section>
 
       <section className="mb-[35px] overflow-hidden px-[16px] pt-[35px] md:mb-[40px] md:pt-[136px]">
-        <div className="relative mx-auto hidden h-[224px] w-full max-w-[1235px] items-center justify-between rounded-[500px] bg-[#855CFF] px-[91px] text-[95px] font-bold uppercase xl:flex">
+        <div className="relative mx-auto hidden h-[224px] w-full max-w-[1235px] items-center justify-between rounded-[500px] !bg-purple px-[91px] text-[95px] font-bold uppercase xl:flex">
           <p>LET&#96;S</p>
           <video
             className="absolute bottom-[-200px] left-[50%] w-[625px] -translate-x-1/2 transform"
@@ -481,7 +481,7 @@ export default async function Home() {
           <p>talk</p>
         </div>
 
-        <div className="relative mx-auto block max-w-[600px] overflow-visible rounded-[60px] bg-[#855CFF] pt-[40px] xl:hidden">
+        <div className="relative mx-auto block max-w-[600px] overflow-visible rounded-[60px] !bg-purple pt-[40px] xl:hidden">
           <p className="text-center text-[85px] leading-[60px] font-bold uppercase [@media(max-width:548px)]:leading-[74px]">
             <span>LET&#96;S</span> <span>talk</span>
           </p>
