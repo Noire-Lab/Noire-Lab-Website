@@ -96,7 +96,7 @@ export default function Page() {
           CHOOSE YOUR PLAN
         </h2>
 
-        <ul className="mx-auto mt-[35px] mb-[70px] grid max-w-[1232px] grid-cols-1 justify-center gap-x-6 gap-y-6 px-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mx-auto mt-[35px] mb-[70px] grid max-w-[1232px] grid-cols-1 justify-center items-center justify-items-center gap-x-6 gap-y-6 px-4 md:grid-cols-2 xl:grid-cols-3">
           <PlanItem
             title={<div className="text-[#CBA2FF]">NOIRE START</div>}
             savingTitle={<div className="text-[#CBA2FF]">Save over 15%!</div>}
