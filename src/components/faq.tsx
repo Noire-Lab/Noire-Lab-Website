@@ -847,7 +847,7 @@ const data = [
             </svg>
 
             <div className="flex flex-col">
-              <p className="leading-[18px]">Receiving tasks: until 6 pm</p>
+             <p className="leading-[18px]">Receiving tasks: until 6:00 PM (UTC+3)</p>
               <p className="text-[12px]">
                 (tasks received later are postponed to the next working day)
               </p>
@@ -871,7 +871,7 @@ const data = [
             </svg>
 
             <div className="flex flex-col">
-              <p className="leading-[18px]">Task delivery: by 8:00 PM</p>
+              <p className="leading-[18px]">Task delivery: by 8:00 PM (UTC+3)</p>
               <p className="text-[12px]">
                 (only for simple tasks; more complex ones are delivered
                 according to an agreed schedule)
