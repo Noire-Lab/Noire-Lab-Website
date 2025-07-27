@@ -6,7 +6,7 @@ import {
 } from '@headlessui/react';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
-import React, { FC, useMemo } from 'react';
+import React, { FC, Fragment, useMemo } from 'react';
 
 const Item: FC<{
   title: React.ReactNode;
@@ -177,29 +177,53 @@ const detailedDescriptionList = [
 
 const DetailedDescriptionContent = () => {
   return (
-    <div className="grid gap-3">
-      <div className="grid grid-cols-2 gap-3 font-bold">
-        <div className="rounded-[8px] bg-[#615478] px-4 py-3 text-[16px] font-normal">
-          Service
+    <Fragment>
+      <div className="grid gap-3 max-md:hidden">
+        <div className="grid grid-cols-2 gap-3 font-bold">
+          <div className="rounded-[8px] bg-[#615478] px-4 py-3 text-[16px] font-normal">
+            Service
+          </div>
+          <div className="rounded-[8px] bg-[#615478] px-4 py-3 text-[16px] font-normal">
+            Description
+          </div>
         </div>
-        <div className="rounded-[8px] bg-[#615478] px-4 py-3 text-[16px] font-normal">
-          Description
-        </div>
+
+        {detailedDescriptionList.map((props, key) => {
+          return (
+            <div key={key} className="grid grid-cols-2 gap-3 text-[14px]">
+              <div className="rounded-[8px] bg-[#191520] p-4">
+                {props.title}
+              </div>
+              <div className="flex flex-col gap-3 rounded-[8px] bg-[#191520] p-4 text-[#9990AB]">
+                {props.descriptionList.map((text, key) => (
+                  <p key={key}>{text}</p>
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </div>
 
-      {detailedDescriptionList.map((props, key) => {
-        return (
-          <div key={key} className="grid grid-cols-2 gap-3 text-[14px]">
-            <div className="rounded-[8px] bg-[#191520] p-4">{props.title}</div>
-            <div className="flex flex-col gap-3 rounded-[8px] bg-[#191520] p-4 text-[#9990AB]">
-              {props.descriptionList.map((text, key) => (
-                <p key={key}>{text}</p>
-              ))}
+      <div className="flex flex-col gap-3 md:hidden">
+        {detailedDescriptionList.map((props, key) => {
+          return (
+            <div
+              key={key}
+              className="flex flex-col gap-3 rounded-[8px] bg-[#191520] px-4 py-3 text-[14px]"
+            >
+              <p>{props.title}</p>
+              <Fragment>
+                {props.descriptionList.map((text, key) => (
+                  <p key={key} className="text-[#9990AB]">
+                    {text}
+                  </p>
+                ))}
+              </Fragment>
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </Fragment>
   );
 };
 
