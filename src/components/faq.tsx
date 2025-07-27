@@ -1,11 +1,12 @@
 'use client';
-import React, { FC } from 'react';
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
 import clsx from 'clsx';
+import { usePathname } from 'next/navigation';
+import React, { FC, useMemo } from 'react';
 
 const Item: FC<{
   title: string;
@@ -20,7 +21,13 @@ const Item: FC<{
           <DisclosureButton className="flex w-full cursor-pointer items-center justify-between px-4 py-3">
             <p className="text-xl">{title}</p>
             {!open && (
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <svg
+                className="shrink-0"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
                 <g clipPath="url(#clip0_972_2503)">
                   <path
                     d="M1.78125 7.99957H14.2257M8.00347 1.77734V14.2218"
@@ -38,7 +45,13 @@ const Item: FC<{
               </svg>
             )}
             {open && (
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <svg
+                className="shrink-0"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
                 <rect x="1" y="7" width="14" height="2" rx="1" fill="white" />
               </svg>
             )}
@@ -190,6 +203,155 @@ const DetailedDescriptionContent = () => {
   );
 };
 
+const noireStartServicesList = [
+  { title: 'Static creative', price: 1.0 },
+  { title: 'Static resize', price: 0.25 },
+  { title: 'Static geo/offer adaptation', price: 0.25 },
+  { title: 'Static uniqueization', price: 0.25 },
+];
+
+const noireProServicesList = [
+  { title: 'Static creative', price: 1.0 },
+  { title: 'Static resize', price: 0.25 },
+  { title: 'Static geo/offer adaptation', price: 0.25 },
+  { title: 'Static uniqueization', price: 0.25 },
+
+  { title: 'Video (1 lvl)', price: 3.0 },
+  { title: 'Video (2 lvl)', price: 4.0 },
+  { title: 'Video (3 lvl)', price: 5.0 },
+  { title: 'Video geo adaptation', price: 1.0 },
+  { title: 'Video game adaptation', price: 1.5 },
+  { title: 'Video uniqueization', price: 1.0 },
+  { title: 'Video resize', price: 0.5 },
+];
+
+const noireMaxServicesList = [
+  { title: 'Static creative', price: 1.0 },
+  { title: 'Static resize', price: 0.25 },
+  { title: 'Static geo/offer adaptation', price: 0.25 },
+  { title: 'Static uniqueization', price: 0.25 },
+
+  { title: 'Video (1 lvl)', price: 3.0 },
+  { title: 'Video (2 lvl)', price: 4.0 },
+  { title: 'Video (3 lvl)', price: 5.0 },
+  { title: 'Video geo adaptation', price: 1.0 },
+  { title: 'Video game adaptation', price: 1.5 },
+  { title: 'Video uniqueization', price: 1.0 },
+  { title: 'Video resize', price: 0.5 },
+
+  { title: 'Promo-landing', price: 8.0 },
+  { title: 'Promo-landing game adaptation', price: 6.0 },
+  { title: 'Promo-landing geo adaptation', price: 3.0 },
+  { title: 'Promo-landing developing', price: 10.0 },
+];
+
+const BillingSystemContent = () => {
+  const pathname = usePathname();
+
+  const isActive = (match: string, currentPathname = pathname) => {
+    return currentPathname.includes(match);
+  };
+
+  const isNoireStart = useMemo(
+    () => isActive('noire-start', pathname),
+    [pathname],
+  );
+  const isNoirePro = useMemo(() => isActive('noire-pro', pathname), [pathname]);
+  const isNoireMax = useMemo(() => isActive('noire-max', pathname), [pathname]);
+
+  return (
+    <div className="flex flex-col gap-3">
+      <p>The subscription operates on a credit-based system.</p>
+
+      {isNoireStart && (
+        <>
+          <p>Total balance: 57.5 credits</p>
+          <p>Main credits: 52.5</p>
+          <p>Bonus credits: 5</p>
+        </>
+      )}
+      {isNoirePro && (
+        <>
+          <p>Total balance: 185.25 credits</p>
+          <p>Main credits: 180.25</p>
+          <p>Bonus credits: 5</p>
+        </>
+      )}
+      {isNoireMax && (
+        <>
+          <p>Total balance: 353.5 credits </p>
+          <p>Main credits: 348.5</p>
+          <p>Bonus credits: 5</p>
+        </>
+      )}
+
+      <p>1 credit = 1 basic service unit</p>
+      <p className="text-[12px]">
+        *This system is specifically designed to streamline internal operations,
+        enhancing both speed and convenience when calculating service usage. It
+        is fully transparent, allowing you to easily calculate exactly how much
+        you paid for each completed service.
+      </p>
+      <div className="rounded-[8px] bg-[#191520] px-4 py-3">
+        <div className="flex justify-between">
+          <span>Service</span> <span>Cost in credits</span>
+        </div>
+
+        <div className="my-3 min-h-[1px] w-full bg-[#615478]"></div>
+
+        <div className="w-fit rounded-[8px] bg-[#615478] px-2 py-1 text-[14px]">
+          Main services
+        </div>
+
+        <ul className="mt-3 space-y-2 text-[14px]">
+          {isNoireStart &&
+            noireStartServicesList.map((service, key) => (
+              <li key={key} className="flex justify-between">
+                <span>{service.title}</span>
+                <span>{service.price}</span>
+              </li>
+            ))}
+
+          {isNoirePro &&
+            noireProServicesList.map((service, key) => (
+              <li key={key} className="flex justify-between">
+                <span>{service.title}</span>
+                <span>{service.price}</span>
+              </li>
+            ))}
+
+          {isNoireMax &&
+            noireMaxServicesList.map((service, key) => (
+              <li key={key} className="flex justify-between">
+                <span>{service.title}</span>
+                <span>{service.price}</span>
+              </li>
+            ))}
+        </ul>
+
+        <div className="mt-3 w-fit rounded-[8px] bg-[#615478] px-2 py-1 text-[14px]">
+          Additional services
+        </div>
+
+        <ul className="mt-3 space-y-2 text-[14px]">
+          <li className="flex justify-between">
+            <span>Turnkey creative</span> <span>1.5</span>
+          </li>
+          <li className="flex justify-between">
+            <span>Deadline boost (to 12 h)</span> <span>0.5</span>
+          </li>
+          <li className="flex justify-between">
+            <span>Creative on weekends</span> <span>2.0</span>
+          </li>
+          <li className="flex justify-between">
+            <span>Extra edits</span> <span>0.25</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
 const faqData = [
   {
     title: 'What is the “Turnkey creo” service?',
@@ -336,12 +498,12 @@ const data = [
   },
   {
     title: 'Billing System',
-    content: '',
+    content: <BillingSystemContent />,
   },
   {
     title: 'Why is this beneficial for me?',
     content: (
-      <div className="py-3 text-[16px]">
+      <div className="text-[16px]">
         <p>
           We are for efficiency and mutually beneficial cooperation! Why is it
           convenient and profitable for you?

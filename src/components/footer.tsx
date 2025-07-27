@@ -78,7 +78,7 @@ export const Footer = () => {
             target="_blank"
           >
             <img
-              src="/instagram.svg"
+              src="/svg/instagram.svg"
               className="h-[20px]"
               loading="eager"
               alt="instagram"

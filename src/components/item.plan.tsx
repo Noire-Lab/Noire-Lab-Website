@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
 import { Button } from '@/components';
 import Link from 'next/link';
+import React, { FC } from 'react';
 
 export const PlanItem: FC<{
   title: React.ReactNode;
@@ -69,7 +69,7 @@ export const PlanItem: FC<{
           <div className="mt-auto flex justify-between">
             <Button
               variant="filled"
-              className="h-14 px-11 py-4 text-xl font-bold"
+              className="h-14 px-11 py-4 text-xl font-bold duration-200 hover:bg-[#563AA7]"
             >
               <a href="https://t.me/noire_lab_igaming" target="_blank">
                 Get
@@ -78,7 +78,7 @@ export const PlanItem: FC<{
 
             <Link
               href={learnMoreLink}
-              className="flex items-center justify-center gap-2 pr-3"
+              className="flex items-center justify-center gap-2 pr-3 duration-200 hover:opacity-50"
             >
               <span className="leading-4 text-[#9990AB]">Learn more</span>
               <svg
