@@ -61,10 +61,10 @@ export default function Page() {
             alt="subscription"
           />
         </picture>
-        <h2 className="absolute inset-x-0 bottom-[62px] mx-auto text-center text-xl md:leading-[50px] font-bold uppercase md:text-[40px]">
+        <h2 className="absolute inset-x-0 bottom-[62px] mx-auto text-center text-xl font-bold uppercase md:text-[40px] md:leading-[50px]">
           Subscriptions <br className="md:hidden" /> for complex services
         </h2>
-        <div className="absolute right-0 bottom-[35px] left-0 mx-auto flex max-w-[1296px] items-center gap-5">
+        <div className="absolute right-0 bottom-[35px] left-0 mx-auto flex max-w-[1328px] items-center gap-5 px-4">
           <div className="min-h-[1px] w-full bg-[#8578AC]"></div>
           <svg
             className="shrink-0"
@@ -92,11 +92,11 @@ export default function Page() {
       </div>
 
       <div>
-        <h2 className="mt-[35px] text-center text-2xl font-bold md:mt-[70px] md:text-[40px]">
+        <h2 className="mt-[35px] text-center text-[32px] font-bold md:mt-[70px] md:text-[40px]">
           CHOOSE YOUR PLAN
         </h2>
 
-        <ul className="mx-auto mt-[35px] mb-[70px] grid max-w-[1232px] grid-cols-1 justify-center items-center justify-items-center gap-x-6 gap-y-6 px-4 md:grid-cols-2 xl:grid-cols-3">
+        <ul className="mx-auto mt-[35px] mb-[70px] grid max-w-[1232px] grid-cols-1 items-center justify-center justify-items-center gap-x-6 gap-y-6 px-4 md:grid-cols-2 xl:grid-cols-3">
           <PlanItem
             title={<div className="text-[#CBA2FF]">NOIRE START</div>}
             savingTitle={<div className="text-[#CBA2FF]">Save over 15%!</div>}

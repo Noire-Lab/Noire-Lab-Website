@@ -23,10 +23,10 @@ export default function Page() {
             alt="subscription"
           />
         </picture>
-        <h2 className="absolute inset-x-0 bottom-[62px] mx-auto px-4 text-center text-xl md:leading-[50px] font-bold uppercase md:text-[40px]">
+        <h2 className="absolute inset-x-0 bottom-[62px] mx-auto px-4 text-center text-xl font-bold uppercase md:text-[40px] md:leading-[50px]">
           SUBSCRIPTION: NOIRE START
         </h2>
-        <div className="absolute right-0 bottom-[35px] left-0 mx-auto flex max-w-[1296px] items-center gap-5">
+        <div className="absolute right-0 bottom-[35px] left-0 mx-auto flex max-w-[1328px] items-center gap-5 px-4">
           <div className="min-h-[1px] w-full bg-[#8578AC]"></div>
           <svg
             className="shrink-0"
