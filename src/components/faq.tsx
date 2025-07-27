@@ -373,9 +373,6 @@ const data = [
               </p>
             </div>
           </li>
-        </ul>
-
-        <ul className="mt-3 space-y-3">
           <li className="flex items-center gap-2">
             <svg
               className="shrink-0"
@@ -401,9 +398,6 @@ const data = [
               </p>
             </div>
           </li>
-        </ul>
-
-        <ul className="mt-3 space-y-3">
           <li className="flex items-center gap-2">
             <svg
               className="shrink-0"
@@ -431,9 +425,6 @@ const data = [
               </p>
             </div>
           </li>
-        </ul>
-
-        <ul className="mt-3 space-y-3">
           <li className="flex items-center gap-2">
             <svg
               className="shrink-0"
@@ -460,9 +451,6 @@ const data = [
               </p>
             </div>
           </li>
-        </ul>
-
-        <ul className="mt-3 space-y-3">
           <li className="flex items-center gap-2">
             <svg
               className="shrink-0"
@@ -490,9 +478,6 @@ const data = [
               </p>
             </div>
           </li>
-        </ul>
-
-        <ul className="mt-3 space-y-3">
           <li className="flex items-center gap-2">
             <svg
               className="shrink-0"
@@ -521,9 +506,6 @@ const data = [
               </p>
             </div>
           </li>
-        </ul>
-
-        <ul className="mt-3 space-y-3">
           <li className="flex items-center gap-2">
             <svg
               className="shrink-0"
@@ -550,9 +532,6 @@ const data = [
               </p>
             </div>
           </li>
-        </ul>
-
-        <ul className="mt-3 space-y-3">
           <li className="flex items-center gap-2">
             <svg
               className="shrink-0"
