@@ -17,16 +17,16 @@ export default function Page() {
             type="image/png"
           />
           <img
-            className="w-full object-cover max-h-[295px] md:max-h-[486px]"
+            className="max-h-[295px] w-full object-cover md:max-h-[486px]"
             src="/images/subscription.mobile.png"
             loading="eager"
             alt="subscription"
           />
         </picture>
-        <h2 className="absolute inset-x-0 bottom-[62px] mx-auto px-4 text-center text-xl md:leading-[50px] font-bold uppercase md:text-[40px]">
+        <h2 className="absolute inset-x-0 bottom-[29px] mx-auto px-4 text-center text-xl font-bold uppercase md:bottom-[62px] md:text-[40px] md:leading-[50px]">
           SUBSCRIPTION: NOIRE MAX
         </h2>
-        <div className="absolute right-0 bottom-[35px] left-0 mx-auto flex max-w-[1328px] items-center gap-5 px-4">
+        <div className="absolute right-0 bottom-[2px] left-0 mx-auto flex max-w-[1328px] items-center gap-5 px-4 md:bottom-[35px]">
           <div className="min-h-[1px] w-full bg-[#8578AC]"></div>
           <svg
             className="shrink-0"
