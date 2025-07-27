@@ -153,30 +153,509 @@ const data = [
   },
   {
     title: 'Why is this beneficial for me?',
-    content: '',
-  },
+    content: (
+      <div className="py-3 text-[16px]">
+        <p>
+          We are for efficiency and mutually beneficial cooperation! Why is it
+          convenient and profitable for you?
+        </p>
 
+        <ul className="mt-3 space-y-3">
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">
+                <span>Savings.</span>
+                <span className="text-[#9990AB]">
+                  You pay up to 20% less compared to per-project pricing.
+                </span>
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <ul className="mt-3 space-y-3">
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">
+                <span>Transparent budget.</span>
+                <span className="text-[#9990AB]">
+                  You always know exactly how much you pay and what you get.
+                </span>
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <ul className="mt-3 space-y-3">
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">
+                <span>Easy and clear budget planning.</span>
+                <span className="text-[#9990AB]">
+                  The subscription lets you be sure how much you’ll pay and how
+                  many creatives you’ll receive. Our flexible credit system
+                  allows you to choose services as needed, without rigid limits.
+                </span>
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <ul className="mt-3 space-y-3">
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">
+                <span>Priority service.</span>
+                <span className="text-[#9990AB]">
+                  Subscribers receive creatives faster and are prioritized in
+                  the queue.
+                </span>
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <ul className="mt-3 space-y-3">
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">
+                <span>Seamless collaboration. </span>
+                <span className="text-[#9990AB]">
+                  Fully tailored to your needs. During our work together, we
+                  deeply understand your product and style, which significantly
+                  improves regular results.
+                </span>
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <ul className="mt-3 space-y-3">
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">
+                <span>Complete transparency and control system. </span>
+                <span className="text-[#9990AB]">
+                  You always know how many credits you have left and how much
+                  work has already been completed.We send weekly reports on all
+                  completed tasks, so you don’t have to spend your time tracking
+                  your budget.
+                </span>
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <ul className="mt-3 space-y-3">
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">
+                <span>Renewal bonus. </span>
+                <span className="text-[#9990AB]">
+                  Even unused credits bring you extra value when renewing your
+                  subscription.
+                </span>
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <ul className="mt-3 space-y-3">
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">
+                <span>Reliability. </span>
+                <span className="text-[#9990AB]">
+                  You don’t get a “random freelancer” or an “unmotivated staff
+                  designer.” You get a reliable long-term partner who guarantees
+                  high-quality, fast, and professional service.
+                </span>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   {
     title: 'Edits',
-    content: '',
+    content: (
+      <div className="py-3 text-[16px]">
+        <p>
+          Each creative includes 3 free revisions of light and medium
+          complexity.Paid revisions apply when the number exceeds 3 or if the
+          revision is considered complex.
+        </p>
+        <ul className="mt-3 space-y-3">
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <span>
+              Light level — minor edits that don’t affect the structure and take
+              up to 3 minutes each.
+            </span>
+          </li>
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <span>
+              Medium level — small structural tweaks, still quick to implement
+              (up to 5 minutes each).
+            </span>
+          </li>
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <span>
+              Complex level — major changes that significantly alter the
+              structure or require rebuilding key elements of the creative
+              (10–20 minutes each). Pricing for such revisions can be found in
+              the "Billing System" section under "Additional Services."
+            </span>
+          </li>
+        </ul>
+      </div>
+    ),
   },
   {
     title: 'Working Conditions',
-    content: '',
+    content: (
+      <div className="py-3 text-[16px]">
+        <ul className="space-y-3">
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">Working days: Mon-Fri</p>
+            </div>
+          </li>
+
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">Receiving tasks: until 6 pm</p>
+              <p className="text-[12px]">
+                (tasks received later are postponed to the next working day)
+              </p>
+            </div>
+          </li>
+
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">Task delivery: by 8:00 PM</p>
+              <p className="text-[12px]">
+                (only for simple tasks; more complex ones are delivered
+                according to an agreed schedule)
+              </p>
+            </div>
+          </li>
+
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">Maximum tasks per day: 5</p>
+              <p className="text-[12px]">
+                (resizes and adaptations are not counted)
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    ),
   },
 
   {
     title: 'System Flexibility',
-    content: '',
+    content: (
+      <div className="py-3 text-[16px]">
+        You can use your credits for any services included in the package, in
+        any order and combination. Want to focus on adaptations? Go ahead. Need
+        only new creatives? No problem. The subscription system is fully
+        adaptable to your workflow.
+      </div>
+    ),
   },
-
   {
     title: 'Unused Credits',
-    content: '',
+    content: (
+      <div className="py-3 text-[16px]">
+        <p>If you don't use all your credits by the end of the month:</p>
+        <ul className="mt-3 space-y-3">
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">
+                They do not roll over to the next billing cycle.
+              </p>
+            </div>
+          </li>
+
+          <li className="flex items-center gap-2">
+            <svg
+              className="shrink-0"
+              width="6"
+              height="7"
+              viewBox="0 0 6 7"
+              fill="none"
+            >
+              <rect
+                width="6"
+                height="6"
+                transform="translate(0 0.5)"
+                fill="white"
+              />
+            </svg>
+
+            <div className="flex flex-col">
+              <p className="leading-[18px]">
+                However, when you renew your subscription, we grant you +5 bonus
+                credits — these can be used for free creatives, adaptations, or
+                any other services of your choice.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    ),
   },
   {
     title: 'Reporting and Notifications',
-    content: '',
+    content: (
+      <div className="py-3 text-[16px]">
+        At the end of each week, we’ll provide you with a report on completed
+        work: the number and types of creatives delivered, as well as how many
+        creatives/services/credits you still have available.
+      </div>
+    ),
   },
   {
     title: 'FAQ',
