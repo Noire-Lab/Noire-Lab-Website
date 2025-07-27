@@ -23,7 +23,7 @@ export default function Page() {
             alt="subscription"
           />
         </picture>
-        <h2 className="absolute inset-x-0 bottom-[29px] mx-auto px-4 text-center text-xl font-bold uppercase md:bottom-[62px] md:text-[40px] md:leading-[50px]">
+        <h2 className="absolute inset-x-0 bottom-[40px] mx-auto text-center text-xl font-bold uppercase max-md:leading-[24px] md:bottom-[62px] md:text-[40px] md:leading-[50px]">
           SUBSCRIPTION: NOIRE MAX
         </h2>
         <div className="absolute right-0 bottom-[2px] left-0 mx-auto flex max-w-[1328px] items-center gap-5 px-4 md:bottom-[35px]">
