@@ -179,7 +179,7 @@ const data = [
 
             <div className="flex flex-col">
               <p className="leading-[18px]">
-                <span>Savings.</span>
+                <span>Savings. </span>
                 <span className="text-[#9990AB]">
                   You pay up to 20% less compared to per-project pricing.
                 </span>
@@ -207,7 +207,7 @@ const data = [
 
             <div className="flex flex-col">
               <p className="leading-[18px]">
-                <span>Transparent budget.</span>
+                <span>Transparent budget. </span>
                 <span className="text-[#9990AB]">
                   You always know exactly how much you pay and what you get.
                 </span>
@@ -235,7 +235,7 @@ const data = [
 
             <div className="flex flex-col">
               <p className="leading-[18px]">
-                <span>Easy and clear budget planning.</span>
+                <span>Easy and clear budget planning. </span>
                 <span className="text-[#9990AB]">
                   The subscription lets you be sure how much you’ll pay and how
                   many creatives you’ll receive. Our flexible credit system
@@ -265,7 +265,7 @@ const data = [
 
             <div className="flex flex-col">
               <p className="leading-[18px]">
-                <span>Priority service.</span>
+                <span>Priority service. </span>
                 <span className="text-[#9990AB]">
                   Subscribers receive creatives faster and are prioritized in
                   the queue.
