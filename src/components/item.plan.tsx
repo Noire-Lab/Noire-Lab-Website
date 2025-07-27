@@ -24,7 +24,7 @@ export const PlanItem: FC<{
   learnMoreLink,
 }) => {
   return (
-    <li className="h-[822px] max-h-[822px] w-full max-w-[394px] min-w-[360px] overflow-hidden rounded-[36px] bg-gradient-to-r from-[#B89EFF] to-[#855CFF] p-[1px]">
+    <li className="sm:h-[822px] max-h-[822px] w-full max-w-[394px] min-w-[360px] overflow-hidden rounded-[36px] bg-gradient-to-r from-[#B89EFF] to-[#855CFF] p-[1px]">
       <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[36px]">
         {chip}
         <div className="z-10 flex h-full flex-col p-6">
@@ -66,7 +66,7 @@ export const PlanItem: FC<{
             ))}
           </ul>
 
-          <div className="mt-auto flex justify-between">
+          <div className="mt-auto max-sm:mt-8 flex justify-between">
             <Button
               variant="filled"
               className="h-14 px-11 py-4 text-xl font-bold duration-200 hover:bg-[#563AA7]"

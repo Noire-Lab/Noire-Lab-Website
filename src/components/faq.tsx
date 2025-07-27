@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 import React, { FC, useMemo } from 'react';
 
 const Item: FC<{
-  title: string;
+  title: React.ReactNode;
   content: React.ReactNode;
   className?: string;
   contentClassName?: string;
@@ -19,7 +19,7 @@ const Item: FC<{
       {({ open }) => (
         <div className={clsx('rounded-[8px] bg-[#0E0C12]', className)}>
           <DisclosureButton className="flex w-full cursor-pointer items-center justify-between px-4 py-3">
-            <p className="text-xl">{title}</p>
+            <p className={clsx('text-start text-xl')}>{title}</p>
             {!open && (
               <svg
                 className="shrink-0"
@@ -847,7 +847,9 @@ const data = [
             </svg>
 
             <div className="flex flex-col">
-             <p className="leading-[18px]">Receiving tasks: until 6:00 PM (UTC+3)</p>
+              <p className="leading-[18px]">
+                Receiving tasks: until 6:00 PM (UTC+3)
+              </p>
               <p className="text-[12px]">
                 (tasks received later are postponed to the next working day)
               </p>
@@ -871,7 +873,9 @@ const data = [
             </svg>
 
             <div className="flex flex-col">
-              <p className="leading-[18px]">Task delivery: by 8:00 PM (UTC+3)</p>
+              <p className="leading-[18px]">
+                Task delivery: by 8:00 PM (UTC+3)
+              </p>
               <p className="text-[12px]">
                 (only for simple tasks; more complex ones are delivered
                 according to an agreed schedule)
@@ -990,10 +994,10 @@ const data = [
       <div className="space-y-3">
         {faqData.map((props, key) => (
           <Item
-            key={key}
             {...props}
+            key={key}
             className="bg-[#191520]"
-            contentClassName="bg-[#14111A] "
+            contentClassName="bg-[#14111A]"
           />
         ))}
       </div>
