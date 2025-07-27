@@ -5,6 +5,54 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
+import clsx from 'clsx';
+
+const Item: FC<{
+  title: string;
+  content: React.ReactNode;
+  className?: string;
+  contentClassName?: string;
+}> = ({ title, content, className, contentClassName }) => {
+  return (
+    <Disclosure>
+      {({ open }) => (
+        <div className={clsx('rounded-[8px] bg-[#0E0C12]', className)}>
+          <DisclosureButton className="flex w-full cursor-pointer items-center justify-between px-4 py-3">
+            <p className="text-xl">{title}</p>
+            {!open && (
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <g clipPath="url(#clip0_972_2503)">
+                  <path
+                    d="M1.78125 7.99957H14.2257M8.00347 1.77734V14.2218"
+                    stroke="white"
+                    strokeWidth="1.77778"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_972_2503">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            )}
+            {open && (
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <rect x="1" y="7" width="14" height="2" rx="1" fill="white" />
+              </svg>
+            )}
+          </DisclosureButton>
+          <DisclosurePanel
+            className={clsx('rounded-b-[8px] px-4 py-3', contentClassName)}
+          >
+            {content}
+          </DisclosurePanel>
+        </div>
+      )}
+    </Disclosure>
+  );
+};
 
 const detailedDescriptionList = [
   {
@@ -141,6 +189,145 @@ const DetailedDescriptionContent = () => {
     </div>
   );
 };
+
+const faqData = [
+  {
+    title: 'What is the “Turnkey creo” service?',
+    content: (
+      <div className="flex flex-col gap-6 bg-[#14111A] text-[#9990AB]">
+        <p>
+          In the standard creative service, we work based on the brief you
+          provide. We do not participate in the creation of the brief — aside
+          from possibly offering a few suggestions. The idea, approach,
+          structure, and copy are entirely your responsibility. Our job is
+          simply to execute the task.
+        </p>
+        <p>
+          The “Turnkey creo” service, however, includes our full involvement. We
+          thoroughly analyze your request, ask the necessary questions to shape
+          the brief, and independently develop the idea, concept, structure,
+          copy, and visual style. You’ll receive a preview before production
+          begins, and we’ll make any required adjustments based on your
+          feedback. In this format, you’re completely freed from managing the
+          creative process — while still receiving a polished, strategically
+          crafted product. We apply our expertise, experience, and cutting-edge
+          tools to ensure maximum quality, detail, and efficiency in crafting
+          your creative.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: 'How does “Deadline boost” work?',
+    content: (
+      <div className="flex flex-col gap-6 bg-[#14111A] text-[#9990AB]">
+        <p>
+          Deadline boost is very straightforward. In standard mode, a creative
+          is delivered within 24 working hours. As we’ve mentioned, in 80% of
+          cases, creatives are delivered much faster — typically within the same
+          day. However, during periods of heavy workload, we may deliver a
+          creative closer to the 24-hour deadline.
+        </p>
+        <p>
+          If your creative is urgent, simply let us know in advance. We’ll apply
+          the rush mode, reducing the deadline from 24 to 12 hours. That said,
+          such high-load situations are rare — we always strive to work as
+          efficiently as possible for each client.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title:
+      'Can I use credits for services from other packages or subscriptions?',
+    content: (
+      <div className="flex flex-col gap-6 bg-[#14111A] text-[#9990AB]">
+        <p>
+          No, credits can only be used within the scope of the subscription plan
+          you selected.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: 'Can I pause my subscription and resume it later?',
+    content: (
+      <div className="flex flex-col gap-6 bg-[#14111A] text-[#9990AB]">
+        <p>
+          No. The subscription functions like most similar services — it can
+          only be fully canceled, with no option to pause. The subscription
+          becomes active from the moment of payment.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: 'Can I buy a subscription with 50% prepayment?',
+    content: (
+      <div className="flex flex-col gap-6 bg-[#14111A] text-[#9990AB]">
+        <p>No, the subscription requires 100% upfront payment.</p>
+      </div>
+    ),
+  },
+  {
+    title: 'Can I cancel the subscription after some time and get a refund?',
+    content: (
+      <div className="flex flex-col gap-6 bg-[#14111A] text-[#9990AB]">
+        <p>
+          Yes, you can cancel your subscription and receive a refund for unused
+          funds.Unlike typical subscription models, we offer partial refunds
+          based on your remaining credits. We calculate how many credits you've
+          used and how many are left (in monetary value), and refund the unused
+          portion.
+        </p>
+        <p>
+          You can cancel under these terms within the first week of your
+          subscription.If you cancel after using the service for more than a
+          week (e.g., a week and a half), we will refund 50% of the value of
+          your remaining unused credits.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title:
+      'If I’m on the Noire Pro or Noire MAX plan, can I use all my credits just for static creatives?',
+    content: (
+      <div className="flex flex-col gap-6 bg-[#14111A] text-[#9990AB]">
+        <p>
+          Theoretically, yes — but technically, no. Our packages are structured
+          with a balance of services for a reason, and we recommend using each
+          one as intended. Focusing on only one type of task (e.g., just static
+          creatives) is not optimal and may affect delivery timelines.For
+          example, completing 181 static creatives in 22 working days may simply
+          be unfeasible due to our daily task limit. We also reserve the right
+          to limit the overuse of a single service type if it disrupts the
+          intended package balance or creates workload bottlenecks.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: 'Can I exchange three static creatives for one video?',
+    content: (
+      <div className="flex flex-col gap-6 bg-[#14111A] text-[#9990AB]">
+        <p>
+          If you are subscribed to Noire Start, you cannot exchange 3 static
+          creatives for one video, as video services are not included in this
+          package. However, you can purchase video separately at the standard
+          project-based rate.
+        </p>
+        <p>
+          If you're on the Noire Pro or Noire MAX subscription, then yes — you
+          can exchange 3 static creatives for one basic-level video, since both
+          cost 3 credits.You're free to use your credits however you like within
+          your package, but keep in mind FAQ item #7 — the system is designed to
+          prevent any excessive benefit beyond the standard 20% discount.
+        </p>
+      </div>
+    ),
+  },
+];
 
 const data = [
   {
@@ -400,7 +587,7 @@ const data = [
   {
     title: 'Edits',
     content: (
-      <div className="py-3 text-[16px]">
+      <div className="text-[16px]">
         <p>
           Each creative includes 3 free revisions of light and medium
           complexity.Paid revisions apply when the number exceeds 3 or if the
@@ -479,7 +666,7 @@ const data = [
   {
     title: 'Working Conditions',
     content: (
-      <div className="py-3 text-[16px]">
+      <div className="text-[16px]">
         <ul className="space-y-3">
           <li className="flex items-center gap-2">
             <svg
@@ -578,11 +765,10 @@ const data = [
       </div>
     ),
   },
-
   {
     title: 'System Flexibility',
     content: (
-      <div className="py-3 text-[16px]">
+      <div className="text-[16px]">
         You can use your credits for any services included in the package, in
         any order and combination. Want to focus on adaptations? Go ahead. Need
         only new creatives? No problem. The subscription system is fully
@@ -593,7 +779,7 @@ const data = [
   {
     title: 'Unused Credits',
     content: (
-      <div className="py-3 text-[16px]">
+      <div className="text-[16px]">
         <p>If you don't use all your credits by the end of the month:</p>
         <ul className="mt-3 space-y-3">
           <li className="flex items-center gap-2">
@@ -650,7 +836,7 @@ const data = [
   {
     title: 'Reporting and Notifications',
     content: (
-      <div className="py-3 text-[16px]">
+      <div className="text-[16px]">
         At the end of each week, we’ll provide you with a report on completed
         work: the number and types of creatives delivered, as well as how many
         creatives/services/credits you still have available.
@@ -659,52 +845,22 @@ const data = [
   },
   {
     title: 'FAQ',
-    content: '',
+    content: (
+      <div className="space-y-3">
+        {faqData.map((props, key) => (
+          <Item
+            key={key}
+            {...props}
+            className="bg-[#191520]"
+            contentClassName="bg-[#14111A] "
+          />
+        ))}
+      </div>
+    ),
   },
 ];
 
 export const FAQ = () => {
-  const Item: FC<{
-    title: string;
-    content: React.ReactNode;
-  }> = ({ title, content }) => {
-    return (
-      <Disclosure>
-        {({ open }) => (
-          <div className="rounded-[8px] bg-[#0E0C12] px-4 py-3">
-            <DisclosureButton className="flex w-full cursor-pointer items-center justify-between">
-              <p className="text-xl">{title}</p>
-              {!open && (
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <g clipPath="url(#clip0_972_2503)">
-                    <path
-                      d="M1.78125 7.99957H14.2257M8.00347 1.77734V14.2218"
-                      stroke="white"
-                      strokeWidth="1.77778"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_972_2503">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              )}
-              {open && (
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <rect x="1" y="7" width="14" height="2" rx="1" fill="white" />
-                </svg>
-              )}
-            </DisclosureButton>
-            <DisclosurePanel className="mt-3">{content}</DisclosurePanel>
-          </div>
-        )}
-      </Disclosure>
-    );
-  };
-
   return (
     <div className="rounded-2xl bg-[#191520] p-4">
       <ul className="space-y-3">
