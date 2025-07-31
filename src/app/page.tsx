@@ -453,7 +453,7 @@ export default async function Home() {
                 index === 8 && 'hidden md:flex'
               } flex h-[90px] w-full items-center justify-center rounded-[7.5px] bg-[#191520] px-[16px] duration-150 ease-in-out hover:bg-[#131018] md:h-[180px] md:rounded-[15px]`}
             >
-              <img src={'/casinos/' + name + extension} alt={name} />
+              <img src={'/images/casinos/' + name + extension} alt={name} />
             </div>
           ))}
         </div>
