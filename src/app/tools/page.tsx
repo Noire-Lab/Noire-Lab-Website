@@ -1,33 +1,21 @@
-import { SlotTools } from "@/components";
+import { PageHeader, SlotTools } from '@/components';
 
 export default function Page() {
   return (
     <div>
-      <picture>
-        <source
-          srcSet="/images/tools-mobile.webp"
-          media="(max-width: 768px)"
-          type="image/png"
-        />
-        <source
-          srcSet="/images/tools.webp"
-          media="(min-width: 769px)"
-          type="image/png"
-        />
-        <img
-          src="/images/tools.webp"
-          loading="eager"
-          alt="tools"
-        />
-      </picture>
-      
-      <div className="py-[35px] px-[16px] md:py-[70px] mx-auto max-w-[846px] grid grid-cols-1 md:grid-cols-2 gap-y-[16px] md:gap-y-0 md:gap-x-[12px]">
+      <PageHeader
+        title={<>Tools for Effective Promotion</>}
+        imagePath="/images/subscription.webp"
+        imagePathMobile="/images/subscription.mobile.webp"
+      />
+
+      <div className="mx-auto grid max-w-[846px] grid-cols-1 gap-y-[16px] px-[16px] py-[35px] md:grid-cols-2 md:gap-x-[12px] md:gap-y-0 md:py-[70px]">
         <SlotTools
           header={
-            <div className="md:hidden flex items-center">
+            <div className="flex items-center md:hidden">
               <img
                 src="/images/influencer.webp"
-                className="min-w-[85px] h-[85px] object-contain"
+                className="h-[85px] min-w-[85px] object-contain"
               />
             </div>
           }
@@ -38,22 +26,25 @@ export default function Page() {
             track record of high quality conversion rates."
         />
 
-        <div className="hidden md:flex items-center">
+        <div className="hidden items-center md:flex">
           <img
             src="/images/influencer.webp"
-            className="scale-[.8] w-full object-contain"
+            className="w-full scale-[.8] object-contain"
           />
         </div>
-        <div className="hidden md:flex items-center">
-          <img src="/images/media.webp" className="scale-[.9] w-full object-cover" />
+        <div className="hidden items-center md:flex">
+          <img
+            src="/images/media.webp"
+            className="w-full scale-[.9] object-cover"
+          />
         </div>
 
         <SlotTools
           header={
-            <div className="md:hidden flex items-center">
+            <div className="flex items-center md:hidden">
               <img
                 src="/images/media.webp"
-                className="min-w-[85px] h-[85px] object-contain"
+                className="h-[85px] min-w-[85px] object-contain"
               />
             </div>
           }
@@ -67,10 +58,10 @@ export default function Page() {
 
         <SlotTools
           header={
-            <div className="md:hidden flex items-center">
+            <div className="flex items-center md:hidden">
               <img
                 src="/images/markets.webp"
-                className="min-w-[85px] h-[85px] object-contain"
+                className="h-[85px] min-w-[85px] object-contain"
               />
             </div>
           }
@@ -79,19 +70,25 @@ export default function Page() {
           description="Our team of specialists will analyze the current state and prepare a strategy to promote your applications, as well as help to implement high-quality brand protection in App Store and PlayMarket"
         />
 
-        <div className="hidden md:flex items-center">
-          <img src="/images/markets.webp" className="scale-[.9] w-full object-cover" />
+        <div className="hidden items-center md:flex">
+          <img
+            src="/images/markets.webp"
+            className="w-full scale-[.9] object-cover"
+          />
         </div>
-        <div className="hidden md:flex items-center">
-          <img src="/images/heart.webp" className="scale-[.6] w-full object-cover" />
+        <div className="hidden items-center md:flex">
+          <img
+            src="/images/heart.webp"
+            className="w-full scale-[.6] object-cover"
+          />
         </div>
 
         <SlotTools
           header={
-            <div className="md:hidden flex items-center">
+            <div className="flex items-center md:hidden">
               <img
                 src="/images/heart.webp"
-                className="min-w-[85px] h-[85px] object-contain"
+                className="h-[85px] min-w-[85px] object-contain"
               />
             </div>
           }

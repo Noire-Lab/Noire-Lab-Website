@@ -1,32 +1,29 @@
-import { Slot } from "@/components";
+import { PageHeader, Slot } from '@/components';
 
 export default function Page() {
   return (
     <div>
-      <picture>
-        <source
-          srcSet="/roadmap-mobile.webp"
-          media="(max-width: 768px)"
-          type="image/png"
-        />
-        <source
-          srcSet="/roadmap.webp"
-          media="(min-width: 769px)"
-          type="image/png"
-        />
-        <img src="/roadmap.webp" loading="eager" alt="roadmap" />
-      </picture>
-      
-      <section className="py-[35px] px-[16px] md:py-[70px] mx-auto max-w-[846px] grid md:grid-cols-2 gap-y-[16px] md:gap-y-0 md:gap-x-[12px]">
-        <div className="hidden md:flex items-center justify-center">
-          <h3 className="uppercase font-bold text-[100px] scale-x-90">
+      <PageHeader
+        title={
+          <>
+            How We Work:
+            <br /> Step-by-Step Action Plan
+          </>
+        }
+        imagePath="/images/cases/roadmap.webp"
+        imagePathMobile="/images/cases/roadmap.mobile.webp"
+      />
+
+      <section className="mx-auto grid max-w-[846px] gap-y-[16px] px-[16px] py-[35px] md:grid-cols-2 md:gap-x-[12px] md:gap-y-0 md:py-[70px]">
+        <div className="hidden items-center justify-center md:flex">
+          <h3 className="scale-x-90 text-[100px] font-bold uppercase">
             step 1
           </h3>
         </div>
         <Slot
           header={
             <svg
-              className="md:hidden mx-auto"
+              className="mx-auto md:hidden"
               width="115"
               height="37"
               viewBox="0 0 115 37"
@@ -41,16 +38,16 @@ export default function Page() {
           }
           color="#A863FF"
           descriptionList={[
-            "Determining client goals and pains",
-            "Creating budgets",
-            "Setting campaign dates",
-            "Agreeing on target audience demographics",
+            'Determining client goals and pains',
+            'Creating budgets',
+            'Setting campaign dates',
+            'Agreeing on target audience demographics',
           ]}
         />
         <Slot
           header={
             <svg
-              className="md:hidden mx-auto"
+              className="mx-auto md:hidden"
               width="123"
               height="37"
               viewBox="0 0 123 37"
@@ -65,27 +62,27 @@ export default function Page() {
           }
           color="#9847FF"
           descriptionList={[
-            "Analyzing the market in real time to determine the best strategy",
+            'Analyzing the market in real time to determine the best strategy',
             "Preparing a proposal in line with the client's objectives",
             "Alignment of the company's main goals",
             "Finalization of the proposal based on the client's wishes",
           ]}
         />
-        <div className="hidden md:flex items-center justify-center">
-          <h3 className="uppercase font-bold text-[100px] scale-x-90">
+        <div className="hidden items-center justify-center md:flex">
+          <h3 className="scale-x-90 text-[100px] font-bold uppercase">
             step 2
           </h3>
         </div>
 
-        <div className="hidden md:flex items-center justify-center">
-          <h3 className="uppercase font-bold text-[100px] scale-x-90">
+        <div className="hidden items-center justify-center md:flex">
+          <h3 className="scale-x-90 text-[100px] font-bold uppercase">
             step 3
           </h3>
         </div>
         <Slot
           header={
             <svg
-              className="md:hidden mx-auto"
+              className="mx-auto md:hidden"
               width="122"
               height="37"
               viewBox="0 0 122 37"
@@ -100,16 +97,16 @@ export default function Page() {
           }
           color="#8A2EFF"
           descriptionList={[
-            "Payment by the client",
-            "Allocation of resources according to the assigned tasks",
-            "Pro-briefing of sources",
-            "Preparation of accounts and consumables for digital advertising",
+            'Payment by the client',
+            'Allocation of resources according to the assigned tasks',
+            'Pro-briefing of sources',
+            'Preparation of accounts and consumables for digital advertising',
           ]}
         />
         <Slot
           header={
             <svg
-              className="md:hidden mx-auto"
+              className="mx-auto md:hidden"
               width="126"
               height="37"
               viewBox="0 0 126 37"
@@ -124,14 +121,14 @@ export default function Page() {
           }
           color="#7D16FF"
           descriptionList={[
-            "Strategy implementation",
-            "Tracking the volume and quality of new users brought in",
-            "Tracking the volume and quality of new users brought in",
-            "Generating weekly detailed campaign reports",
+            'Strategy implementation',
+            'Tracking the volume and quality of new users brought in',
+            'Tracking the volume and quality of new users brought in',
+            'Generating weekly detailed campaign reports',
           ]}
         />
-        <div className="hidden md:flex items-center justify-center">
-          <h3 className="uppercase font-bold text-[100px] scale-x-90">
+        <div className="hidden items-center justify-center md:flex">
+          <h3 className="scale-x-90 text-[100px] font-bold uppercase">
             step 4
           </h3>
         </div>

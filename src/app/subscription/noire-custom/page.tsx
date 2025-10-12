@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <div>
       <PageHeader
-        title="SUBSCRIPTION: NOIRE PRO"
+        title="SUBSCRIPTION: NOIRE CUSTOM"
         imagePath="/images/subscription.webp"
         imagePathMobile="/images/subscription.mobile.webp"
       />
@@ -13,23 +13,30 @@ export default function Page() {
       <div className="mx-auto my-[35px] max-w-[1328px] px-4 text-xl md:my-[70px]">
         <div className="mb-6 space-y-6">
           <p>
-            <span className="text-[#CBA2FF]">Noire PRO</span> is the ultimate
-            solution for teams of any level — from early-stage marketing
-            projects to established businesses with mature creative workflows.
-            This package combines both static creatives and full-fledged video
-            content, offering flexibility, scalability, and maximum value from
-            your subscription.
+            <span className="text-[#CBA2FF]">Noire CUSTOM</span> is a fully
+            personalized subscription package designed to adapt to you — your
+            workflow, your volume, and your priorities. Whether you're a large
+            company with high-frequency needs or a smaller team looking for
+            consistent support, this package is the ideal flexible solution.
           </p>
           <p>
-            It’s the best choice for those who need a balanced approach to
-            design, video production, and adaptations — all without unnecessary
-            bureaucracy and with a predictable budget.
+            Noire CUSTOM is not just for big budgets or massive campaigns — it’s
+            for anyone who values a tailor-made approach. From 5 tasks a month
+            to full-scale production — we build your package based on your
+            actual goals and resources. We’re open to long-term collaboration at
+            any scale and ready to shape our service around your unique business
+            model.
+          </p>
+          <p>
+            This package is fully centered around your needs — not the other way
+            around. Let’s create a workflow that fits you perfectly.
           </p>
           <p>
             Before getting started, make sure to carefully review the
             subscription terms — this is essential for maximum efficiency and a
             smooth workflow.
           </p>
+
           <p className="text-xs">
             *By purchasing the subscription, you automatically agree to all
             stated terms and conditions.

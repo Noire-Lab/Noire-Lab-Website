@@ -1,5 +1,6 @@
-import { PlanItem } from '@/components';
+import { Button, PageHeader, PlanItem } from '@/components';
 import { noireMax, noirePro, noireStart } from '@/svg';
+import Link from 'next/link';
 
 const featuresStart = [
   { label: 'Static creative', count: 40 },
@@ -39,65 +40,69 @@ const featuresMax = [
   { label: 'Promo-landing developing', count: 4 },
 ];
 
+const featuresCustom = [
+  {
+    label: (
+      <>
+        The volume of creatives <br /> and videos you need
+      </>
+    ),
+  },
+  {
+    label: (
+      <>
+        A personalized credit <br /> and service structure
+      </>
+    ),
+  },
+  {
+    label: <>A dedicated manager to build your plan based on your goals</>,
+  },
+
+  {
+    label: (
+      <>
+        A unique price calculated <br /> to fit your workload
+      </>
+    ),
+  },
+  {
+    label: (
+      <>
+        Option to include <br /> non-standard services
+      </>
+    ),
+  },
+  {
+    label: (
+      <>
+        Personalized service <br /> and priority level
+      </>
+    ),
+  },
+];
+
 export default function Page() {
   return (
     <div>
-      <div className="relative">
-        <picture>
-          <source
-            srcSet="/images/subscription.mobile.png"
-            media="(max-width: 768px)"
-            type="image/png"
-          />
-          <source
-            srcSet="/images/subscription.png"
-            media="(min-width: 769px)"
-            type="image/png"
-          />
-          <img
-            className="max-h-[295px] w-full object-cover md:max-h-[486px]"
-            src="/images/subscription.mobile.png"
-            loading="eager"
-            alt="subscription"
-          />
-        </picture>
-        <h2 className="absolute inset-x-0 bottom-[40px] mx-auto text-center text-xl font-bold uppercase max-md:leading-[24px] md:bottom-[62px] md:text-[40px] md:leading-[50px]">
-          Subscriptions <br className="md:hidden" /> for complex services
-        </h2>
-        <div className="absolute right-0 bottom-[2px] left-0 mx-auto flex max-w-[1328px] items-center gap-5 px-4 md:bottom-[35px]">
-          <div className="min-h-[1px] w-full bg-[#8578AC]"></div>
-          <svg
-            className="shrink-0"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <rect
-              x="0.5"
-              y="0.5"
-              width="23"
-              height="23"
-              rx="11.5"
-              stroke="#8578AC"
-            />
-            <path
-              d="M11.7525 15.4056C11.8892 15.5422 12.1108 15.5422 12.2475 15.4056L14.4749 13.1782C14.6116 13.0415 14.6116 12.8199 14.4749 12.6832C14.3382 12.5465 14.1166 12.5465 13.9799 12.6832L12 14.6631L10.0201 12.6832C9.88342 12.5465 9.66181 12.5465 9.52513 12.6832C9.38844 12.8199 9.38844 13.0415 9.52513 13.1782L11.7525 15.4056ZM12 8.84229L11.65 8.84229L11.65 15.1581L12 15.1581L12.35 15.1581L12.35 8.84229L12 8.84229Z"
-              fill="#8578AC"
-            />
-          </svg>
-
-          <div className="min-h-[1px] w-full bg-[#8578AC]"></div>
-        </div>
-      </div>
+      <PageHeader
+        title={
+          <>
+            Subscriptions <br className="md:hidden" /> for complex services
+          </>
+        }
+        imagePath="/images/subscription.plans.webp"
+        imagePathMobile="/images/subscription.mobile.webp"
+      />
 
       <div>
         <h2 className="mt-[35px] text-center text-[32px] font-bold md:mt-[70px] md:text-[40px]">
           CHOOSE YOUR PLAN
         </h2>
 
-        <ul className="mx-auto mt-[30px] mb-[70px] grid max-w-[1232px] grid-cols-1 items-center justify-center justify-items-center gap-x-6 gap-y-6 px-4 md:grid-cols-2 xl:grid-cols-3">
+        <ul className="mx-auto mt-[30px] mb-[70px] grid max-w-[1232px] grid-cols-1 justify-items-center gap-x-6 gap-y-6 px-4 md:grid-cols-2 xl:grid-cols-3">
           <PlanItem
+            className="bg-gradient-to-b from-[#B7A1DB] to-[#55496B]"
             title={<div className="text-[#CBA2FF]">NOIRE START</div>}
             savingTitle={<div className="text-[#CBA2FF]">Save over 15%!</div>}
             fullPrice={1800}
@@ -109,6 +114,7 @@ export default function Page() {
           />
 
           <PlanItem
+            className="bg-[#855CFF] p-[2px]"
             title={<div className="text-[#7C51FF]">NOIRE PRO</div>}
             savingTitle={<div className="text-[#7C51FF]">Save over 20%!</div>}
             fullPrice={3400}
@@ -135,6 +141,7 @@ export default function Page() {
           />
 
           <PlanItem
+            className="bg-gradient-to-b from-[#B7A1DB] to-[#55496B]"
             title={<div className="text-[#FC51FF]">NOIRE MAX</div>}
             savingTitle={<div className="text-[#CBA2FF]">Save over 18%!</div>}
             fullPrice={7000}
@@ -144,6 +151,96 @@ export default function Page() {
             background={noireMax()}
             learnMoreLink="/subscription/noire-max"
           />
+
+          <PlanItem
+            className="bg-gradient-to-b from-[#B7A1DB] to-[#55496B] xl:hidden"
+            title={<div>NOIRE CUSTOM</div>}
+            description={
+              <>
+                Your personal plan, which will <br /> fully meet all your needs.
+              </>
+            }
+            list={featuresCustom}
+            background={noireMax()}
+            learnMoreLink="/subscription/noire-max"
+          />
+
+          <div className="col-span-3 w-full overflow-hidden rounded-[36px] bg-gradient-to-b from-[#ffffff] to-[#55496B] p-[1px] max-xl:hidden">
+            <div className="relative flex min-h-[202px] w-full items-stretch rounded-[36px] bg-gradient-to-b from-[#1F1A28] to-[#14111A] p-6">
+              {/* Left Section */}
+              <div className="flex w-[27.5%] flex-col items-start justify-center gap-4">
+                <h3 className="font-gotham-xnarrow text-[40px] leading-12 font-bold uppercase">
+                  Noire custom
+                </h3>
+                <p className="text-[18px] leading-5 font-[400] text-[#9990AB]">
+                  Your personal plan, which will fully meet all your needs.
+                </p>
+              </div>
+
+              {/* Divider */}
+              <div className="mx-7 w-[1px] bg-[#302840]" />
+
+              {/* Center Section */}
+              <div className="flex w-[45%] flex-col items-center justify-center">
+                <div className="text-[18px] leading-3.5 font-medium">
+                  What’s inside?
+                </div>
+
+                <ul className="grid grid-cols-2 gap-x-6 gap-y-2 p-4 text-white">
+                  {featuresCustom.map((item, index) => (
+                    <li key={index} className="flex items-center gap-2">
+                      <div className="h-[6px] w-[6px] shrink-0 bg-[#9990AB]" />
+                      <span className="text-[16px] leading-5 text-[#9990AB]">
+                        {item.label}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                {/* What’s inside? */}
+              </div>
+
+              {/* Divider */}
+              <div className="mx-7 w-[1px] bg-[#302840]" />
+
+              {/* Right Section */}
+              <div className="flex w-[27.5%] items-center justify-between gap-5">
+                <Button
+                  variant="filled"
+                  className="h-14 px-11 py-4 text-xl font-bold duration-200 hover:bg-[#563AA7]"
+                >
+                  <a
+                    href="https://t.me/noire_lab_igaming"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Get
+                  </a>
+                </Button>
+
+                <Link
+                  href="/subscription/noire-custom"
+                  className="flex items-center justify-center gap-2 pr-3 duration-200 hover:opacity-50"
+                >
+                  <span className="leading-4 text-[#9990AB]">Learn more</span>
+                  <svg
+                    width="15"
+                    height="14"
+                    viewBox="0 0 15 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.52504 11.5846L10.4609 7.0013L5.52504 2.41797"
+                      stroke="#9990AB"
+                      strokeWidth="1.375"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
         </ul>
       </div>
     </div>

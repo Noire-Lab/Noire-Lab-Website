@@ -5,33 +5,34 @@ import {
   PageHeader,
 } from '@/components';
 import clsx from 'clsx';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
 const list = [
   {
-    path: '/images/products/betting/1.png',
+    path: '/images/products/gambling/static/1.png',
   },
   {
-    path: '/images/products/betting/2.png',
+    path: '/images/products/gambling/static/2.png',
   },
   {
-    path: '/images/products/betting/3.png',
+    path: '/images/products/gambling/static/3.png',
   },
   {
-    path: '/images/products/betting/4.png',
+    path: '/images/products/gambling/static/4.png',
   },
   {
-    path: '/images/products/betting/5.png',
+    path: '/images/products/gambling/static/5.png',
   },
   {
-    path: '/images/products/betting/6.png',
+    path: '/images/products/gambling/static/6.png',
   },
   {
-    path: '/images/products/betting/7.png',
+    path: '/images/products/gambling/static/7.png',
   },
   {
-    path: '/images/products/betting/8.png',
+    path: '/images/products/gambling/static/8.png',
   },
 ];
 
@@ -55,12 +56,11 @@ export default function Page() {
               const isOddRow = rowIndex % 2 === 1;
               const isLeft = index % 2 === 0;
 
-              const heightClass =
-                rowIndex === 2 ? 'md:h-[204px]' : 'md:h-[314px]';
+              const heightClass = 'md:h-[314px]';
 
               return (
                 <div
-                  key={index}
+                  key={props.path}
                   className={clsx(
                     heightClass,
                     isLeft

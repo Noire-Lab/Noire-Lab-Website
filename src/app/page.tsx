@@ -140,7 +140,7 @@ export default async function Home() {
         </div>
 
         <div className="flex flex-col flex-wrap items-center justify-center gap-[12px] md:flex-row md:gap-[20px]">
-          <Link href="/cases/landing-gambling">
+          <Link href="/cases/landings-gambling">
             <Button
               type="button"
               variant="filled"
@@ -235,7 +235,7 @@ export default async function Home() {
           </video>
 
           <div className="flex flex-col flex-wrap items-center justify-center gap-[12px] md:flex-row md:gap-[20px]">
-            <Link href="/cases/products-gambling">
+            <Link href="/cases/products-gambling/static">
               <Button
                 type="button"
                 variant="filled"
