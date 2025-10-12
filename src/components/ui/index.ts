@@ -6,6 +6,7 @@ export * from './slot.tools';
 
 export * from './intersection.observer';
 
+export * from './item.product.2';
 export * from './item.product';
 export * from './item.plan';
 

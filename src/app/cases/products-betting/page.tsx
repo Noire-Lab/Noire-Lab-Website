@@ -3,6 +3,7 @@ import {
   IntersectionObserverWrapper,
   NavigationProducts,
   PageHeader,
+  Product2Item,
 } from '@/components';
 import clsx from 'clsx';
 import Link from 'next/link';
@@ -59,7 +60,8 @@ export default function Page() {
                 rowIndex === 2 ? 'md:h-[204px]' : 'md:h-[314px]';
 
               return (
-                <div
+                <Product2Item
+                  link={props.path}
                   key={index}
                   className={clsx(
                     heightClass,
@@ -71,16 +73,7 @@ export default function Page() {
                         ? 'md:col-span-8'
                         : 'md:col-span-5',
                   )}
-                >
-                  <figure className="h-full overflow-hidden rounded-[12px]">
-                    <img
-                      src={props.path}
-                      className="h-full w-full object-cover"
-                      loading="lazy"
-                      alt=""
-                    />
-                  </figure>
-                </div>
+                />
               );
             })}
           </div>
