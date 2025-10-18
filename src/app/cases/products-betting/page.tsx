@@ -53,7 +53,7 @@ export default function Page() {
           <p className="mb-5 text-center text-[20px] md:mb-8 md:text-[24px]">
             Static
           </p>
-          <div className="mx-auto grid max-w-[1128px] grid-cols-13 gap-4 max-md:grid-cols-1">
+          <div className="mx-auto grid max-w-[1128px] grid-cols-13 gap-1.5 max-md:grid-cols-1 md:gap-4">
             {list.slice(0, 6).map((props, index) => {
               const rowIndex = Math.floor(index / 2); // each 2 items = 1 row
               const isOddRow = rowIndex % 2 === 1;
@@ -81,7 +81,7 @@ export default function Page() {
             })}
           </div>
 
-          <div className="mx-auto mt-4 flex justify-center gap-4 max-md:w-full max-md:flex-col md:max-w-[816px]">
+          <div className="mx-auto mt-1.5 flex justify-center gap-1.5 max-md:w-full max-md:flex-col md:mt-4 md:max-w-[816px] md:gap-4">
             <Product2Item link={list[6].path} />
             <Product2Item link={list[7].path} />
           </div>
