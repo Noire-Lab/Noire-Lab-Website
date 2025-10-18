@@ -1,6 +1,7 @@
 'use client';
 import { FC, Fragment, useState } from 'react';
-import { ImagePreviewModal } from '@/components';
+import { PreviewModal } from '@/components';
+import clsx from 'clsx';
 
 export interface ProductItemProps {
   title?: string;
@@ -56,12 +57,49 @@ export const ProductItem: FC<ProductItemProps> = ({
         )}
       </div>
       {type === 'image' && (
-        <ImagePreviewModal
-          link={link}
-          open={open}
-          onClose={() => setOpen(false)}
-        />
+        <PreviewModal link={link} open={open} onClose={() => setOpen(false)} />
       )}
+    </Fragment>
+  );
+};
+
+export interface ProductItem2Props {
+  link: string;
+  videoLink?: string;
+  className?: string;
+}
+
+export const Product2Item: FC<ProductItem2Props> = ({
+  link,
+  videoLink,
+  className,
+}) => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+
+  return (
+    <Fragment>
+      <div
+        onClick={handleOpen}
+        className={clsx(
+          className,
+          'animated-appear cursor-pointer duration-150 ease-in-out',
+        )}
+      >
+        <figure className="h-full overflow-hidden rounded-[12px]">
+          <img
+            src={link}
+            className="h-full w-full object-cover"
+            loading="lazy"
+            alt=""
+          />
+        </figure>
+      </div>
+      <PreviewModal
+        link={videoLink ? videoLink : link}
+        open={open}
+        onClose={() => setOpen(false)}
+      />
     </Fragment>
   );
 };

@@ -40,47 +40,14 @@
   }
 }
 
-@utility font-expanded {
-  font-stretch: expanded;
-}
-
-@utility font-condensed {
-  font-stretch: condensed;
-}
-
-@utility font-narrower {
-  font-stretch: narrower;
-}
-
-@utility font-extra-condensed {
-  font-stretch: extra-condensed;
-}
-
-@utility font-semi-condensed {
-  font-stretch: semi-condensed;
-}
-
-@utility font-ultra-condensed {
-  font-stretch: ultra-condensed;
-}
-
-.font-stretch {
-  font-stretch: extra-condensed;
-}
-
 .animated-appear {
   opacity: 0;
-  -webkit-transform: translateY(20px);
-  -ms-transform: translateY(20px);
-  transform: translateY(20px);
-  -webkit-transform: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
 }
 
 .animated-appear.open {
   opacity: 1;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
   transform: translateY(0);
 }

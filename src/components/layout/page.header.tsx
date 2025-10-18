@@ -8,8 +8,9 @@ export const PageHeader: FC<{
 }> = ({ title, imagePath, imagePathMobile }) => {
   return (
     <div className="relative">
-      <Link href="/" className="absolute top-5 left-1/2 -translate-x-1/2 max-md:hidden">
+      <Link href="/" className="absolute top-5 max-md:top-[12px] left-1/2 -translate-x-1/2">
         <svg
+          className="max-md:max-w-[82px]"
           width="180"
           height="27"
           viewBox="0 0 180 27"
@@ -66,7 +67,7 @@ export const PageHeader: FC<{
           loading="eager"
         />
       </picture>
-      <h2 className="absolute inset-x-0 bottom-[40px] mx-auto text-center text-xl font-bold uppercase max-md:leading-[24px] md:bottom-[62px] md:text-[40px] md:leading-[50px]">
+      <h2 className="absolute inset-x-0 bottom-[37px] mx-auto text-center text-xl font-bold uppercase max-md:leading-[24px] md:bottom-[72px] md:text-[40px] md:leading-[50px]">
         {title}
       </h2>
       <div className="absolute right-0 bottom-[2px] left-0 mx-auto flex items-center gap-5 md:bottom-[35px]">

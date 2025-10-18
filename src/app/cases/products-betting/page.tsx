@@ -50,14 +50,17 @@ export default function Page() {
         <NavigationProducts />
 
         <section className="px-[16px] pt-[30px] md:pt-[40px]">
-          <div className="mx-auto grid max-w-[892px] grid-cols-13 gap-5 max-md:grid-cols-1">
+          <p className="mb-5 text-center text-[20px] md:mb-8 md:text-[24px]">
+            Static
+          </p>
+          <div className="mx-auto grid max-w-[1128px] grid-cols-13 gap-4 max-md:grid-cols-1">
             {list.slice(0, 6).map((props, index) => {
               const rowIndex = Math.floor(index / 2); // each 2 items = 1 row
               const isOddRow = rowIndex % 2 === 1;
               const isLeft = index % 2 === 0;
 
               const heightClass =
-                rowIndex === 2 ? 'md:h-[204px]' : 'md:h-[314px]';
+                rowIndex === 2 ? 'md:h-[262px]' : 'md:h-[400px]';
 
               return (
                 <Product2Item
@@ -78,27 +81,9 @@ export default function Page() {
             })}
           </div>
 
-          <div className="mx-auto mt-5 flex justify-center gap-5 max-md:w-full max-md:flex-col md:max-w-[686px]">
-            <div className="w-full md:h-[624px] md:max-w-[430px]">
-              <figure className="h-full overflow-hidden rounded-[12px] max-md:w-full">
-                <img
-                  src={list[6].path}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                  alt=""
-                />
-              </figure>
-            </div>
-            <div className="w-full md:h-[624px] md:max-w-[430px]">
-              <figure className="h-full overflow-hidden rounded-[12px] max-md:w-full">
-                <img
-                  src={list[7].path}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                  alt=""
-                />
-              </figure>
-            </div>
+          <div className="mx-auto mt-4 flex justify-center gap-4 max-md:w-full max-md:flex-col md:max-w-[816px]">
+            <Product2Item link={list[6].path} />
+            <Product2Item link={list[7].path} />
           </div>
         </section>
 

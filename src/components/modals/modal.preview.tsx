@@ -1,11 +1,13 @@
-import { Dialog, DialogPanel } from "@headlessui/react";
-import { FC } from "react";
+import { Dialog, DialogPanel } from '@headlessui/react';
+import { FC } from 'react';
 
-export const ImagePreviewModal: FC<{
+export const PreviewModal: FC<{
+  link: string;
   open: boolean;
   onClose: () => void;
-  link: string;
 }> = ({ open, onClose, link }) => {
+  const isVideo = /\.(mp4|webm|ogg)$/i.test(link);
+
   return (
     <Dialog open={open} onClose={onClose}>
       <div className="fixed top-0 right-0 bottom-0 left-0 z-50 grid place-items-center bg-[rgba(9,9,9,0.85)] px-[12px]">
@@ -31,12 +33,24 @@ export const ImagePreviewModal: FC<{
                 />
               </svg>
             </button>
-            <img
-              src={link}
-              className="max-h-[65vh]"
-              loading="lazy"
-              alt="picture"
-            />
+
+            {isVideo ? (
+              <video
+                src={link}
+                poster={link.replace(/\.(mp4|webm|ogg)$/i, '.png')} // если есть постер
+                controls
+                autoPlay
+                loop
+                className="max-h-[70vh]"
+              />
+            ) : (
+              <img
+                src={link}
+                className="max-h-[70vh]"
+                loading="lazy"
+                alt="picture"
+              />
+            )}
           </figure>
         </DialogPanel>
       </div>

@@ -21,26 +21,22 @@ import * as yup from 'yup';
 export const useIntersectionObserver = () => {
   useEffect(() => {
     const options: IntersectionObserverInit = {
-      threshold: 0.2,
+      threshold: 0.4, // увеличенный порог для более стабильного срабатывания
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('open');
-        } else {
-          entry.target.classList.remove('open');
+          observer.unobserve(entry.target); // больше не отслеживаем этот элемент
         }
       });
     }, options);
 
     const elements = document.querySelectorAll('.animated-appear');
-
     elements.forEach((element) => observer.observe(element));
 
-    return () => {
-      elements.forEach((element) => observer.unobserve(element));
-    };
+    return () => observer.disconnect();
   }, []);
 };
 

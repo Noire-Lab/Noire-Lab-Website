@@ -143,8 +143,8 @@ export default function Page() {
           <PlanItem
             className="bg-gradient-to-b from-[#B7A1DB] to-[#55496B]"
             title={<div className="text-[#FC51FF]">NOIRE MAX</div>}
-            savingTitle={<div className="text-[#CBA2FF]">Save over 18%!</div>}
-            fullPrice={7000}
+            savingTitle={<div className="text-[#FC51FF]">Save over 20%!</div>}
+            fullPrice={7700}
             price={6399}
             description="Static, motion design, web design"
             list={featuresMax}

@@ -9,7 +9,7 @@ export default function Page() {
       <header className="relative">
         <Link
           href="/"
-          className="absolute top-5 left-1/2 -translate-x-1/2 max-md:hidden"
+          className="absolute top-5 left-1/2 -translate-x-1/2"
         >
           <svg
             width="180"
