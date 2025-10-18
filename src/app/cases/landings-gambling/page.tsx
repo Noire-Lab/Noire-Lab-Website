@@ -17,7 +17,7 @@ const list = [
   },
   {
     link: '/images/landings/landing8.webp',
-    title: 'Casino landing page with a registration for',
+    title: 'Casino landing page with a phone game',
     description: 'Optimized landing page design to enhance user registration.',
   },
   {
