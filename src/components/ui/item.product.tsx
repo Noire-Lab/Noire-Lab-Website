@@ -25,7 +25,7 @@ export const ProductItem: FC<ProductItemProps> = ({
     <Fragment>
       <div
         onClick={handleOpen}
-        className="animated-appear group h-max cursor-pointer rounded-[8px] bg-[#191520] p-[10px] duration-150 ease-in-out hover:bg-purple md:p-[25px]"
+        className="animated-appear group cursor-pointer rounded-[8px] bg-[#191520] p-[10px] duration-150 ease-in-out hover:bg-purple md:p-[25px]"
       >
         {type === 'image' && (
           <figure>
