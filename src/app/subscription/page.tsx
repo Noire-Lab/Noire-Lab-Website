@@ -104,7 +104,7 @@ export default function Page() {
           <PlanItem
             className="bg-gradient-to-b from-[#B7A1DB] to-[#55496B]"
             title={<div className="text-[#CBA2FF]">NOIRE START</div>}
-            savingTitle={<div className="text-[#CBA2FF]">Save over 15%!</div>}
+            savingTitle={<div className="text-[#CBA2FF]">Save over 20%!</div>}
             fullPrice={1800}
             price={1499}
             description="Static graphics"
