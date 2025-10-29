@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div className="mx-auto flex h-screen max-w-[540px] flex-col items-center justify-center gap-15">
+    <div className="mx-auto flex h-screen max-w-[540px] flex-col items-center justify-center gap-15 px-4">
       <svg
         width="361"
         height="48"
@@ -92,9 +92,9 @@ export default function Page() {
 
       <a
         href="https://t.me/noire_lab_igaming"
-        className="flex h-[78px] w-full max-w-[540px] cursor-pointer items-center justify-center truncate rounded-[57px] bg-[#29A9EB] font-gotham text-[39px] font-medium text-ellipsis text-white max-md:text-[32px]"
+        className="flex h-[78px] md:w-full md:max-w-[540px] cursor-pointer items-center justify-center truncate rounded-[57px] bg-[#29A9EB] px-6 font-gotham text-[39px] font-medium text-ellipsis text-white max-md:text-[28px]"
       >
-        Написать в телеграмм
+        Написать в телеграм
       </a>
     </div>
   );
