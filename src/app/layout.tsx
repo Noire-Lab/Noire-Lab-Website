@@ -193,7 +193,7 @@ export default function RootLayout({
         className={clsx(
           gotham.variable,
           gothamXNarrow.variable,
-          'bg-[#0E0C12] font-gotham text-white antialiased',
+          'font-gotham bg-[#0E0C12] text-white antialiased',
         )}
       >
         <noscript>
@@ -205,9 +205,7 @@ export default function RootLayout({
           ></iframe>
         </noscript>
 
-        <Navigation />
-        <main className="overflow-hidden">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
