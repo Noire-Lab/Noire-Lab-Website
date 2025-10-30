@@ -92,9 +92,16 @@ export default function Page() {
 
       <a
         href="https://t.me/noire_lab_igaming"
-        className="flex h-[78px] md:w-full md:max-w-[540px] cursor-pointer items-center justify-center truncate rounded-[57px] bg-[#29A9EB] px-6 font-gotham text-[39px] font-medium text-ellipsis text-white max-md:text-[28px]"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => {
+          if (typeof window !== 'undefined' && (window as any).fbq) {
+            (window as any).fbq('track', 'Lead');
+          }
+        }}
+        className="flex h-[78px] cursor-pointer items-center justify-center truncate rounded-[57px] bg-[#29A9EB] px-6 font-gotham text-[39px] font-medium text-ellipsis text-white max-md:text-[28px] md:w-full md:max-w-[540px]"
       >
-        Написать в телеграм
+        Написать в Telegram
       </a>
     </div>
   );
