@@ -1,3 +1,4 @@
+'use client';
 export default function Page() {
   return (
     <div className="mx-auto flex h-screen max-w-[540px] flex-col items-center justify-center gap-15 px-4">

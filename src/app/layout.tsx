@@ -204,23 +204,22 @@ export default function RootLayout({
         `}
       </Script>
 
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: 'none' }}
-          src="https://www.facebook.com/tr?id=830643499903336&ev=PageView&noscript=1"
-          alt="facebook pixel"
-        />
-      </noscript>
-
       <body
         className={clsx(
           gotham.variable,
           gothamXNarrow.variable,
-          'font-gotham bg-[#0E0C12] text-white antialiased',
+          'bg-[#0E0C12] font-gotham text-white antialiased',
         )}
       >
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=830643499903336&ev=PageView&noscript=1"
+            alt="facebook pixel"
+          />
+        </noscript>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WQ5CV9WF"
