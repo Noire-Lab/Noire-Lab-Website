@@ -5,7 +5,7 @@ import { Fragment } from 'react';
 
 const list = [
   {
-    name: 'slotoking',
+    name: 'betfury',
     extension: '.svg',
   },
   {
